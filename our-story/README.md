@@ -1,3 +1,3 @@
 # Our Story
 
-The story of Flex Tokens — who built them, and what community success looks like.
+Who built Flex Tokens, what community success looks like, and the unintended market consequences of making money EASY.
