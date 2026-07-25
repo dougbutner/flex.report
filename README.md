@@ -1,8 +1,13 @@
 # EASY Onboarding
 
+![Gudasol](assets/gudasol.jpg)
+
 Because you’re here, you’re a rare breed of crypto lover: one who wants financial energy to return to people creating real value. The people experiencing life, sharing their gifts, walking dharma and ikigai, making their own meaning.
 
 You’re in good company. I take it as my duty to see this through by gathering the best people, ideas, and mechanisms to make it happen.
+
+- Welcome,  
+  Gudasol 🜛
 
 ## Onboard to EASY
 

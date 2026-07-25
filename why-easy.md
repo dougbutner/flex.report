@@ -2,10 +2,10 @@
 
 ## Why I Built EASY, and all Flex Tokens.
 
-I believe token tech can free people financially to love in their unique way.  
+I believe token tech can free people financially to love more in their unique way.  
 Decentralized fintech needs be easy, and exciting.
 
-EASY experiments nation-building fintech FEELS like in real life, with digital money.
+EASY experiments as the conversion layer from debt-backed FIAT systems (via stablecoins) to abundant systems where time pays you.
 
 ## New-Earth money is EASY
 
