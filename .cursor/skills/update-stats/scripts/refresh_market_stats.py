@@ -91,6 +91,22 @@ def fetch_stats() -> dict:
         if holders > 10000:
             break
 
+    # EASY price in XUSDC from deepest EASY/XUSDC pool
+    price_xusdc = None
+    for p in pools:
+        a, b = p.get("tokenA", {}), p.get("tokenB", {})
+        if a.get("symbol") == "EASY" and a.get("contract") == "mon3y" and b.get("symbol") == "XUSDC":
+            cand = float(p.get("priceA") or 0)
+            tvl = float(p.get("tvlUSD") or 0)
+            if price_xusdc is None or tvl > price_xusdc[1]:
+                price_xusdc = (cand, tvl)
+        elif b.get("symbol") == "EASY" and b.get("contract") == "mon3y" and a.get("symbol") == "XUSDC":
+            cand = float(p.get("priceB") or 0)
+            tvl = float(p.get("tvlUSD") or 0)
+            if price_xusdc is None or tvl > price_xusdc[1]:
+                price_xusdc = (cand, tvl)
+    price_xusdc_val = round(price_xusdc[0], 6) if price_xusdc and price_xusdc[0] else round(px, 6)
+
     alcor_swap_1d = float(global_1d["swapTradingVolume"])
     share = 100 * vol24 / alcor_swap_1d if alcor_swap_1d else 0
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -99,6 +115,7 @@ def fetch_stats() -> dict:
         "updated": now,
         "easy": {
             "price_usd": round(px, 6),
+            "price_xusdc": price_xusdc_val,
             "price_xpr": round(float(tok["system_price"]), 4),
             "tvl_usd": round(tvl, 2),
             "volume_usd_24h": round(vol24, 2),
@@ -215,6 +232,7 @@ Live pulse of EASY on XPR Alcor — liquidity, volume, and pending holder reward
 | | |
 | --- | --- |
 | **EASY price** | **${e['price_usd']:.4f}** (~{e['price_xpr']:.2f} XPR) |
+| **EASY price in XUSDC** | **{e.get('price_xusdc', e['price_usd']):.6f} XUSDC** |
 | **Liquidity (EASY pools TVL)** | **{money(e['tvl_usd'])}** |
 | **Pending holder rewards** | **{e['reflection_pool_easy']:,.2f} EASY** (~{money(e['reflection_pool_usd'])}) in the reflection pool |
 | **24h volume (all EASY pools)** | **{money(e['volume_usd_24h'])}** |

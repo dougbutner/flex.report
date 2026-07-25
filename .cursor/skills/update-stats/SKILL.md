@@ -56,7 +56,7 @@ Docs: https://api.alcor.exchange/ and https://docs.alcor.exchange/developers-api
 | Daily pool charts | `GET .../swap/charts?tokenA=easy-mon3y&tokenB=xusdc-xtokens` | Optional; used for longer price/volume series |
 | Reflection pool | RPC `get_table_rows` `code=mon3y` `scope=EASY` `table=stat` | `reflection_pool` asset |
 | Flexer count | RPC page `flexers` table `code=mon3y` `scope=mon3y` | Count rows |
-| Stable arb matrix | Same `.../swap/pools` | Stables: XMD@`xmd.token`, XUSDC/XPYUSD/XPAX/XUSDT@`xtokens`. Prefer deepest EASY↔stable pool per asset; `easy_per_stable` from pool `priceB` when tokenA is EASY. Cross rate sell→buy = easy_per_sell / easy_per_buy. Also list best direct stable↔stable pools by TVL. |
+| Stable arb matrix | Same `.../swap/pools` | Stables: XMD@`xmd.token`, XUSDC/XPYUSD/XPAX/XUSDT@`xtokens`. Prefer deepest EASY↔stable pool per asset by **Stable TVL** (USD value of non-EASY quantity). Cross rate sell→buy = easy_per_sell / easy_per_buy. Do **not** include direct stable↔stable pools section. |
 
 RPC: `https://api.protonnz.com/v1/chain/...` (fallback `https://proton.greymass.com`).
 
@@ -78,10 +78,13 @@ Keep `arbitrage.md` structure:
 4. Same matrix in bps vs 1.0
 5. Heatmap PNG
 6. Standout legs
-7. EASY pool anchors + Alcor `usd_price` row
-8. Direct stable↔stable pools table
+7. EASY pool anchors with **Stable TVL** (non-EASY side only) + Alcor `usd_price` row
+
+Do not include a direct stable↔stable pools section.
 
 Coins (fixed order): **XMD, XUSDC, XPYUSD, XPAX, XUSDT** (treat “XUSDX” as XUSDT).
+
+Keep `market-stats.md` at-a-glance with **EASY price** then **EASY price in XUSDC** (from deepest EASY/XUSDC pool `priceA`).
 
 ## Page layout rules (ime.money-inspired)
 

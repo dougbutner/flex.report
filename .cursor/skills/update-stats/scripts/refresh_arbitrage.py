@@ -28,8 +28,8 @@ def get(url: str):
         return json.load(r)
 
 
-def pick_easy_stable_pools(pools: list) -> dict:
-    """Best EASY↔stable pool per stable by TVL. Returns easy_per_stable (priceB when EASY is tokenA)."""
+def pick_easy_stable_pools(pools: list, token_usd: dict) -> dict:
+    """Best EASY↔stable pool per stable by Stable TVL (non-EASY side USD)."""
     best = {}
     for p in pools:
         a, b = p.get("tokenA", {}), p.get("tokenB", {})
@@ -40,87 +40,31 @@ def pick_easy_stable_pools(pools: list) -> dict:
             continue
         if easy_a:
             stable_sym, stable_con = sb, cb
-            # 1 stable = priceB EASY when tokenA=EASY, tokenB=stable
             easy_per_stable = float(p.get("priceB") or 0)
             stable_per_easy = float(p.get("priceA") or 0)
+            stable_qty = float(b.get("quantity") or 0)
         else:
             stable_sym, stable_con = sa, ca
             easy_per_stable = float(p.get("priceA") or 0)
             stable_per_easy = float(p.get("priceB") or 0)
+            stable_qty = float(a.get("quantity") or 0)
         meta = next((s for s in STABLES if s[0] == stable_sym and s[1] == stable_con), None)
         if not meta or easy_per_stable <= 0:
             continue
-        tvl = float(p.get("tvlUSD") or 0)
+        # Stable TVL = USD value of the non-EASY side only
+        stable_tvl = stable_qty * float(token_usd.get(stable_sym) or 1.0)
         prev = best.get(stable_sym)
-        if prev is None or tvl > prev["tvl"]:
+        if prev is None or stable_tvl > prev["stable_tvl"]:
             best[stable_sym] = {
                 "pool_id": p.get("id"),
-                "tvl": tvl,
+                "stable_tvl": stable_tvl,
+                "stable_qty": stable_qty,
                 "vol24": float(p.get("volumeUSD24") or 0),
                 "easy_per_stable": easy_per_stable,
                 "stable_per_easy": stable_per_easy,
                 "fee": p.get("fee"),
             }
     return best
-
-
-def pick_direct_pools(pools: list) -> dict:
-    """Best direct A/B pool for each unordered pair, keyed (sell, buy) → how many buy per 1 sell."""
-    best = {}  # frozenset → pool info with oriented rates
-
-    def match(sym, con):
-        return next((s[0] for s in STABLES if s[0] == sym and s[1] == con), None)
-
-    for p in pools:
-        a, b = p.get("tokenA", {}), p.get("tokenB", {})
-        sa, sb = match(a.get("symbol"), a.get("contract")), match(b.get("symbol"), b.get("contract"))
-        if not sa or not sb or sa == sb:
-            continue
-        tvl = float(p.get("tvlUSD") or 0)
-        key = frozenset((sa, sb))
-        prev = best.get(key)
-        if prev is not None and tvl <= prev["tvl"]:
-            continue
-        # priceA ≈ tokenA in tokenB terms when paired like EASY pattern: 1 B = priceA of A? 
-        # For XUSDC/XUSDT pool 0: priceA 1.00001, priceB 0.999991 → 1/1.00001≈0.99999≈priceB
-        # tokenA=XUSDC, tokenB=XUSDT: priceA = USDC per ? Actually priceA is USD-ish of A, priceB of B in A.
-        # Safer: use quantity ratio if present
-        qa, qb = float(a.get("quantity") or 0), float(b.get("quantity") or 0)
-        price_a, price_b = float(p.get("priceA") or 0), float(p.get("priceB") or 0)
-        # From EASY pattern: priceB = amount of A per 1 B, priceA = amount of B per 1 A
-        # For stables both ~$1: priceA ≈ B per A, priceB ≈ A per B
-        a_per_b = price_b if price_b > 0 else (qa / qb if qb else 0)
-        b_per_a = price_a if price_a > 0 else (qb / qa if qa else 0)
-        # If inverted (both near 1), check consistency
-        if a_per_b > 0 and b_per_a > 0 and abs(a_per_b * b_per_a - 1) > 0.05:
-            # try swap interpretation
-            if abs(price_a * price_b - 1) < 0.05:
-                b_per_a, a_per_b = price_a, price_b
-        best[key] = {
-            "pool_id": p.get("id"),
-            "tvl": tvl,
-            "vol24": float(p.get("volumeUSD24") or 0),
-            "a": sa,
-            "b": sb,
-            "b_per_a": b_per_a,  # sell A get B
-            "a_per_b": a_per_b,  # sell B get A
-        }
-    # expand to oriented dict
-    out = {}
-    for info in best.values():
-        out[(info["a"], info["b"])] = {
-            "pool_id": info["pool_id"],
-            "tvl": info["tvl"],
-            "vol24": info["vol24"],
-            "rate": info["b_per_a"],
-        }
-        out[(info["b"], info["a"])] = {
-            "pool_id": info["pool_id"],
-            "tvl": info["tvl"],
-            "vol24": info["vol24"],
-            "rate": info["a_per_b"],
-        }
-    return out
 
 
 def build_via_easy_matrix(easy_pools: dict) -> list[list[float | None]]:
@@ -215,7 +159,7 @@ def write_markdown(payload: dict) -> None:
             continue
         pool_lines.append(
             f"| {sym} | [{p['pool_id']}](https://proton.alcor.exchange/analytics/pools/{p['pool_id']}) | "
-            f"{p['easy_per_stable']:.4f} | ${p['tvl']:,.0f} | ${p['vol24']:,.0f} |"
+            f"{p['easy_per_stable']:.4f} | ${p['stable_tvl']:,.0f} | ${p['vol24']:,.0f} |"
         )
 
     # top edges
@@ -243,27 +187,13 @@ def write_markdown(payload: dict) -> None:
     if not opp_lines:
         opp_lines = ["- No material dislocation vs 1:1 in this snapshot."]
 
-    # direct highlights
-    direct_lines = []
-    for (sell, buy), info in sorted(payload["direct"].items(), key=lambda x: -x[1]["tvl"]):
-        if sell >= buy:  # list each pool once by alphabetical sell<buy orientation in display
-            continue
-        other = payload["direct"].get((buy, sell))
-        direct_lines.append(
-            f"| {sell}/{buy} | {info['pool_id']} | ${info['tvl']:,.2f} | "
-            f"{info['rate']:.6f} {buy} per {sell} | "
-            f"{(other or {}).get('rate', float('nan')):.6f} {sell} per {buy} |"
-        )
-    if not direct_lines:
-        direct_lines = ["| — | — | — | — | — |"]
-
     usd_cells = " | ".join(f"${payload['token_usd'][s]:.4f}" for s in SYMBOLS)
 
     md = f"""# Stablecoin Arbitrage (XPR)
 
 Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT** into the others on Alcor (XPR Network).
 
-*Snapshot: **{updated}** · Primary path: deepest **EASY**↔stable pools · Also listed: direct stable↔stable pools*
+*Snapshot: **{updated}** · Primary path: deepest **EASY**↔stable pools*
 
 ## How to read
 
@@ -293,7 +223,9 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 
 ## EASY pool anchors
 
-| Stable | Pool | EASY per 1 stable | TVL | 24h vol |
+**Stable TVL** = USD value of the non-EASY side only (XMD / XUSDC / XPYUSD / XPAX / XUSDT depth in that pool).
+
+| Stable | Pool | EASY per 1 stable | Stable TVL | 24h vol |
 | --- | --- | ---: | ---: | ---: |
 {chr(10).join(pool_lines)}
 
@@ -302,14 +234,6 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 | | {' | '.join(SYMBOLS)} |
 | --- | {' | '.join(['---:'] * len(SYMBOLS))} |
 | `usd_price` | {usd_cells} |
-
-## Direct stable↔stable pools (best TVL each pair)
-
-| Pair | Pool | TVL | Rate | Inverse |
-| --- | --- | ---: | --- | --- |
-{chr(10).join(direct_lines)}
-
-Many direct books are thin — the EASY matrix is usually the practical arb surface (and why EASY volume dominates Alcor).
 
 ## Share / refresh
 
@@ -320,13 +244,13 @@ Copy the dated tables above into Telegram or Club notes. Say **update stats** in
 
 def main() -> None:
     pools = get("https://proton.alcor.exchange/api/v2/swap/pools")
-    easy_pools = pick_easy_stable_pools(pools)
-    direct = pick_direct_pools(pools)
-    matrix = build_via_easy_matrix(easy_pools)
     token_usd = {}
     for sym, _con, tid in STABLES:
         tok = get(f"https://proton.alcor.exchange/api/v2/tokens/{tid}")
         token_usd[sym] = float(tok.get("usd_price") or 0)
+
+    easy_pools = pick_easy_stable_pools(pools, token_usd)
+    matrix = build_via_easy_matrix(easy_pools)
 
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     payload = {
@@ -334,9 +258,7 @@ def main() -> None:
         "symbols": SYMBOLS,
         "token_usd": token_usd,
         "via_easy": {"pools": easy_pools, "matrix": matrix},
-        "direct": {f"{a}->{b}": v for (a, b), v in direct.items()},
     }
-    # JSON-serializable direct keys already strings
     (ROOT / "arbitrage.json").write_text(json.dumps(payload, indent=2) + "\n")
     write_heatmap(matrix, updated)
     write_markdown(
@@ -344,7 +266,6 @@ def main() -> None:
             "updated": updated,
             "token_usd": token_usd,
             "via_easy": {"pools": easy_pools, "matrix": matrix},
-            "direct": direct,
         }
     )
     print(f"updated {updated}")
