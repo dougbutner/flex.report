@@ -4,7 +4,7 @@ Take it EASY 👄 💰 You have EASY 👄 → You are given more EASY.
 
 Get a Wallet | [Buy EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y) | [Analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | [Telegram](https://t.me/flextokens)
 
-## EASY (focus)
+## EASY
 
 | | |
 | --- | --- |
@@ -52,16 +52,16 @@ flowchart LR
   S --> E["4.2M × XUSDT"]
 ```
 
-| Pool | EASY day one |
-| --- | ---: |
-| EASY / XMD | 4,200,000 |
-| EASY / XUSDC | 4,200,000 |
-| EASY / XPYUSD | 4,200,000 |
-| EASY / XPAX | 4,200,000 |
-| EASY / XUSDT | 4,200,000 |
-| **Total** | **21,000,000** |
+| Pool | EASY day one | Alcor |
+| --- | ---: | --- |
+| EASY / XMD | 4,200,000 | [4067](https://alcor.exchange/v/xpr/analytics/pools/4067) |
+| EASY / XUSDC | 4,200,000 | [4065](https://alcor.exchange/v/xpr/analytics/pools/4065) |
+| EASY / XPYUSD | 4,200,000 | [4068](https://alcor.exchange/v/xpr/analytics/pools/4068) |
+| EASY / XPAX | 4,200,000 | [4070](https://alcor.exchange/v/xpr/analytics/pools/4070) |
+| EASY / XUSDT | 4,200,000 | [4066](https://alcor.exchange/v/xpr/analytics/pools/4066) |
+| **Total** | **21,000,000** | |
 
-Live depth and volume: [Market Stats](market-stats.md) · Buyback rhythm: [Celestial Buybacks](celestial-buybacks.md).
+Live depth and volume: [Market Stats](market-stats.md) · Venus unlocks (one pool at a time): [Celestial Buybacks](celestial-buybacks.md).
 
 ## Flex family (all tokens)
 

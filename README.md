@@ -1,6 +1,6 @@
 # EASY Onboarding
 
-![Gudasol](assets/gudasol.jpg)
+![EASY](tokens/easy/EASY.png) ![WON](tokens/won/won.png) ![MEME](tokens/meme/meme.png) ![GRAMS](tokens/grams/grams-512.png)
 
 Because you’re here, you’re a rare breed of crypto lover: one who wants financial energy to return to people creating real value. The people experiencing life, sharing their gifts, walking dharma and ikigai, making their own meaning.
 
