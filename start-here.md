@@ -19,6 +19,6 @@ Each may have additional farming rewards and EASY alone has a protocol fee to fu
 
 ## Take it EASY
 
-Click this link, then click swap: [proton.alcor.exchange](https://proton.alcor.exchange)
+Click this link, then click swap: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap)
 
 Keep reading to learn tokenomics for each Flex token, maximizing your Flex Tokens, and earning at bi-weekly EASY Club meetings.

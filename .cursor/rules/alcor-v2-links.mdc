@@ -1,0 +1,29 @@
+---
+description: Always use Alcor XPR v2 UI links in documentation (never legacy proton.alcor.exchange UI URLs).
+globs: "**/*.md"
+alwaysApply: true
+---
+
+# Alcor XPR links in docs
+
+When linking to Alcor **UI** (swap, analytics, farms, pools, tokens) in any markdown or generated doc page, **always** use the new v2 XPR paths on `alcor.exchange`:
+
+| Purpose | URL |
+| --- | --- |
+| Swap (default trade / buy) | `https://alcor.exchange/v/xpr/swap` |
+| Swap with pair | `https://alcor.exchange/v/xpr/swap?input=…&output=…` |
+| Analytics home | `https://alcor.exchange/v/xpr/analytics` |
+| Farms | `https://alcor.exchange/v/xpr/analytics?tab=farms` |
+| Token page | `https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y` |
+| Pool page | `https://alcor.exchange/v/xpr/analytics/pools/{id}` |
+
+## Do not use for user-facing UI links
+
+- `https://proton.alcor.exchange` (legacy UI)
+- `https://proton.alcor.exchange/swap…`
+- `https://proton.alcor.exchange/analytics…`
+
+## API (scripts / data refresh only)
+
+Keep the Proton API host for fetches: `https://proton.alcor.exchange/api/v2/…`  
+API docs may stay at `https://api.alcor.exchange/`. Do not point readers to the old UI when the intent is “go trade / see farms / open a pool.”

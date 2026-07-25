@@ -42,6 +42,16 @@ Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if
 
 4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb bps (best sell→buy leg), updated timestamp.
 
+## Alcor links in generated markdown
+
+**UI links must use the v2 XPR UI** (see `.cursor/rules/alcor-v2-links.mdc`):
+
+- Swap: `https://alcor.exchange/v/xpr/swap`
+- Analytics / token / pool / farms: `https://alcor.exchange/v/xpr/analytics…`
+- Never emit legacy `https://proton.alcor.exchange/…` UI URLs in markdown.
+
+**API fetches** still use `https://proton.alcor.exchange/api/v2/…`.
+
 ## Data sources (Alcor / XPR)
 
 Base URL for XPR (Proton) chain: `https://proton.alcor.exchange/api/v2/`
@@ -50,7 +60,7 @@ Docs: https://api.alcor.exchange/ and https://docs.alcor.exchange/developers-api
 
 | What | Endpoint | Notes |
 | --- | --- | --- |
-| Exchange TVL / volume | `GET .../analytics/global?resolution=1D` and `?resolution=1M` | Resolutions: `1D`, `1W`, `1M`. Use **proton** subdomain, not bare `alcor.exchange` (that is WAX). |
+| Exchange TVL / volume | `GET .../analytics/global?resolution=1D` and `?resolution=1M` | Resolutions: `1D`, `1W`, `1M`. API host is **proton.alcor.exchange**; user-facing docs use **alcor.exchange/v/xpr/…**. |
 | Token price | `GET .../tokens/easy-mon3y` | `usd_price`, `system_price` (XPR) |
 | Pool volumes / TVL | `GET .../swap/pools` | Sum pools where `tokenA` or `tokenB` is EASY@`mon3y`. Fields: `volumeUSD24`, `volumeUSDWeek`, `volumeUSDMonth`, `tvlUSD`, `change24` |
 | Daily pool charts | `GET .../swap/charts?tokenA=easy-mon3y&tokenB=xusdc-xtokens` | Optional; used for longer price/volume series |

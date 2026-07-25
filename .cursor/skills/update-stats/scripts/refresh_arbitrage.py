@@ -158,7 +158,7 @@ def write_markdown(payload: dict) -> None:
             pool_lines.append(f"| {sym} | — | — | — | — |")
             continue
         pool_lines.append(
-            f"| {sym} | [{p['pool_id']}](https://proton.alcor.exchange/analytics/pools/{p['pool_id']}) | "
+            f"| {sym} | [{p['pool_id']}](https://alcor.exchange/v/xpr/analytics/pools/{p['pool_id']}) | "
             f"{p['easy_per_stable']:.4f} | ${p['stable_tvl']:,.0f} | ${p['vol24']:,.0f} |"
         )
 
@@ -187,7 +187,9 @@ def write_markdown(payload: dict) -> None:
     if not opp_lines:
         opp_lines = ["- No material dislocation vs 1:1 in this snapshot."]
 
-    usd_cells = " | ".join(f"${payload['token_usd'][s]:.4f}" for s in SYMBOLS)
+    mark_lines = [
+        f"| {s} | ${payload['token_usd'][s]:.4f} |" for s in SYMBOLS
+    ]
 
     md = f"""# Stablecoin Arbitrage (XPR)
 
@@ -203,7 +205,7 @@ Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT*
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.
-- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage — always simulate on [Alcor Swap](https://proton.alcor.exchange/swap) before sizing.
+- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage — always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
 
 Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts — prefer routing that stays inside `swap.alcor` memos when possible.
 
@@ -233,13 +235,9 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 
 ### Alcor mark prices
 
-| | {' | '.join(SYMBOLS)} |
-| --- | {' | '.join(['---:'] * len(SYMBOLS))} |
-| `usd_price` | {usd_cells} |
-
-## Share / refresh
-
-Copy the dated tables above into Telegram or Club notes. Say **update stats** in Cursor to refresh this page with a new timestamp.
+| Stable | usd_price |
+| --- | ---: |
+{chr(10).join(mark_lines)}
 """
     (ROOT / "arbitrage.md").write_text(md)
 

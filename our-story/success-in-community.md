@@ -38,7 +38,7 @@ From the Alcor EASY/XUSDC pool — price stepped up from ~$0.01 at launch into t
 
 ![EASY price chart on Alcor](assets/easy-price-chart.png)
 
-Live analytics: [proton.alcor.exchange/analytics/tokens/EASY-mon3y](https://proton.alcor.exchange/analytics/tokens/EASY-mon3y)
+Live analytics: [alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
 ## Volume
 

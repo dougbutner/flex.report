@@ -39,7 +39,7 @@ EOSIO enabled me to build the systems I couldn't fake on hype chains: real contr
 
 ## Key: EASY Tokens
 
-1. Go to [proton.alcor.exchange](https://proton.alcor.exchange) + connect your WebAuth wallet  
+1. Go to [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) + connect your WebAuth wallet  
 2. Swap any token for EASY  
 3. Ensure you have at least 100 EASY to get reflections (about 1 USD worth)
 

@@ -50,7 +50,7 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 | EASY/SNIPS | $494.73 | $5,256 | +0.5% |
 | EASY/XSOL | $240.41 | — | +0.8% |
 
-Trade: [proton.alcor.exchange](https://proton.alcor.exchange) · Analytics: [EASY token](https://proton.alcor.exchange/analytics/tokens/EASY-mon3y)
+Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analytics: [EASY token](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
 ## Alcor Proton (exchange-wide)
 
