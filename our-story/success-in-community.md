@@ -2,9 +2,35 @@
 
 Pics or it didn’t happen.
 
-## Reflections landing
+![Reflections landing like rain on a lake](assets/reflections-lake.png)
 
-What payments look like coming in. You can check how much the account has earned — it started with 1000.0 EASY on November 26, 2025 — or this account that put in 100 USD (worth of EASY) on December 22, 2025.
+## Case study: `thelake`
+
+On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.org/account/thelake) entered EASY — the “put in ~100 USD worth of EASY” story from the original playbook.
+
+**Day-one stack:** 8,535.71 EASY  
+(7,880.71 from the funding transfer + 655 welcome / welcome bonus)
+
+**Reflections earned since then:** **1,671.98 EASY** across **578** on-chain payments from `mon3y` (through July 25, 2026).
+
+That’s **+19.6%** grown from reflections alone — without selling — while the bag kept collecting.
+
+| | |
+| --- | --- |
+| Account created | Dec 22, 2025 |
+| Day-one stack | 8,535.71 EASY |
+| Reflections (mon3y → thelake) | **1,671.98 EASY** |
+| Reflection payments | 578 |
+| Balance now | **10,320.67 EASY** |
+| Explorer | [thelake](https://explorer.xprnetwork.org/account/thelake) |
+
+![thelake reflections summary](assets/thelake-reflections-summary.png)
+
+![thelake cumulative reflections](assets/thelake-reflections-cumulative.png)
+
+![thelake monthly reflections](assets/thelake-reflections-monthly.png)
+
+You can verify any payment on the explorer: transfers from `mon3y` with memos like “Take it EASY 🍹 Reflect & Collect ❇️” / “Be EASY 🍹 flex.town 🏘”.
 
 ## EASY price (recent)
 

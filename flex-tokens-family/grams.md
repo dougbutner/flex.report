@@ -1,5 +1,7 @@
 # GRAMS
 
+![Gold flowing into digital GRAMS](assets/grams-gold-flow.png)
+
 Max supply: 1,000,000,000 GRAMS  
 **Backed by XPAXG** (Paxos Gold) — pure liquid for gold  
 1.1% reflection + 0.11% team/project  
