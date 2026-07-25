@@ -1,4 +1,4 @@
-# MEME (contract: m3m3)
+# MEME (contract: [`m3m3`](https://explorer.xprnetwork.org/account/m3m3))
 
 Reflexive EOSIO token with flexible swap targets and configurable burn.
 

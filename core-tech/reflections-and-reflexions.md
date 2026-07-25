@@ -1,19 +1,30 @@
 # Reflections and Reflexions
 
-All transfer fees go in the reflection pool... The reflection rate goes to direct payments to accounts holding that token.
+All transfer fees go in the reflection pool. The reflection rate goes to direct payments to accounts holding that token.
 
-**Let’s glance over Flex Tokens**
+```mermaid
+flowchart LR
+  T[Transfer] --> F[Transfer tax]
+  F --> P[Reflection pool]
+  P --> D["distribute / radiate / reflect"]
+  D --> R{Reward choice}
+  R -->|Default| H[Same token in wallet]
+  R -->|Flex| X[Other token via Alcor]
+```
 
-- Flex Tokens: Tokens that charge a tax and redistribute it in a token they choose, and/or burn it or pay team.
-- **EASY “Take it EASY”** = 2% reflection
-- **WON “We WON”** = 2.2% reflection + 0.8% team
-- **MEME** = 1% reflection + 1% burn
-- **GRAMS** = 1.1% reflection + 0.11% team
+**Reflect** = rewards stay in the same token. **Reflexive** = you flex rewards into something else (XBTC, GRAMS, …).
 
-Each may have additional farming rewards and EASY alone has a protocol fee to fund Flex token volunteer efforts and infrastructure.
+## Fee glance
 
-Reflexive technology allows more than a quick interest payment... When you let your EASY compound, it reflects EASY to your account. When you choose GRAMS, MEME, XBTC, it's now reflexive.
+| Token | Reflection | Burn | Team / project | Hold to earn | Pool to pay |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| **EASY** | 2% | — | — | 100+ | 1,000 EASY |
+| **WON** | 2.2% | — | 0.8% | 1.0+ | 8 WON |
+| **MEME** | 1% | 1% | — | 1M+ | 10M MEME |
+| **GRAMS** | 1.1% | — | 0.11% | see contract | see contract |
 
-Liquidity positions are managed within the `reflections` account and go back to the rewards pool. View them on the old Alcor UI anytime by typing in `reflections` in the top search bar.
+Each may have additional farming rewards. EASY alone has a protocol fee path that funds Flex volunteer work and infrastructure.
+
+Liquidity positions are managed within the `reflections` account and go back to the rewards pool. View them on Alcor anytime by searching `reflections`.
 
 Additionally, `m3m3` feeds the `reflections` account with their earned LP fees.

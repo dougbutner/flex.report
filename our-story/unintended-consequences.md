@@ -20,7 +20,7 @@ Outcome: EASY became **#1 on Alcor by volume** — some days **crossing XPR itse
 
 That’s not a pitch deck metric. It’s what happens when you put a useful money-primitive in a place where bots and humans already trade: the rails get used harder than the asset you thought was the main character.
 
-Recent Alcor snapshots (price + volume) live on [Success in Community](success-in-community.md).
+Live pulse (share of Alcor Proton swap volume, pool depth, price): [Market Stats](../market-stats.md). Story charts for a real bag: [Success in Community](success-in-community.md).
 
 ## Why it matters
 

@@ -1,4 +1,4 @@
-# WON (contract: w3won)
+# WON (contract: [`w3won`](https://explorer.xprnetwork.org/account/w3won))
 
 Tree-aware reflections + flex pools, minted as WON on XPR.
 

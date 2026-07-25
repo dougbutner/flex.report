@@ -1,10 +1,11 @@
 # WON
 
-Max supply: 1,000,000 WON  
-100% stashed in WON/EASY day 1 (no presale, infinitely liquid)  
-Robin Hoodin': 3% transfer tax (opt-out) — 2.2% reflection + 0.8% to fund ecovillage tokenization team  
-Hold 1.0+ WON to get reflections  
-8 WON in pool to send reflections
+| | |
+| --- | --- |
+| **Max supply** | 1,000,000 WON |
+| **Day-one** | 100% in WON/EASY (no presale) |
+| **Transfer tax** | 3% (2.2% reflection + 0.8% team) |
+| **Earn threshold** | Hold 1.0+ · 8 WON in pool to pay |
 
 ## Step into Paradise
 

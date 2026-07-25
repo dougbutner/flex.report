@@ -1,6 +1,14 @@
-# EASY (contract: mon3y)
+# EASY (contract: [`mon3y`](https://explorer.xprnetwork.org/account/mon3y))
 
 Reflexive EOSIO token with flexible swap targets and configurable burn.
+
+```mermaid
+flowchart LR
+  T[transfer] --> Pool[reflection_pool]
+  Pool --> D[distribute]
+  D --> W[Holders]
+  T -.->|Col memo from swap.alcor| R[reflections]
+```
 
 ## Contract Surface (actions)
 

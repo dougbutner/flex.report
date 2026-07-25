@@ -10,6 +10,12 @@ Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT*
 
 ## How to read
 
+```mermaid
+flowchart LR
+  Sell[Sell stable] --> Easy[EASY pool]
+  Easy --> Buy[Buy stable]
+```
+
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.
 - **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage — always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.

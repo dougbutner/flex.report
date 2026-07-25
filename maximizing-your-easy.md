@@ -2,7 +2,18 @@
 
 ## Track pending rewards
 
-Look at the balance of EASY on `mon3y`, WON on `w3won`, or GRAMS on `gold.mon3y`.
+Look at the balance of EASY on [`mon3y`](https://explorer.xprnetwork.org/account/mon3y), WON on [`w3won`](https://explorer.xprnetwork.org/account/w3won), or GRAMS on [`gold.mon3y`](https://explorer.xprnetwork.org/account/gold.mon3y).
+
+```mermaid
+flowchart TB
+  Hold[Hold Flex token] --> Pool[Tax fills reflection pool]
+  Pool --> Call["Anyone calls distribute / radiate / reflect"]
+  Call --> Pay[Splash to wallets]
+  Hold --> Flex{Reward token}
+  Flex -->|Default| Same[Same token]
+  Flex -->|setflextoken / sprout / interest| Other[Other token via Alcor]
+  Flex -->|WON / GRAMS tree| Heir[Share % to another account]
+```
 
 ## Pay people
 

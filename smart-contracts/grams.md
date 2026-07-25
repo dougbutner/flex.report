@@ -1,4 +1,4 @@
-# GRAMS (contract: gold.mon3y)
+# GRAMS (contract: [`gold.mon3y`](https://explorer.xprnetwork.org/account/gold.mon3y))
 
 Tree-aware reflections + flex pools — same pattern as WON, with gold-themed action names. Minted as GRAMS on XPR.
 
