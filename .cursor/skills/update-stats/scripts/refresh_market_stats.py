@@ -11,6 +11,73 @@ ROOT = Path(__file__).resolve().parents[4]  # flex.report/
 ASSETS = ROOT / "assets"
 UA = {"User-Agent": "Mozilla/5.0 (flex.report update-stats)"}
 
+# Flex family for Tokenomics live tables
+FLEX = [
+    {
+        "sym": "EASY",
+        "code": "mon3y",
+        "scope": "EASY",
+        "alcor": "easy-mon3y",
+        "max_supply": 21_000_000,
+        "reflection": "2%",
+        "burn": "-",
+        "team": "-",
+        "hold": "100+",
+        "pool_min": "1,000 EASY",
+        "tagline": "Take it EASY",
+        # Major backing = these counter-assets only
+        "majors": {
+            "XMD": "xmd.token",
+            "XUSDC": "xtokens",
+            "XPYUSD": "xtokens",
+            "XPAX": "xtokens",
+            "XUSDT": "xtokens",
+        },
+    },
+    {
+        "sym": "WON",
+        "code": "w3won",
+        "scope": "WON",
+        "alcor": "won-w3won",
+        "max_supply": 1_000_000,
+        "reflection": "2.2%",
+        "burn": "-",
+        "team": "0.8%",
+        "hold": "1.0+",
+        "pool_min": "8 WON",
+        "tagline": "We WON",
+        "majors": {"EASY": "mon3y", "XPR": "eosio.token"},
+    },
+    {
+        "sym": "MEME",
+        "code": "m3m3",
+        "scope": "MEME",
+        "alcor": "meme-m3m3",
+        "max_supply": 10_000_000_000_000,
+        "reflection": "1%",
+        "burn": "1%",
+        "team": "-",
+        "hold": "1M+",
+        "pool_min": "10M MEME",
+        "tagline": "burns + farms",
+        "majors": {"XPR": "eosio.token", "XUSDC": "xtokens", "EASY": "mon3y"},
+    },
+    {
+        "sym": "GRAMS",
+        "code": "gold.mon3y",
+        "scope": "GRAMS",
+        "alcor": "grams-gold.mon3y",
+        "max_supply": 1_000_000_000,
+        "reflection": "1.1%",
+        "burn": "-",
+        "team": "0.11%",
+        "hold": "see contract",
+        "pool_min": "see contract",
+        "tagline": "gold-backed",
+        "majors": {"XPAXG": "xtokens"},
+    },
+]
+
 
 def get(url: str):
     req = urllib.request.Request(url, headers=UA)
@@ -181,7 +248,90 @@ def fetch_stats() -> dict:
             "rest_swap_1w": round(max(alcor_swap_1w - vol7, 0), 2),
             "rest_swap_1m": round(max(alcor_swap_1m - vol30, 0), 2),
         },
+        "flex_family": fetch_flex_family(pools, stable_usd, easy_usd=px),
     }
+
+
+def fetch_flex_family(pools: list, stable_usd: dict, easy_usd: float) -> list[dict]:
+    """Supply + major-token USD backing + reflection pool for each Flex token."""
+    price_cache = dict(stable_usd)
+    price_cache["EASY"] = float(easy_usd or 0)
+    tid_map = {
+        "EASY": "easy-mon3y",
+        "XPR": "xpr-eosio.token",
+        "XPAXG": "xpaxg-xtokens",
+        "XUSDC": "xusdc-xtokens",
+    }
+    for meta in FLEX:
+        for msym in meta["majors"]:
+            if price_cache.get(msym):
+                continue
+            tid = tid_map.get(msym)
+            if not tid:
+                price_cache[msym] = 0.0
+                continue
+            try:
+                t = get(f"https://proton.alcor.exchange/api/v2/tokens/{tid}")
+                price_cache[msym] = float(t.get("usd_price") or 0)
+            except Exception:
+                price_cache[msym] = 0.0
+
+    out = []
+    for meta in FLEX:
+        sym, code = meta["sym"], meta["code"]
+        try:
+            tok = get(f"https://proton.alcor.exchange/api/v2/tokens/{meta['alcor']}")
+            px = float(tok.get("usd_price") or 0)
+        except Exception:
+            px = float(price_cache.get(sym) or 0)
+        if px:
+            price_cache[sym] = px
+        try:
+            stat = post(
+                "https://api.protonnz.com/v1/chain/get_table_rows",
+                {"code": code, "scope": meta["scope"], "table": "stat", "json": True, "limit": 1},
+            )["rows"][0]
+            supply = float(str(stat.get("supply", "0")).split()[0])
+            max_s = float(str(stat.get("max_supply", str(meta["max_supply"]))).split()[0])
+            refl = float(str(stat.get("reflection_pool", "0")).split()[0])
+        except Exception:
+            supply, max_s, refl = meta["max_supply"], meta["max_supply"], 0.0
+
+        by_major = {m: 0.0 for m in meta["majors"]}
+        backing = 0.0
+        for p in pools:
+            a, b = p.get("tokenA", {}), p.get("tokenB", {})
+            hit_a = a.get("symbol") == sym and a.get("contract") == code
+            hit_b = b.get("symbol") == sym and b.get("contract") == code
+            if not (hit_a or hit_b):
+                continue
+            other = b if hit_a else a
+            osym, ocon = other.get("symbol"), other.get("contract")
+            if osym not in meta["majors"] or meta["majors"][osym] != ocon:
+                continue
+            qty = float(other.get("quantity") or 0)
+            side = qty * float(price_cache.get(osym) or 0)
+            by_major[osym] += side
+            backing += side
+
+        out.append(
+            {
+                "sym": sym,
+                "price_usd": round(px, 6),
+                "supply": supply,
+                "max_supply": max_s,
+                "reflection_pool": round(refl, 6),
+                "usd_backing": round(backing, 2),
+                "usd_backing_by_major": {k: round(v, 2) for k, v in by_major.items()},
+                "reflection": meta["reflection"],
+                "burn": meta["burn"],
+                "team": meta["team"],
+                "hold": meta["hold"],
+                "pool_min": meta["pool_min"],
+                "tagline": meta["tagline"],
+            }
+        )
+    return out
 
 
 def write_charts(stats: dict) -> None:
@@ -366,19 +516,72 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | How it pays | Anyone calls `distribute` → splash to flexers |
 
 Track a real bag over time on [Success in Community](our-story/success-in-community.md) (`thelake`).
-
-## Supply
-
-| | |
-| --- | --- |
-| Max / issued | {e['max_supply']:,.0f} EASY |
-| Circulating in pools + wallets | {e['supply']:,.0f} (100% minted day one into liquidity) |
-
----
-
-*Numbers drift every block. Say **update stats** in Cursor to refresh this page from Alcor + chain.*
 """
     (ROOT / "market-stats.md").write_text(md)
+
+
+def write_tokenomics_live(stats: dict) -> None:
+    """Replace the live Flex tables block inside tokenomics.md."""
+    path = ROOT / "tokenomics.md"
+    text = path.read_text()
+    start = "<!-- LIVE:FLEX-TOKENOMICS -->"
+    end = "<!-- /LIVE:FLEX-TOKENOMICS -->"
+    if start not in text or end not in text:
+        raise SystemExit("tokenomics.md missing LIVE:FLEX-TOKENOMICS markers")
+
+    fam = stats.get("flex_family") or []
+    updated = stats["updated"]
+    supply_rows = []
+    fee_rows = []
+    backing_rows = []
+    for t in fam:
+        supply_rows.append(
+            f"| **{t['sym']}** | {t['supply']:,.0f} | {t['max_supply']:,.0f} | ${t['price_usd']:.6f} | "
+            f"{t['reflection_pool']:,.4f} {t['sym']} |"
+        )
+        fee_rows.append(
+            f"| **{t['sym']}** | {t['reflection']} | {t['burn']} | {t['team']} | {t['hold']} | {t['pool_min']} | {t['tagline']} |"
+        )
+        majors = ", ".join(
+            f"{k} {money(v)}" for k, v in t["usd_backing_by_major"].items() if v > 0
+        ) or "-"
+        backing_rows.append(
+            f"| **{t['sym']}** | **{money(t['usd_backing'])}** | {majors} |"
+        )
+
+    block = f"""{start}
+*Live snapshot: **{updated}** · Alcor + chain `stat` tables*
+
+### Supply (all Flex tokens)
+
+| Token | Supply | Max | Price (USD) | Reflection pool |
+| --- | ---: | ---: | ---: | ---: |
+{chr(10).join(supply_rows)}
+
+### Fee rates
+
+| Token | Reflection | Burn | Team | Hold to earn | Pool to pay | Tagline |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+{chr(10).join(fee_rows)}
+
+### Major-token USD backing (live)
+
+USD value of **major** counter-assets sitting in each token’s Alcor pools (not full Alcor `tvlUSD`).
+
+| Token | Total major backing | Breakdown |
+| --- | ---: | --- |
+{chr(10).join(backing_rows)}
+
+- **EASY majors:** XMD · XUSDC · XPYUSD · XPAX · XUSDT  
+- **WON majors:** EASY · XPR  
+- **MEME majors:** XPR · XUSDC · EASY  
+- **GRAMS majors:** XPAXG  
+
+{end}"""
+
+    before, rest = text.split(start, 1)
+    _, after = rest.split(end, 1)
+    path.write_text(before + block + after)
 
 
 def main() -> None:
@@ -386,6 +589,7 @@ def main() -> None:
     (ROOT / "market-stats.json").write_text(json.dumps(stats, indent=2) + "\n")
     write_charts(stats)
     write_markdown(stats)
+    write_tokenomics_live(stats)
     print(f"updated {stats['updated']}")
     print(f"EASY 24h vol {stats['easy']['volume_usd_24h']} · Alcor swap 1D {stats['alcor_proton']['swap_volume_usd_1d']}")
 

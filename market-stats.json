@@ -1,145 +1,222 @@
 {
-  "updated": "2026-07-25 09:19 UTC",
+  "updated": "2026-07-25 21:32 UTC",
   "easy": {
-    "price_usd": 0.016235,
-    "price_xusdc": 0.016526,
-    "price_xpr": 6.481,
-    "usd_backing": 58820.72,
+    "price_usd": 0.016271,
+    "price_xusdc": 0.016638,
+    "price_xpr": 6.4614,
+    "usd_backing": 59376.42,
     "usd_backing_by_stable": {
-      "XMD": 11927.06,
-      "XUSDC": 12169.76,
-      "XPYUSD": 11450.26,
-      "XPAX": 11494.96,
-      "XUSDT": 11778.69
+      "XMD": 12069.96,
+      "XUSDC": 12353.83,
+      "XPYUSD": 11476.78,
+      "XPAX": 11576.94,
+      "XUSDT": 11898.91
     },
-    "volume_usd_24h": 15502.59,
-    "volume_usd_7d": 114801.54,
-    "volume_usd_30d": 393903.99,
+    "volume_usd_24h": 4123.76,
+    "volume_usd_7d": 108623.32,
+    "volume_usd_30d": 388938.91,
     "pools": 100,
     "supply": 21000000.0,
     "max_supply": 21000000,
-    "reflection_pool_easy": 954.530155,
-    "reflection_pool_usd": 15.5,
-    "flexers": 888,
-    "mcap_usd": 340940.43,
-    "share_of_alcor_swap_24h_pct": 33.53,
-    "share_of_alcor_swap_7d_pct": 39.57,
-    "share_of_alcor_swap_30d_pct": 28.83,
+    "reflection_pool_easy": 1322.433752,
+    "reflection_pool_usd": 21.52,
+    "flexers": 892,
+    "mcap_usd": 341698.77,
+    "share_of_alcor_swap_24h_pct": 16.6,
+    "share_of_alcor_swap_7d_pct": 40.22,
+    "share_of_alcor_swap_30d_pct": 29.08,
     "top_pools": [
       {
         "id": 4067,
         "pair": "EASY/XMD",
-        "vol24": 6581.248958953333,
-        "vol7": 34882.014397025756,
-        "vol30": 91910.80142680656,
-        "tvl": 64998.36810947,
-        "change24": -0.35
+        "vol24": 1030.0927765095503,
+        "vol7": 33214.30891232707,
+        "vol30": 91111.72967937465,
+        "tvl": 65032.94718486,
+        "change24": 0.37
       },
       {
         "id": 4065,
         "pair": "EASY/XUSDC",
-        "vol24": 2798.205755200396,
-        "vol7": 26603.734763394015,
-        "vol30": 106624.7138491473,
-        "tvl": 65039.07457334,
-        "change24": -0.37
-      },
-      {
-        "id": 5837,
-        "pair": "EASY/XXRP",
-        "vol24": 2088.5522965323867,
-        "vol7": 9127.267476969091,
-        "vol30": 36152.192985402806,
-        "tvl": 13875.0171359,
-        "change24": 0.68
-      },
-      {
-        "id": 4066,
-        "pair": "EASY/XUSDT",
-        "vol24": 1270.2653440740105,
-        "vol7": 11970.687948933706,
-        "vol30": 30591.020921001123,
-        "tvl": 64813.51538527,
-        "change24": -0.29
+        "vol24": 977.5921173899966,
+        "vol7": 25530.285621116764,
+        "vol30": 104590.83616614572,
+        "tvl": 65154.06727766,
+        "change24": 0.28
       },
       {
         "id": 4512,
         "pair": "EASY/XPR",
-        "vol24": 1011.8502820916508,
-        "vol7": 20326.996057021417,
-        "vol30": 76896.45565745275,
-        "tvl": 23447.21995089,
-        "change24": -0.17
-      },
-      {
-        "id": 5926,
-        "pair": "EASY/METAL",
-        "vol24": 547.7223519461932,
-        "vol7": 2558.446682517187,
-        "vol30": 16841.50845999006,
-        "tvl": 8857.97824949,
-        "change24": -0.18
-      },
-      {
-        "id": 6986,
-        "pair": "EASY/SNIPS",
-        "vol24": 494.73097544934006,
-        "vol7": 890.1584901638347,
-        "vol30": 5736.028274120957,
-        "tvl": 5255.55843003,
-        "change24": 0.52
+        "vol24": 873.2943918343373,
+        "vol7": 17949.07156008597,
+        "vol30": 76255.9399228028,
+        "tvl": 23540.35656092,
+        "change24": 0.15
       },
       {
         "id": 6048,
         "pair": "EASY/XSOL",
-        "vol24": 240.41421032425038,
-        "vol7": 614.8359370636092,
-        "vol30": 1985.5356910270887,
+        "vol24": 234.84568550639003,
+        "vol7": 791.8134241979883,
+        "vol30": 2144.245702730663,
         "tvl": 0.0,
-        "change24": 0.8
+        "change24": 1.62
+      },
+      {
+        "id": 5926,
+        "pair": "EASY/METAL",
+        "vol24": 208.17705305457767,
+        "vol7": 2561.6500685999526,
+        "vol30": 16454.082201295194,
+        "tvl": 8917.16455108,
+        "change24": 0.12
+      },
+      {
+        "id": 4066,
+        "pair": "EASY/XUSDT",
+        "vol24": 197.04942990145204,
+        "vol7": 11221.626251994516,
+        "vol30": 30410.49983311706,
+        "tvl": 64923.30259854,
+        "change24": 0.22
+      },
+      {
+        "id": 5837,
+        "pair": "EASY/XXRP",
+        "vol24": 179.0985808267335,
+        "vol7": 9071.585620853548,
+        "vol30": 35514.88800195338,
+        "tvl": 13921.48424075,
+        "change24": -0.02
       },
       {
         "id": 6045,
         "pair": "EASY/XHBAR",
-        "vol24": 198.67729870711906,
-        "vol7": 1037.6943701307978,
-        "vol30": 1230.6802421142518,
-        "tvl": 572.87202197,
-        "change24": 0.38
+        "vol24": 109.28149229042288,
+        "vol7": 1039.7052530268434,
+        "vol30": 1232.5613479491117,
+        "tvl": 568.97985768,
+        "change24": 0.35
       },
       {
-        "id": 7161,
-        "pair": "EASY/XBTC",
-        "vol24": 127.7918941072362,
-        "vol7": 827.9392261352355,
-        "vol30": 3107.2925787767485,
-        "tvl": 3292.6990519,
-        "change24": 0.36
+        "id": 7191,
+        "pair": "EASY/XDOGE",
+        "vol24": 53.86226614608789,
+        "vol7": 54.83586621203063,
+        "vol30": 179.08392603276627,
+        "tvl": 353.59670761,
+        "change24": -1.53
+      },
+      {
+        "id": 6986,
+        "pair": "EASY/SNIPS",
+        "vol24": 50.69621613286615,
+        "vol7": 805.8342633157595,
+        "vol30": 5767.366400856866,
+        "tvl": 5264.43338521,
+        "change24": -0.27
       }
     ]
   },
   "alcor_proton": {
-    "tvl_usd": 1000924.39,
-    "swap_tvl_usd": 882138.64,
-    "volume_usd_1d": 47094.02,
-    "swap_volume_usd_1d": 46241.25,
-    "spot_volume_usd_1d": 852.77,
-    "volume_usd_1w": 305596.99,
-    "swap_volume_usd_1w": 290132.39,
-    "spot_volume_usd_1w": 15464.6,
-    "volume_usd_1m": 1407356.41,
-    "swap_volume_usd_1m": 1366433.55,
-    "spot_volume_usd_1m": 40922.86,
-    "swap_fees_1d": 228.32,
-    "swap_fees_1w": 1460.86,
-    "swap_fees_1m": 7522.75,
-    "dau_1d": 78.3,
-    "dau_1w": 81.2,
+    "tvl_usd": 1012793.39,
+    "swap_tvl_usd": 891084.54,
+    "volume_usd_1d": 27535.35,
+    "swap_volume_usd_1d": 24838.63,
+    "spot_volume_usd_1d": 2696.72,
+    "volume_usd_1w": 286720.59,
+    "swap_volume_usd_1w": 270046.47,
+    "spot_volume_usd_1w": 16674.13,
+    "volume_usd_1m": 1380306.28,
+    "swap_volume_usd_1m": 1337568.77,
+    "spot_volume_usd_1m": 42737.51,
+    "swap_fees_1d": 131.23,
+    "swap_fees_1w": 1352.53,
+    "swap_fees_1m": 7299.58,
+    "dau_1d": 77.6,
+    "dau_1w": 80.3,
     "dau_1m": 77.3,
-    "pools": 11124,
-    "spot_pairs": 1601,
-    "rest_swap_1d": 30738.67,
-    "rest_swap_1w": 175330.85,
-    "rest_swap_1m": 972529.56
-  }
+    "pools": 11142,
+    "spot_pairs": 1602,
+    "rest_swap_1d": 20714.87,
+    "rest_swap_1w": 161423.15,
+    "rest_swap_1m": 948629.86
+  },
+  "flex_family": [
+    {
+      "sym": "EASY",
+      "price_usd": 0.016271,
+      "supply": 21000000.0,
+      "max_supply": 21000000.0,
+      "reflection_pool": 1322.433752,
+      "usd_backing": 59376.42,
+      "usd_backing_by_major": {
+        "XMD": 12069.96,
+        "XUSDC": 12353.83,
+        "XPYUSD": 11476.78,
+        "XPAX": 11576.94,
+        "XUSDT": 11898.91
+      },
+      "reflection": "2%",
+      "burn": "-",
+      "team": "-",
+      "hold": "100+",
+      "pool_min": "1,000 EASY",
+      "tagline": "Take it EASY"
+    },
+    {
+      "sym": "WON",
+      "price_usd": 1.628887,
+      "supply": 1000000.0,
+      "max_supply": 1000000.0,
+      "reflection_pool": 6.88441,
+      "usd_backing": 1536.97,
+      "usd_backing_by_major": {
+        "EASY": 1446.25,
+        "XPR": 90.72
+      },
+      "reflection": "2.2%",
+      "burn": "-",
+      "team": "0.8%",
+      "hold": "1.0+",
+      "pool_min": "8 WON",
+      "tagline": "We WON"
+    },
+    {
+      "sym": "MEME",
+      "price_usd": 0.0,
+      "supply": 9986257831742.994,
+      "max_supply": 10000000000000.0,
+      "reflection_pool": 53291849.6836,
+      "usd_backing": 1269.18,
+      "usd_backing_by_major": {
+        "XPR": 328.48,
+        "XUSDC": 272.53,
+        "EASY": 668.16
+      },
+      "reflection": "1%",
+      "burn": "1%",
+      "team": "-",
+      "hold": "1M+",
+      "pool_min": "10M MEME",
+      "tagline": "burns + farms"
+    },
+    {
+      "sym": "GRAMS",
+      "price_usd": 132.562443,
+      "supply": 1000000000.0,
+      "max_supply": 1000000000.0,
+      "reflection_pool": 0.081785,
+      "usd_backing": 1160.34,
+      "usd_backing_by_major": {
+        "XPAXG": 1160.34
+      },
+      "reflection": "1.1%",
+      "burn": "-",
+      "team": "0.11%",
+      "hold": "see contract",
+      "pool_min": "see contract",
+      "tagline": "gold-backed"
+    }
+  ]
 }

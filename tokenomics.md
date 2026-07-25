@@ -1,17 +1,19 @@
-# Tokenomics of EASY
+# Tokenomics
 
 Take it EASY 👄 💰 You have EASY 👄 → You are given more EASY.
 
-Get a Wallet | [Buy EASY](https://alcor.exchange/v/xpr/swap) | [Analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | [Telegram](https://t.me/flextokens)
+Get a Wallet | [Buy EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y) | [Analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | [Telegram](https://t.me/flextokens)
 
-## Brief
+## EASY (focus)
 
 | | |
 | --- | --- |
-| **Max supply** | 21M EASY |
+| **Max supply** | 21M EASY (100% minted day one into liquidity) |
 | **Day-one placement** | 100% in stablecoin pools (no presale) |
-| **Transfer tax** | 2% (opt-out) |
+| **Transfer tax** | 2% reflection (opt-out) |
 | **Earn threshold** | Hold 100+ EASY · 1,000 EASY in pool to pay |
+| **Payout smoothing** | Each `distribute` pays **61.8%** of each flexer’s pro-rata share (Fibonacci smoothing); the rest stays in the pool for later rounds |
+| **Protocol fee** | **0.3%** of/from the reflection pool per payout action ([Legal & Terms](legal-and-terms.md)) |
 | **Bridges** | Solana, Base, Optimism, BSC |
 
 ## Infinitely Liquid
@@ -60,3 +62,46 @@ flowchart LR
 | **Total** | **21,000,000** |
 
 Live depth and volume: [Market Stats](market-stats.md) · Buyback rhythm: [Celestial Buybacks](celestial-buybacks.md).
+
+## Flex family (all tokens)
+
+<!-- LIVE:FLEX-TOKENOMICS -->
+*Live snapshot: **2026-07-25 21:32 UTC** · Alcor + chain `stat` tables*
+
+### Supply (all Flex tokens)
+
+| Token | Supply | Max | Price (USD) | Reflection pool |
+| --- | ---: | ---: | ---: | ---: |
+| **EASY** | 21,000,000 | 21,000,000 | $0.016271 | 1,322.4338 EASY |
+| **WON** | 1,000,000 | 1,000,000 | $1.628887 | 6.8844 WON |
+| **MEME** | 9,986,257,831,743 | 10,000,000,000,000 | $0.000000 | 53,291,849.6836 MEME |
+| **GRAMS** | 1,000,000,000 | 1,000,000,000 | $132.562443 | 0.0818 GRAMS |
+
+### Fee rates
+
+| Token | Reflection | Burn | Team | Hold to earn | Pool to pay | Tagline |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| **EASY** | 2% | - | - | 100+ | 1,000 EASY | Take it EASY |
+| **WON** | 2.2% | - | 0.8% | 1.0+ | 8 WON | We WON |
+| **MEME** | 1% | 1% | - | 1M+ | 10M MEME | burns + farms |
+| **GRAMS** | 1.1% | - | 0.11% | see contract | see contract | gold-backed |
+
+### Major-token USD backing (live)
+
+USD value of **major** counter-assets sitting in each token’s Alcor pools (not full Alcor `tvlUSD`).
+
+| Token | Total major backing | Breakdown |
+| --- | ---: | --- |
+| **EASY** | **$59,376** | XMD $12,070, XUSDC $12,354, XPYUSD $11,477, XPAX $11,577, XUSDT $11,899 |
+| **WON** | **$1,537** | EASY $1,446, XPR $90.72 |
+| **MEME** | **$1,269** | XPR $328.48, XUSDC $272.53, EASY $668.16 |
+| **GRAMS** | **$1,160** | XPAXG $1,160 |
+
+- **EASY majors:** XMD · XUSDC · XPYUSD · XPAX · XUSDT  
+- **WON majors:** EASY · XPR  
+- **MEME majors:** XPR · XUSDC · EASY  
+- **GRAMS majors:** XPAXG  
+
+<!-- /LIVE:FLEX-TOKENOMICS -->
+
+Each may have additional farming rewards. EASY alone has a protocol fee path that funds Flex volunteer work and infrastructure (see [Legal & Terms](legal-and-terms.md)).

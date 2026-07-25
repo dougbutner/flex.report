@@ -32,16 +32,9 @@ flowchart TB
 
 Protocol fees (separate from the transfer tax above) are explained in [Legal & Terms](legal-and-terms.md).
 
-## Fee rates
+Fee rates, supplies, and live major-token backing for **EASY · WON · MEME · GRAMS** live on [Tokenomics](tokenomics.md).
 
-| Token | Reflection | Burn | Team | Tagline |
-| --- | ---: | ---: | ---: | --- |
-| **EASY** | 2% | - | - | Take it EASY |
-| **WON** | 2.2% | - | 0.8% | We WON |
-| **MEME** | 1% | 1% | - | burns + farms |
-| **GRAMS** | 1.1% | - | 0.11% | gold-backed |
-
-Each may have additional farming rewards. EASY alone has a protocol fee path that funds Flex volunteer work and infrastructure (see [Legal & Terms](legal-and-terms.md)).
+Each `distribute` on EASY pays **61.8%** of a flexer’s pro-rata share from the reflection pool (Fibonacci smoothing); the rest stays in the pool for later rounds.
 
 ## Take it EASY
 

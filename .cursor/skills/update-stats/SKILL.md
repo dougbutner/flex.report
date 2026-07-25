@@ -32,6 +32,7 @@ Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if
 - `market-stats.json`
 - `assets/market-easy-pools-24h.png`
 - `assets/market-easy-share.png` (EASY share donut + same-window EASY vs rest of Alcor)
+- `tokenomics.md` live Flex family tables (supply / fees / major-token USD backing)
 
 **Arbitrage**
 - `arbitrage.md`
