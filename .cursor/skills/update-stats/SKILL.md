@@ -1,37 +1,46 @@
 ---
 name: update-stats
 description: >-
-  Refresh Flex Report market stats from XPR Alcor APIs and on-chain mon3y
-  tables. Use when the user says "update stats", "refresh stats", "update
-  market stats", or asks to pull latest EASY/Alcor volume, TVL, price, or
-  reflection pool numbers into the docs.
+  Refresh Flex Report market stats and stablecoin arbitrage matrices from XPR
+  Alcor APIs and on-chain mon3y tables. Use when the user says "update stats",
+  "refresh stats", "update market stats", "update arbitrage", or asks to pull
+  latest EASY/Alcor volume, TVL, price, reflection pool, or XMD/XUSDC/XPYUSD/XPAX/XUSDT
+  cross-rates into the docs.
 ---
 
 # Update Stats
 
 ## When
 
-User says **update stats** (or refresh/update market stats).
+User says **update stats** (or refresh/update market stats / arbitrage).
 
 ## Do this
 
-1. Run the refresh script from the repo root:
+1. From the repo root, run both refresh scripts:
 
 ```bash
 python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
+python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
 ```
 
 Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if missing).
 
 2. Confirm these files changed:
-   - `market-stats.md` (published GitBook page)
-   - `market-stats.json` (machine snapshot)
-   - `assets/market-easy-pools-24h.png`
-   - `assets/market-volume-context.png`
+
+**Market stats**
+- `market-stats.md`
+- `market-stats.json`
+- `assets/market-easy-pools-24h.png`
+- `assets/market-volume-context.png`
+
+**Arbitrage**
+- `arbitrage.md`
+- `arbitrage.json`
+- `assets/arbitrage-heatmap.png`
 
 3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts — that is a separate path (see below). Do **not** rewrite founder/legal content.
 
-4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, updated timestamp.
+4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb bps (best sell→buy leg), updated timestamp.
 
 ## Data sources (Alcor / XPR)
 
@@ -47,6 +56,7 @@ Docs: https://api.alcor.exchange/ and https://docs.alcor.exchange/developers-api
 | Daily pool charts | `GET .../swap/charts?tokenA=easy-mon3y&tokenB=xusdc-xtokens` | Optional; used for longer price/volume series |
 | Reflection pool | RPC `get_table_rows` `code=mon3y` `scope=EASY` `table=stat` | `reflection_pool` asset |
 | Flexer count | RPC page `flexers` table `code=mon3y` `scope=mon3y` | Count rows |
+| Stable arb matrix | Same `.../swap/pools` | Stables: XMD@`xmd.token`, XUSDC/XPYUSD/XPAX/XUSDT@`xtokens`. Prefer deepest EASY↔stable pool per asset; `easy_per_stable` from pool `priceB` when tokenA is EASY. Cross rate sell→buy = easy_per_sell / easy_per_buy. Also list best direct stable↔stable pools by TVL. |
 
 RPC: `https://api.protonnz.com/v1/chain/...` (fallback `https://proton.greymass.com`).
 
@@ -57,6 +67,21 @@ RPC: `https://api.protonnz.com/v1/chain/...` (fallback `https://proton.greymass.
 **Share of Alcor** = EASY 24h volume / `swapTradingVolume` from `analytics/global?resolution=1D`.
 
 Do not use spot `markets` volume for EASY — liquidity is almost entirely AMM/swap.
+
+## Arbitrage page rules
+
+Keep `arbitrage.md` structure:
+
+1. Dated snapshot header (UTC)
+2. How to read (sell rows / buy cols)
+3. 5×5 rate matrix via EASY
+4. Same matrix in bps vs 1.0
+5. Heatmap PNG
+6. Standout legs
+7. EASY pool anchors + Alcor `usd_price` row
+8. Direct stable↔stable pools table
+
+Coins (fixed order): **XMD, XUSDC, XPYUSD, XPAX, XUSDT** (treat “XUSDX” as XUSDT).
 
 ## Page layout rules (ime.money-inspired)
 

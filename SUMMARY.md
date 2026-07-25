@@ -5,6 +5,7 @@
 * [Start Here](start-here.md)
 * [Tokenomics of EASY](tokenomics.md)
 * [Market Stats](market-stats.md)
+* [Stablecoin Arbitrage](arbitrage.md)
 * [Our Story](our-story/README.md)
   * [Founder Story](our-story/founder-story.md)
   * [Success in Community](our-story/success-in-community.md)

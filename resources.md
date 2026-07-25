@@ -5,6 +5,7 @@
 - [proton.alcor.exchange](https://proton.alcor.exchange)
 - Farms on [proton.alcor.exchange/farm](https://proton.alcor.exchange/farm)
 - Live numbers: [Market Stats](market-stats.md)
+- Stable cross-rates: [Stablecoin Arbitrage](arbitrage.md)
 - Alcor API docs: [api.alcor.exchange](https://api.alcor.exchange/)
 
 **Take it EASY** ✨
