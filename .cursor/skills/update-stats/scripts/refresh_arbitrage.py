@@ -89,12 +89,12 @@ def fmt_rate(x: float | None) -> str:
     return f"{x:.6f}"
 
 
-def fmt_bps(x: float | None) -> str:
+def fmt_pct(x: float | None) -> str:
     if x is None:
         return "-"
-    bps = (x - 1.0) * 10_000
-    sign = "+" if bps >= 0 else ""
-    return f"{sign}{bps:.1f}"
+    pct = (x - 1.0) * 100
+    sign = "+" if pct >= 0 else ""
+    return f"{sign}{pct:.2f}"
 
 
 def write_heatmap(matrix: list[list[float | None]], updated: str) -> None:
@@ -103,31 +103,44 @@ def write_heatmap(matrix: list[list[float | None]], updated: str) -> None:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     import numpy as np
+    from matplotlib import colors as mcolors
 
     ASSETS.mkdir(exist_ok=True)
     data = np.array(
-        [[(v - 1.0) * 10_000 if v is not None else np.nan for v in row] for row in matrix],
+        [[(v - 1.0) * 100 if v is not None else np.nan for v in row] for row in matrix],
         dtype=float,
     )
     fig, ax = plt.subplots(figsize=(8.5, 7), dpi=150)
     fig.patch.set_facecolor("#1a1a1c")
     ax.set_facecolor("#212121")
-    im = ax.imshow(data, cmap="RdYlGn", vmin=-150, vmax=150)
+    # Symmetric scale in percent (not basis points)
+    lim = float(np.nanmax(np.abs(data))) if np.isfinite(data).any() else 8.0
+    lim = max(lim, 1.0)
+    im = ax.imshow(data, cmap="RdYlGn", vmin=-lim, vmax=lim)
     ax.set_xticks(range(len(SYMBOLS)))
     ax.set_yticks(range(len(SYMBOLS)))
     ax.set_xticklabels(SYMBOLS, color="#f2f2f2")
     ax.set_yticklabels(SYMBOLS, color="#f2f2f2")
     ax.set_xlabel("Buy →", color="#9a9a9a")
     ax.set_ylabel("Sell ↓", color="#9a9a9a")
-    ax.set_title("Cross-rate vs 1.000 (bps) via EASY pools", color="#f2f2f2", loc="left")
+    ax.set_title("Cross-rate vs 1.000 (+/- percent) via EASY pools", color="#f2f2f2", loc="left")
+    norm = mcolors.Normalize(vmin=-lim, vmax=lim)
+    cmap = plt.get_cmap("RdYlGn")
     for i in range(len(SYMBOLS)):
         for j in range(len(SYMBOLS)):
             v = matrix[i][j]
             if v is None:
                 continue
-            ax.text(j, i, f"{(v-1)*10000:+.0f}" if i != j else "0", ha="center", va="center", color="#111", fontsize=9)
+            pct = (v - 1.0) * 100
+            # No % sign in cells; label/colorbar carry the unit
+            label = "0" if i == j else f"{pct:+.1f}"
+            rgba = cmap(norm(pct if i != j else 0.0))
+            # Relative luminance → dark text on light cells, light text on dark
+            lum = 0.299 * rgba[0] + 0.587 * rgba[1] + 0.114 * rgba[2]
+            text_color = "#111111" if lum > 0.55 else "#f7f7f7"
+            ax.text(j, i, label, ha="center", va="center", color=text_color, fontsize=10, fontweight="bold")
     cbar = fig.colorbar(im, ax=ax, fraction=0.046)
-    cbar.set_label("bps vs peg parity", color="#9a9a9a")
+    cbar.set_label("+/- percent vs peg parity", color="#9a9a9a")
     cbar.ax.yaxis.set_tick_params(color="#9a9a9a")
     plt.setp(cbar.ax.yaxis.get_ticklabels(), color="#9a9a9a")
     fig.text(0.99, 0.02, f"Alcor Proton · {updated}", ha="right", color="#9a9a9a", fontsize=8)
@@ -142,13 +155,13 @@ def write_markdown(payload: dict) -> None:
     header = "| Sell ↓ \\ Buy → | " + " | ".join(SYMBOLS) + " |"
     sep = "| --- | " + " | ".join(["---:"] * len(SYMBOLS)) + " |"
     rate_rows = []
-    bps_rows = []
+    pct_rows = []
     for i, sell in enumerate(SYMBOLS):
         rate_rows.append(
             f"| **{sell}** | " + " | ".join(fmt_rate(e["matrix"][i][j]) for j in range(len(SYMBOLS))) + " |"
         )
-        bps_rows.append(
-            f"| **{sell}** | " + " | ".join(fmt_bps(e["matrix"][i][j]) for j in range(len(SYMBOLS))) + " |"
+        pct_rows.append(
+            f"| **{sell}** | " + " | ".join(fmt_pct(e["matrix"][i][j]) for j in range(len(SYMBOLS))) + " |"
         )
 
     pool_lines = []
@@ -176,14 +189,14 @@ def write_markdown(payload: dict) -> None:
     top = edges[:5]
     bottom = list(reversed(edges[-5:])) if len(edges) >= 5 else []
     opp_lines = []
-    for bps, sell, buy, r in top:
-        if bps <= 0:
+    for delta, sell, buy, r in top:
+        if delta <= 0:
             continue
-        opp_lines.append(f"- Sell **{sell}** → buy **{buy}**: **{r:.6f}** ({bps*10000:+.1f} bps) via EASY")
-    for bps, sell, buy, r in bottom:
-        if bps >= 0:
+        opp_lines.append(f"- Sell **{sell}** → buy **{buy}**: **{r:.6f}** ({delta*100:+.2f}% vs parity) via EASY")
+    for delta, sell, buy, r in bottom:
+        if delta >= 0:
             continue
-        opp_lines.append(f"- Sell **{sell}** → buy **{buy}**: **{r:.6f}** ({bps*10000:+.1f} bps) via EASY")
+        opp_lines.append(f"- Sell **{sell}** → buy **{buy}**: **{r:.6f}** ({delta*100:+.2f}% vs parity) via EASY")
     if not opp_lines:
         opp_lines = ["- No material dislocation vs 1:1 in this snapshot."]
 
@@ -197,9 +210,9 @@ Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT*
 
 *Snapshot: **{updated}** · Primary path: deepest **EASY**↔stable pools*
 
-## Cross-rate heatmap (bps)
+## Cross-rate heatmap (+/- percent)
 
-![Cross-rate heatmap (bps)](assets/arbitrage-heatmap.png)
+![Cross-rate heatmap (+/- percent vs parity)](assets/arbitrage-heatmap.png)
 
 ## How to read
 
@@ -211,7 +224,7 @@ flowchart LR
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.
-- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage. Always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
+- Heatmap / percent table = distance from 1.0000 (parity) as **+/- percent** (green when you receive more than 1.0 of a same-peg asset after fees/slippage). Always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
 
 Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts. Prefer routing that stays inside `swap.alcor` memos when possible.
 
@@ -221,11 +234,11 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 {sep}
 {chr(10).join(rate_rows)}
 
-### Same matrix in basis points vs 1.000
+### Same matrix as +/- percent vs 1.000
 
 {header}
 {sep}
-{chr(10).join(bps_rows)}
+{chr(10).join(pct_rows)}
 
 ## Standout legs (this snapshot)
 

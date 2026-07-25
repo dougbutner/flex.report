@@ -2,7 +2,7 @@
 
 * [EASY Onboarding](README.md)
 * [Why EASY](why-easy.md)
-* [Start Here](start-here.md)
+* [How it works](how-it-works.md)
 * [Tokenomics of EASY](tokenomics.md)
 * [Celestial Buybacks](celestial-buybacks.md)
 * [Market Stats](market-stats.md)

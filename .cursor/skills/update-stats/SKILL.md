@@ -40,7 +40,7 @@ Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if
 
 3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts (that is a separate path) (see below). Do **not** rewrite founder/legal content.
 
-4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb bps (best sell→buy leg), updated timestamp.
+4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb +/- % (best sell→buy leg), updated timestamp.
 
 ## Alcor links in generated markdown
 
@@ -83,10 +83,10 @@ Do not use spot `markets` volume for EASY: liquidity is almost entirely AMM/swap
 Keep `arbitrage.md` structure:
 
 1. Dated snapshot header (UTC)
-2. Cross-rate heatmap (bps) at the top
+2. Cross-rate heatmap (+/- percent) at the top
 3. How to read (sell rows / buy cols)
 4. 5×5 rate matrix via EASY
-5. Same matrix in bps vs 1.0
+5. Same matrix as +/- percent vs 1.0
 6. Standout legs
 7. EASY pool anchors with **Stable TVL** (non-EASY side only) + Alcor `usd_price` row
 
