@@ -38,6 +38,7 @@ def money(n: float) -> str:
 
 def fetch_stats() -> dict:
     global_1d = get("https://proton.alcor.exchange/api/v2/analytics/global?resolution=1D")
+    global_1w = get("https://proton.alcor.exchange/api/v2/analytics/global?resolution=1W")
     global_1m = get("https://proton.alcor.exchange/api/v2/analytics/global?resolution=1M")
     tok = get("https://proton.alcor.exchange/api/v2/tokens/easy-mon3y")
     pools = get("https://proton.alcor.exchange/api/v2/swap/pools")
@@ -126,7 +127,11 @@ def fetch_stats() -> dict:
     price_xusdc_val = round(price_xusdc[0], 6) if price_xusdc and price_xusdc[0] else round(px, 6)
 
     alcor_swap_1d = float(global_1d["swapTradingVolume"])
-    share = 100 * vol24 / alcor_swap_1d if alcor_swap_1d else 0
+    alcor_swap_1w = float(global_1w["swapTradingVolume"])
+    alcor_swap_1m = float(global_1m["swapTradingVolume"])
+    share_1d = 100 * vol24 / alcor_swap_1d if alcor_swap_1d else 0
+    share_1w = 100 * vol7 / alcor_swap_1w if alcor_swap_1w else 0
+    share_1m = 100 * vol30 / alcor_swap_1m if alcor_swap_1m else 0
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     return {
@@ -147,7 +152,9 @@ def fetch_stats() -> dict:
             "reflection_pool_usd": round(refl_pool * px, 2),
             "flexers": holders,
             "mcap_usd": round(supply * px, 2),
-            "share_of_alcor_swap_24h_pct": round(share, 2),
+            "share_of_alcor_swap_24h_pct": round(share_1d, 2),
+            "share_of_alcor_swap_7d_pct": round(share_1w, 2),
+            "share_of_alcor_swap_30d_pct": round(share_1m, 2),
             "top_pools": easy[:10],
         },
         "alcor_proton": {
@@ -156,15 +163,23 @@ def fetch_stats() -> dict:
             "volume_usd_1d": round(float(global_1d["totalTradingVolume"]), 2),
             "swap_volume_usd_1d": round(alcor_swap_1d, 2),
             "spot_volume_usd_1d": round(float(global_1d["spotTradingVolume"]), 2),
+            "volume_usd_1w": round(float(global_1w["totalTradingVolume"]), 2),
+            "swap_volume_usd_1w": round(alcor_swap_1w, 2),
+            "spot_volume_usd_1w": round(float(global_1w["spotTradingVolume"]), 2),
             "volume_usd_1m": round(float(global_1m["totalTradingVolume"]), 2),
-            "swap_volume_usd_1m": round(float(global_1m["swapTradingVolume"]), 2),
+            "swap_volume_usd_1m": round(alcor_swap_1m, 2),
             "spot_volume_usd_1m": round(float(global_1m["spotTradingVolume"]), 2),
             "swap_fees_1d": round(float(global_1d["swapFees"]), 2),
+            "swap_fees_1w": round(float(global_1w["swapFees"]), 2),
             "swap_fees_1m": round(float(global_1m["swapFees"]), 2),
             "dau_1d": round(float(global_1d["dailyActiveUsers"]), 1),
+            "dau_1w": round(float(global_1w["dailyActiveUsers"]), 1),
             "dau_1m": round(float(global_1m["dailyActiveUsers"]), 1),
             "pools": global_1d["totalLiquidityPools"],
             "spot_pairs": global_1d["totalSpotPairs"],
+            "rest_swap_1d": round(max(alcor_swap_1d - vol24, 0), 2),
+            "rest_swap_1w": round(max(alcor_swap_1w - vol7, 0), 2),
+            "rest_swap_1m": round(max(alcor_swap_1m - vol30, 0), 2),
         },
     }
 
@@ -174,16 +189,16 @@ def write_charts(stats: dict) -> None:
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    import numpy as np
 
     ASSETS.mkdir(exist_ok=True)
-    BG, CARD, GREEN, MUTED, WHITE, BLUE, GOLD = (
+    BG, CARD, GREEN, MUTED, WHITE, BLUE = (
         "#1a1a1c",
         "#212121",
         "#66c167",
         "#9a9a9a",
         "#f2f2f2",
         "#3d8bfd",
-        "#e8c547",
     )
     e, a = stats["easy"], stats["alcor_proton"]
     top = list(reversed(e["top_pools"][:8]))
@@ -207,24 +222,65 @@ def write_charts(stats: dict) -> None:
     fig.savefig(ASSETS / "market-easy-pools-24h.png", facecolor=BG, bbox_inches="tight")
     plt.close()
 
-    fig, ax = plt.subplots(figsize=(8, 4.5), dpi=150)
-    ax.set_facecolor(CARD)
+    # Meaningful context: EASY share of Alcor (donut) + same-window EASY vs rest (grouped bars)
+    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(11, 4.8), dpi=150, gridspec_kw={"width_ratios": [1, 1.25]})
     fig.patch.set_facecolor(BG)
-    ax.bar(
-        ["EASY pools\n24h", "Alcor Proton\nswap 1D", "Alcor Proton\nswap 1M"],
-        [e["volume_usd_24h"], a["swap_volume_usd_1d"], a["swap_volume_usd_1m"]],
-        color=[GREEN, BLUE, GOLD],
+    for ax in (ax0, ax1):
+        ax.set_facecolor(CARD)
+
+    easy_24 = e["volume_usd_24h"]
+    rest_24 = a["rest_swap_1d"]
+    share = e["share_of_alcor_swap_24h_pct"]
+    wedges, texts, autotexts = ax0.pie(
+        [easy_24, rest_24],
+        labels=["EASY pools", "Rest of Alcor swap"],
+        colors=[GREEN, BLUE],
+        autopct=lambda p: f"{p:.0f}%",
+        startangle=90,
+        textprops={"color": WHITE, "fontsize": 9},
+        wedgeprops={"width": 0.42, "edgecolor": BG},
     )
-    ax.set_title("Volume context (USD)", color=WHITE, loc="left")
-    ax.tick_params(colors=MUTED)
-    for s in ax.spines.values():
+    for t in autotexts:
+        t.set_color("#111")
+        t.set_fontweight("bold")
+    ax0.set_title(f"Alcor Proton swap · 24h\nEASY share {share:.1f}%", color=WHITE, fontsize=11, loc="left")
+
+    windows = ["24h", "7d", "30d"]
+    easy_vals = [e["volume_usd_24h"], e["volume_usd_7d"], e["volume_usd_30d"]]
+    rest_vals = [a["rest_swap_1d"], a["rest_swap_1w"], a["rest_swap_1m"]]
+    shares = [
+        e["share_of_alcor_swap_24h_pct"],
+        e["share_of_alcor_swap_7d_pct"],
+        e["share_of_alcor_swap_30d_pct"],
+    ]
+    x = np.arange(len(windows))
+    w = 0.36
+    ax1.bar(x - w / 2, easy_vals, w, label="EASY pools", color=GREEN)
+    ax1.bar(x + w / 2, rest_vals, w, label="Rest of Alcor swap", color=BLUE)
+    ax1.set_xticks(x)
+    ax1.set_xticklabels([f"{w}\n({s:.0f}% EASY)" for w, s in zip(windows, shares)], color=MUTED)
+    ax1.set_ylabel("USD volume", color=MUTED)
+    ax1.tick_params(colors=MUTED)
+    for s in ax1.spines.values():
         s.set_color("#3f3f3f")
-    ax.yaxis.set_major_formatter(
+    ax1.yaxis.set_major_formatter(
         plt.FuncFormatter(lambda v, _: f"${v/1000:.0f}k" if v < 1e6 else f"${v/1e6:.2f}M")
     )
-    ax.grid(True, color="#2c2c2c", axis="y")
-    fig.text(0.99, 0.02, "Alcor analytics/global · EASY sum volumeUSD*", ha="right", color=MUTED, fontsize=8)
-    fig.tight_layout()
+    ax1.grid(True, color="#2c2c2c", axis="y")
+    ax1.legend(facecolor=CARD, edgecolor="#3f3f3f", labelcolor=WHITE, fontsize=8)
+    ax1.set_title("Same-window: EASY vs rest of Alcor", color=WHITE, fontsize=11, loc="left")
+
+    fig.text(
+        0.99,
+        0.02,
+        f"EASY = sum volumeUSD* on EASY@mon3y pools · Alcor = analytics/global · {stats['updated']}",
+        ha="right",
+        color=MUTED,
+        fontsize=7,
+    )
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.savefig(ASSETS / "market-easy-share.png", facecolor=BG, bbox_inches="tight")
+    # keep old filename as alias for any cached links
     fig.savefig(ASSETS / "market-volume-context.png", facecolor=BG, bbox_inches="tight")
     plt.close()
 
@@ -265,16 +321,17 @@ USDC-style rewards dashboards inspired this layout: **liquidity**, **pending rew
 
 ## Volume
 
-EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth` across every Alcor swap pool where one side is `EASY@mon3y` ([swap pools API](https://proton.alcor.exchange/api/v2/swap/pools)).
+EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth` across every Alcor swap pool where one side is `EASY@mon3y`.
 
-Alcor Proton exchange totals use [`GET /api/v2/analytics/global?resolution=1D|1M`](https://api.alcor.exchange/) on the **proton** subdomain.
+**Share** = EASY volume ÷ Alcor Proton **swap** volume for the **same window** (`analytics/global` resolutions `1D` / `1W` / `1M`). That answers: *how much of Alcor’s swap tape is EASY?*
 
-| Window | EASY pools | Alcor Proton (swap) | Alcor Proton (total) |
+| Window | EASY pools | Rest of Alcor swap | EASY share |
 | --- | ---: | ---: | ---: |
-| 24h / 1D | {money(e['volume_usd_24h'])} | {money(a['swap_volume_usd_1d'])} | {money(a['volume_usd_1d'])} |
-| 30d / 1M | {money(e['volume_usd_30d'])} | {money(a['swap_volume_usd_1m'])} | {money(a['volume_usd_1m'])} |
+| 24h | {money(e['volume_usd_24h'])} | {money(a['rest_swap_1d'])} | **{e['share_of_alcor_swap_24h_pct']:.1f}%** |
+| 7d | {money(e['volume_usd_7d'])} | {money(a['rest_swap_1w'])} | **{e.get('share_of_alcor_swap_7d_pct', 0):.1f}%** |
+| 30d | {money(e['volume_usd_30d'])} | {money(a['rest_swap_1m'])} | **{e.get('share_of_alcor_swap_30d_pct', 0):.1f}%** |
 
-![EASY vs Alcor volume context](assets/market-volume-context.png)
+![EASY share of Alcor Proton swap volume](assets/market-easy-share.png)
 
 ![Top EASY pools by 24h volume](assets/market-easy-pools-24h.png)
 
@@ -288,16 +345,16 @@ Trade: [proton.alcor.exchange](https://proton.alcor.exchange) · Analytics: [EAS
 
 ## Alcor Proton (exchange-wide)
 
-| | 1D | 1M |
-| --- | ---: | ---: |
-| **TVL** | {money(a['tvl_usd'])} | (same snapshot) |
-| **Swap TVL** | {money(a['swap_tvl_usd'])} | — |
-| **Swap volume** | {money(a['swap_volume_usd_1d'])} | {money(a['swap_volume_usd_1m'])} |
-| **Spot volume** | {money(a['spot_volume_usd_1d'])} | {money(a['spot_volume_usd_1m'])} |
-| **Swap fees** | {money(a['swap_fees_1d'])} | {money(a['swap_fees_1m'])} |
-| **DAU (avg)** | ~{a['dau_1d']:.0f} | ~{a['dau_1m']:.0f} |
-| **Liquidity pools** | {a['pools']:,} | — |
-| **Spot pairs** | {a['spot_pairs']:,} | — |
+| | 1D | 1W | 1M |
+| --- | ---: | ---: | ---: |
+| **TVL** | {money(a['tvl_usd'])} | (snapshot) | (snapshot) |
+| **Swap TVL** | {money(a['swap_tvl_usd'])} | — | — |
+| **Swap volume** | {money(a['swap_volume_usd_1d'])} | {money(a.get('swap_volume_usd_1w', 0))} | {money(a['swap_volume_usd_1m'])} |
+| **Spot volume** | {money(a['spot_volume_usd_1d'])} | {money(a.get('spot_volume_usd_1w', 0))} | {money(a['spot_volume_usd_1m'])} |
+| **Swap fees** | {money(a['swap_fees_1d'])} | {money(a.get('swap_fees_1w', 0))} | {money(a['swap_fees_1m'])} |
+| **DAU (avg)** | ~{a['dau_1d']:.0f} | ~{a.get('dau_1w', a['dau_1d']):.0f} | ~{a['dau_1m']:.0f} |
+| **Liquidity pools** | {a['pools']:,} | — | — |
+| **Spot pairs** | {a['spot_pairs']:,} | — | — |
 
 ## Holder rewards (on-chain)
 

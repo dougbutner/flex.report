@@ -31,7 +31,7 @@ Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if
 - `market-stats.md`
 - `market-stats.json`
 - `assets/market-easy-pools-24h.png`
-- `assets/market-volume-context.png`
+- `assets/market-easy-share.png` (EASY share donut + same-window EASY vs rest of Alcor)
 
 **Arbitrage**
 - `arbitrage.md`
