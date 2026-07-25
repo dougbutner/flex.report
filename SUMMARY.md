@@ -4,6 +4,7 @@
 * [Why EASY](why-easy.md)
 * [Start Here](start-here.md)
 * [Tokenomics of EASY](tokenomics.md)
+* [Market Stats](market-stats.md)
 * [Our Story](our-story/README.md)
   * [Founder Story](our-story/founder-story.md)
   * [Success in Community](our-story/success-in-community.md)

@@ -1,0 +1,84 @@
+---
+name: update-stats
+description: >-
+  Refresh Flex Report market stats from XPR Alcor APIs and on-chain mon3y
+  tables. Use when the user says "update stats", "refresh stats", "update
+  market stats", or asks to pull latest EASY/Alcor volume, TVL, price, or
+  reflection pool numbers into the docs.
+---
+
+# Update Stats
+
+## When
+
+User says **update stats** (or refresh/update market stats).
+
+## Do this
+
+1. Run the refresh script from the repo root:
+
+```bash
+python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
+```
+
+Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if missing).
+
+2. Confirm these files changed:
+   - `market-stats.md` (published GitBook page)
+   - `market-stats.json` (machine snapshot)
+   - `assets/market-easy-pools-24h.png`
+   - `assets/market-volume-context.png`
+
+3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts — that is a separate path (see below). Do **not** rewrite founder/legal content.
+
+4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, updated timestamp.
+
+## Data sources (Alcor / XPR)
+
+Base URL for XPR (Proton) chain: `https://proton.alcor.exchange/api/v2/`
+
+Docs: https://api.alcor.exchange/ and https://docs.alcor.exchange/developers-api/api
+
+| What | Endpoint | Notes |
+| --- | --- | --- |
+| Exchange TVL / volume | `GET .../analytics/global?resolution=1D` and `?resolution=1M` | Resolutions: `1D`, `1W`, `1M`. Use **proton** subdomain, not bare `alcor.exchange` (that is WAX). |
+| Token price | `GET .../tokens/easy-mon3y` | `usd_price`, `system_price` (XPR) |
+| Pool volumes / TVL | `GET .../swap/pools` | Sum pools where `tokenA` or `tokenB` is EASY@`mon3y`. Fields: `volumeUSD24`, `volumeUSDWeek`, `volumeUSDMonth`, `tvlUSD`, `change24` |
+| Daily pool charts | `GET .../swap/charts?tokenA=easy-mon3y&tokenB=xusdc-xtokens` | Optional; used for longer price/volume series |
+| Reflection pool | RPC `get_table_rows` `code=mon3y` `scope=EASY` `table=stat` | `reflection_pool` asset |
+| Flexer count | RPC page `flexers` table `code=mon3y` `scope=mon3y` | Count rows |
+
+RPC: `https://api.protonnz.com/v1/chain/...` (fallback `https://proton.greymass.com`).
+
+## EASY volume definition
+
+**EASY 24h/7d/30d volume** = sum of Alcor AMM `volumeUSD*` across all pools containing `EASY` / `mon3y`.
+
+**Share of Alcor** = EASY 24h volume / `swapTradingVolume` from `analytics/global?resolution=1D`.
+
+Do not use spot `markets` volume for EASY — liquidity is almost entirely AMM/swap.
+
+## Page layout rules (ime.money-inspired)
+
+Keep `market-stats.md` structure:
+
+1. At a glance: price, liquidity (TVL), pending holder rewards, 24h/7d/30d volume, flexers, mcap, Alcor share
+2. Volume tables + charts
+3. Top pools table
+4. Alcor Proton exchange-wide 1D / 1M
+5. Holder rewards + supply
+
+Do not invent APY unless computed from a documented formula. Prefer raw on-chain + Alcor figures.
+
+## Optional: thelake / Success charts
+
+Only if user asks to update reflection case-study charts:
+
+- History: `https://proton.eosusa.io/v2/history/get_actions?account=thelake&filter=mon3y:transfer&sort=asc`
+- Reflections = inbound transfers `from=mon3y`
+- Day-one stack ≈ inbound from `nyra` + `reflections` welcome memos
+- Regenerate PNGs under `our-story/assets/thelake-*.png` and update numbers in `our-story/success-in-community.md`
+
+## Not published
+
+This skill lives under `.cursor/skills/` — **not** linked in `SUMMARY.md`. Do not add it to GitBook navigation.
