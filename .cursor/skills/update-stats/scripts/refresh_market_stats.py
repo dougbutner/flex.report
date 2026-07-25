@@ -42,14 +42,31 @@ def fetch_stats() -> dict:
     tok = get("https://proton.alcor.exchange/api/v2/tokens/easy-mon3y")
     pools = get("https://proton.alcor.exchange/api/v2/swap/pools")
 
+    # USD marks for the five backing stables
+    stable_meta = {
+        "XMD": ("xmd.token", "xmd-xmd.token"),
+        "XUSDC": ("xtokens", "xusdc-xtokens"),
+        "XPYUSD": ("xtokens", "xpyusd-xtokens"),
+        "XPAX": ("xtokens", "xpax-xtokens"),
+        "XUSDT": ("xtokens", "xusdt-xtokens"),
+    }
+    stable_usd = {}
+    for sym, (_con, tid) in stable_meta.items():
+        t = get(f"https://proton.alcor.exchange/api/v2/tokens/{tid}")
+        stable_usd[sym] = float(t.get("usd_price") or 1.0)
+
     easy = []
+    backing = 0.0
+    backing_by_stable = {s: 0.0 for s in stable_meta}
+    price_xusdc = None  # (price, pool_tvl_for_pick)
+
     for p in pools:
-        toks = [p.get("tokenA", {}), p.get("tokenB", {})]
-        if not any(t.get("symbol") == "EASY" and t.get("contract") == "mon3y" for t in toks):
+        a, b = p.get("tokenA", {}), p.get("tokenB", {})
+        easy_a = a.get("symbol") == "EASY" and a.get("contract") == "mon3y"
+        easy_b = b.get("symbol") == "EASY" and b.get("contract") == "mon3y"
+        if not (easy_a or easy_b):
             continue
-        other = next(
-            t for t in toks if not (t.get("symbol") == "EASY" and t.get("contract") == "mon3y")
-        )
+        other = b if easy_a else a
         easy.append(
             {
                 "id": p.get("id"),
@@ -61,12 +78,27 @@ def fetch_stats() -> dict:
                 "change24": float(p.get("change24") or 0),
             }
         )
+        # Total USD backing = sum of non-EASY (stable) side across the 5 stables
+        osym, ocon = other.get("symbol"), other.get("contract")
+        meta = stable_meta.get(osym)
+        if meta and meta[0] == ocon:
+            qty = float(other.get("quantity") or 0)
+            side_usd = qty * stable_usd[osym]
+            backing += side_usd
+            backing_by_stable[osym] += side_usd
+
+        # EASY price in XUSDC from deepest EASY/XUSDC pool
+        if osym == "XUSDC" and ocon == "xtokens":
+            cand = float(p.get("priceA") if easy_a else p.get("priceB") or 0)
+            pool_tvl = float(p.get("tvlUSD") or 0)
+            if cand > 0 and (price_xusdc is None or pool_tvl > price_xusdc[1]):
+                price_xusdc = (cand, pool_tvl)
+
     easy.sort(key=lambda x: -x["vol24"])
 
     vol24 = sum(x["vol24"] for x in easy)
     vol7 = sum(x["vol7"] for x in easy)
     vol30 = sum(x["vol30"] for x in easy)
-    tvl = sum(x["tvl"] for x in easy)
     px = float(tok["usd_price"])
 
     stat = post(
@@ -91,20 +123,6 @@ def fetch_stats() -> dict:
         if holders > 10000:
             break
 
-    # EASY price in XUSDC from deepest EASY/XUSDC pool
-    price_xusdc = None
-    for p in pools:
-        a, b = p.get("tokenA", {}), p.get("tokenB", {})
-        if a.get("symbol") == "EASY" and a.get("contract") == "mon3y" and b.get("symbol") == "XUSDC":
-            cand = float(p.get("priceA") or 0)
-            tvl = float(p.get("tvlUSD") or 0)
-            if price_xusdc is None or tvl > price_xusdc[1]:
-                price_xusdc = (cand, tvl)
-        elif b.get("symbol") == "EASY" and b.get("contract") == "mon3y" and a.get("symbol") == "XUSDC":
-            cand = float(p.get("priceB") or 0)
-            tvl = float(p.get("tvlUSD") or 0)
-            if price_xusdc is None or tvl > price_xusdc[1]:
-                price_xusdc = (cand, tvl)
     price_xusdc_val = round(price_xusdc[0], 6) if price_xusdc and price_xusdc[0] else round(px, 6)
 
     alcor_swap_1d = float(global_1d["swapTradingVolume"])
@@ -117,7 +135,8 @@ def fetch_stats() -> dict:
             "price_usd": round(px, 6),
             "price_xusdc": price_xusdc_val,
             "price_xpr": round(float(tok["system_price"]), 4),
-            "tvl_usd": round(tvl, 2),
+            "usd_backing": round(backing, 2),
+            "usd_backing_by_stable": {k: round(v, 2) for k, v in backing_by_stable.items()},
             "volume_usd_24h": round(vol24, 2),
             "volume_usd_7d": round(vol7, 2),
             "volume_usd_30d": round(vol30, 2),
@@ -231,11 +250,11 @@ Live pulse of EASY on XPR Alcor — liquidity, volume, and pending holder reward
 
 | | |
 | --- | --- |
+| **24h volume (all EASY pools)** | **{money(e['volume_usd_24h'])}** |
 | **EASY price** | **${e['price_usd']:.4f}** (~{e['price_xpr']:.2f} XPR) |
 | **EASY price in XUSDC** | **{e.get('price_xusdc', e['price_usd']):.6f} XUSDC** |
-| **Liquidity (EASY pools TVL)** | **{money(e['tvl_usd'])}** |
+| **Total USD backing** | **{money(e.get('usd_backing', 0))}** (XMD + XUSDC + XPYUSD + XPAX + XUSDT in EASY pools) |
 | **Pending holder rewards** | **{e['reflection_pool_easy']:,.2f} EASY** (~{money(e['reflection_pool_usd'])}) in the reflection pool |
-| **24h volume (all EASY pools)** | **{money(e['volume_usd_24h'])}** |
 | **7d volume** | **{money(e['volume_usd_7d'])}** |
 | **30d volume** | **{money(e['volume_usd_30d'])}** |
 | **Flexers (holders on contract)** | **{e['flexers']:,}** |

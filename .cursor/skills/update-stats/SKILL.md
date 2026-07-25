@@ -84,7 +84,7 @@ Do not include a direct stable↔stable pools section.
 
 Coins (fixed order): **XMD, XUSDC, XPYUSD, XPAX, XUSDT** (treat “XUSDX” as XUSDT).
 
-Keep `market-stats.md` at-a-glance with **EASY price** then **EASY price in XUSDC** (from deepest EASY/XUSDC pool `priceA`).
+Keep `market-stats.md` at-a-glance order: **24h volume** first, then EASY price, EASY price in XUSDC, **Total USD backing** (sum of XMD+XUSDC+XPYUSD+XPAX+XUSDT sides in EASY pools — not Alcor `tvlUSD`), then rewards / 7d / 30d / flexers / mcap / share. Do not show “Liquidity (EASY pools TVL)”.
 
 ## Page layout rules (ime.money-inspired)
 
