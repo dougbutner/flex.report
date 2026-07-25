@@ -59,4 +59,4 @@ flowchart LR
 | EASY / XUSDT | 4,200,000 |
 | **Total** | **21,000,000** |
 
-Live depth and volume: [Market Stats](market-stats.md).
+Live depth and volume: [Market Stats](market-stats.md) · Buyback rhythm: [Celestial Buybacks](celestial-buybacks.md).

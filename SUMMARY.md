@@ -1,9 +1,10 @@
 # Summary
 
-* [Home](README.md)
+* [EASY Onboarding](README.md)
 * [Why EASY](why-easy.md)
 * [Start Here](start-here.md)
 * [Tokenomics of EASY](tokenomics.md)
+* [Celestial Buybacks](celestial-buybacks.md)
 * [Market Stats](market-stats.md)
 * [Stablecoin Arbitrage](arbitrage.md)
 * [Our Story](our-story/README.md)
@@ -26,5 +27,6 @@
   * [WON (w3won)](smart-contracts/won.md)
   * [MEME (m3m3)](smart-contracts/meme.md)
   * [GRAMS (gold.mon3y)](smart-contracts/grams.md)
+* [API Reference](api-reference.md)
 * [Legal & Terms](legal-and-terms.md)
 * [Resources](resources.md)

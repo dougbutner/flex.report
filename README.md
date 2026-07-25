@@ -1,9 +1,8 @@
-# Flex Tokens Liftoff: EASY, GRAMS, WON & MEME
+# EASY Onboarding
 
-Get ur EASY, choose your reward, start stacking.
+Because you’re here, you’re a rare breed of crypto lover — one who wants financial energy to return to people creating real value: living, sharing their gifts, walking dharma and ikigai, making their own meaning.
 
-**Notes**  
-Claim your badge by badgering admins in [t.me/flextokens](https://t.me/flextokens)
+You’re in good company. I take it as my duty to see this through — gathering the best people, ideas, and mechanisms to make it happen.
 
 ## Onboard to EASY
 
