@@ -73,10 +73,10 @@ Do not use spot `markets` volume for EASY — liquidity is almost entirely AMM/s
 Keep `arbitrage.md` structure:
 
 1. Dated snapshot header (UTC)
-2. How to read (sell rows / buy cols)
-3. 5×5 rate matrix via EASY
-4. Same matrix in bps vs 1.0
-5. Heatmap PNG
+2. Cross-rate heatmap (bps) at the top
+3. How to read (sell rows / buy cols)
+4. 5×5 rate matrix via EASY
+5. Same matrix in bps vs 1.0
 6. Standout legs
 7. EASY pool anchors with **Stable TVL** (non-EASY side only) + Alcor `usd_price` row
 

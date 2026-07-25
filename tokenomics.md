@@ -2,7 +2,7 @@
 
 Take it EASY 👄 💰 You have EASY 👄 → You are given more EASY.
 
-Get a Wallet | [Buy EASY](https://proton.alcor.exchange) | Analytics | [Farms](https://proton.alcor.exchange/farm) | [Telegram](https://t.me/flextokens)
+Get a Wallet | [Buy EASY](https://proton.alcor.exchange) | Analytics | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | [Telegram](https://t.me/flextokens)
 
 ## Brief
 

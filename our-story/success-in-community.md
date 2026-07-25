@@ -54,6 +54,6 @@ Volume followed. See [Unintended Consequences](unintended-consequences.md) for h
 
 ## Farms
 
-Extensive rewards pools for [proton.alcor.exchange/farm](https://proton.alcor.exchange/farm).
+Extensive rewards pools for [Alcor Farms (XPR)](https://alcor.exchange/v/xpr/analytics?tab=farms).
 
 Flex tokens are not magic. The feeling you get when you check your wallet and see it working for you, that’s magic.

@@ -195,6 +195,10 @@ Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT*
 
 *Snapshot: **{updated}** · Primary path: deepest **EASY**↔stable pools*
 
+## Cross-rate heatmap (bps)
+
+![Cross-rate heatmap (bps)](assets/arbitrage-heatmap.png)
+
 ## How to read
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
@@ -214,8 +218,6 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 {header}
 {sep}
 {chr(10).join(bps_rows)}
-
-![Cross-rate heatmap (bps)](assets/arbitrage-heatmap.png)
 
 ## Standout legs (this snapshot)
 

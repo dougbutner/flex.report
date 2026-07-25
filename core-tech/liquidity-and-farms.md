@@ -8,4 +8,4 @@ Liquidity positions are managed within the `reflections` account and go back to 
 
 Additionally, `m3m3` feeds the `reflections` account with their earned LP fees.
 
-Farms: [proton.alcor.exchange/farm](https://proton.alcor.exchange/farm)
+Farms: [alcor.exchange/v/xpr/analytics?tab=farms](https://alcor.exchange/v/xpr/analytics?tab=farms)
