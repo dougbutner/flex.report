@@ -1,6 +1,6 @@
 # API Reference
 
-Public reads used by this docs site — published here as a builder’s map. Endpoints are **Alcor (XPR)** and **XPR chain RPC**; treat them like Flex Report’s data plane.
+Public reads used by this docs site, published here as a builder’s map. Endpoints are **Alcor (XPR)** and **XPR chain RPC**; treat them like Flex Report’s data plane.
 
 Base hosts:
 
@@ -33,7 +33,7 @@ Full action lists: [Smart Contracts](smart-contracts/README.md).
 
 `POST https://api.protonnz.com/v1/chain/get_table_rows`
 
-Read `stat.reflection_pool` — the pending splash balance before someone calls `distribute` / `radiate` / `reflect`.
+Read `stat.reflection_pool` (the pending splash balance before someone calls `distribute` / `radiate` / `reflect`).
 
 | Token | `code` | `scope` | `table` |
 | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Paginate with `limit` (e.g. `1000`) and `lower_bound` / `next_key` while `more` 
 
 ## 4. Token price & metadata (Alcor)
 
-`GET` — open in browser or curl:
+`GET` (open in browser or curl):
 
 | Token | Endpoint |
 | --- | --- |

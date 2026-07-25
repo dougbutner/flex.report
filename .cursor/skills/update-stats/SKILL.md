@@ -38,7 +38,7 @@ Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if
 - `arbitrage.json`
 - `assets/arbitrage-heatmap.png`
 
-3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts — that is a separate path (see below). Do **not** rewrite founder/legal content.
+3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts (that is a separate path) (see below). Do **not** rewrite founder/legal content.
 
 4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb bps (best sell→buy leg), updated timestamp.
 
@@ -76,7 +76,7 @@ RPC: `https://api.protonnz.com/v1/chain/...` (fallback `https://proton.greymass.
 
 **Share of Alcor** = EASY 24h volume / `swapTradingVolume` from `analytics/global?resolution=1D`.
 
-Do not use spot `markets` volume for EASY — liquidity is almost entirely AMM/swap.
+Do not use spot `markets` volume for EASY: liquidity is almost entirely AMM/swap.
 
 ## Arbitrage page rules
 
@@ -94,7 +94,7 @@ Do not include a direct stable↔stable pools section.
 
 Coins (fixed order): **XMD, XUSDC, XPYUSD, XPAX, XUSDT** (treat “XUSDX” as XUSDT).
 
-Keep `market-stats.md` at-a-glance order: **24h volume** first, then EASY price, EASY price in XUSDC, **Total USD backing** (sum of XMD+XUSDC+XPYUSD+XPAX+XUSDT sides in EASY pools — not Alcor `tvlUSD`), then rewards / 7d / 30d / flexers / mcap / share. Do not show “Liquidity (EASY pools TVL)”.
+Keep `market-stats.md` at-a-glance order: **24h volume** first, then EASY price, EASY price in XUSDC, **Total USD backing** (sum of XMD+XUSDC+XPYUSD+XPAX+XUSDT sides in EASY pools: not Alcor `tvlUSD`), then rewards / 7d / 30d / flexers / mcap / share. Do not show “Liquidity (EASY pools TVL)”.
 
 ## Page layout rules (ime.money-inspired)
 
@@ -119,4 +119,4 @@ Only if user asks to update reflection case-study charts:
 
 ## Not published
 
-This skill lives under `.cursor/skills/` — **not** linked in `SUMMARY.md`. Do not add it to GitBook navigation.
+This skill lives under `.cursor/skills/`: **not** linked in `SUMMARY.md`. Do not add it to GitBook navigation.

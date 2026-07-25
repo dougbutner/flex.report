@@ -1,6 +1,6 @@
 # Soon: The EASY Blockchain
 
-**The EASY Blockchain Manifesto** — by Gudasol
+**The EASY Blockchain Manifesto**, by Gudasol
 
 Blockchain was supposed to make money better. **EASY is better money.**
 
@@ -19,19 +19,19 @@ flowchart TB
   L1 --> L2 --> L3 --> L4 --> L5 --> L6
 ```
 
-- **Token** — efficient reflections (direct-to-wallet earnings from transfer tax)
-- **Bridges** — reflective / non-reflective version of each bridged token
-- **Wallet** — WebAuth logins, account recovery, one-click actions
-- **Blockchain** — Antelope (EOS, WAX, Telos) on steroids: easy permission delegation, resource subsidies, and more
-- **Stable-backing** — deep USDC-style support under EASY via locked AMM liquidity + scheduled buybacks every **584 days**
-- **DeFi** — negative-interest loans; Alcor DEX (CLMM, spot, LP farms)
-- **Human** — competitive consensus meetings that put people in power and pay the community
-- **Infra + BP** — democratically vetted core group paid in USDC; finalizers paid in RAM
-- **Application** — WebAuth-signed experiences
-- **Advertising / Attention** — tokenized offers for non-tokenized goods/services on a global map, fulfilled by EASY (based on [cXc.world](https://cxc.world))
-- **EASY Lifestyle** — tech-positive minimalists maximizing output; paid Skool community (optional lifetime buy-in with EASY)
-- **EASY Wins** — retroactive public goods game
-- **Super Club** — fractal meetings with rewards every 2 weeks
+- **Token**: efficient reflections (direct-to-wallet earnings from transfer tax)
+- **Bridges**: reflective / non-reflective version of each bridged token
+- **Wallet**: WebAuth logins, account recovery, one-click actions
+- **Blockchain**: Antelope (EOS, WAX, Telos) on steroids: easy permission delegation, resource subsidies, and more
+- **Stable-backing**: deep USDC-style support under EASY via locked AMM liquidity + scheduled buybacks every **584 days**
+- **DeFi**: negative-interest loans; Alcor DEX (CLMM, spot, LP farms)
+- **Human**: competitive consensus meetings that put people in power and pay the community
+- **Infra + BP**: democratically vetted core group paid in USDC; finalizers paid in RAM
+- **Application**: WebAuth-signed experiences
+- **Advertising / Attention**: tokenized offers for non-tokenized goods/services on a global map, fulfilled by EASY (based on [cXc.world](https://cxc.world))
+- **EASY Lifestyle**: tech-positive minimalists maximizing output; paid Skool community (optional lifetime buy-in with EASY)
+- **EASY Wins**: retroactive public goods game
+- **Super Club**: fractal meetings with rewards every 2 weeks
 
 ## Why it works
 
@@ -77,7 +77,7 @@ flowchart TB
 ## Brand
 
 - Surface: living an **easy life**; cooler / lightyears-better option vs status-quo chains
-- Look: **black + gold** — golden tokens, abundance
+- Look: **black + gold**, golden tokens, abundance
 - Underneath: restore faith in blockchain; Antelope’s best systems + uniting people to struggle less, together
 
 ## Launch (21 months)

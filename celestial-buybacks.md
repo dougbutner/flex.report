@@ -1,6 +1,6 @@
 # Celestial Buybacks
 
-Scheduled buybacks on celestial time — not arbitrary calendars. Liquidity stays locked in the pools; buybacks reinforce the floor on a rhythm humans can feel in the sky.
+Scheduled buybacks on celestial time, not arbitrary calendars. Liquidity stays locked in the pools; buybacks reinforce the floor on a rhythm humans can feel in the sky.
 
 ## Venus buybacks (EASY)
 
@@ -10,7 +10,7 @@ Scheduled buybacks on celestial time — not arbitrary calendars. Liquidity stay
 | --- | --- |
 | **Cadence** | Every **584 days** (Venus) |
 | **What** | Buy EASY with accumulated USD(c)-side profits / protocol reserves |
-| **Why celestial** | A rare, memorable beat — long enough to compound, short enough to anticipate |
+| **Why celestial** | A rare, memorable beat, long enough to compound, short enough to anticipate |
 | **Near-term marker** | Target window around **October 24, 2026** (aligns with the EASY buyback / chain milestone) |
 
 Between Venus beats, day-to-day floor support still comes from the living loop: USD(c) swap profits buy EASY; EASY-side profits re-pool. See [Tokenomics](tokenomics.md) and [Liquidity & Farms](core-tech/liquidity-and-farms.md).
@@ -24,7 +24,7 @@ flowchart LR
 
 ## WON buybacks (half-step)
 
-**WON** buybacks run on the **half-step** of the Venus cycle — every **292 days** (~½ × 584).
+**WON** buybacks run on the **half-step** of the Venus cycle, every **292 days** (~½ × 584).
 
 | | |
 | --- | --- |

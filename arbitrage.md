@@ -18,9 +18,9 @@ flowchart LR
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.
-- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage — always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
+- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage. Always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
 
-Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts — prefer routing that stays inside `swap.alcor` memos when possible.
+Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts. Prefer routing that stays inside `swap.alcor` memos when possible.
 
 ## Implied rates via EASY (amount of Buy per 1 Sell)
 

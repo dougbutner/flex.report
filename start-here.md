@@ -19,10 +19,10 @@ Each Flex token customizes three fee options: reflection, burn, and project. All
 
 | Token | Reflection | Burn | Team | Tagline |
 | --- | ---: | ---: | ---: | --- |
-| **EASY** | 2% | — | — | Take it EASY |
-| **WON** | 2.2% | — | 0.8% | We WON |
-| **MEME** | 1% | 1% | — | burns + farms |
-| **GRAMS** | 1.1% | — | 0.11% | gold-backed |
+| **EASY** | 2% | - | - | Take it EASY |
+| **WON** | 2.2% | - | 0.8% | We WON |
+| **MEME** | 1% | 1% | - | burns + farms |
+| **GRAMS** | 1.1% | - | 0.11% | gold-backed |
 
 Each may have additional farming rewards. EASY alone has a protocol fee to fund Flex volunteer efforts and infrastructure.
 

@@ -6,14 +6,14 @@ Pics or it didn’t happen.
 
 ## Case study: `thelake`
 
-On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.org/account/thelake) entered EASY — the “put in ~100 USD worth of EASY” story from the original playbook.
+On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.org/account/thelake) entered EASY (the “put in ~100 USD worth of EASY” story from the original playbook).
 
 **Day-one stack:** 8,535.71 EASY  
 (7,880.71 from the funding transfer + 655 welcome / welcome bonus)
 
 **Reflections earned since then:** **1,671.98 EASY** across **578** on-chain payments from `mon3y` (through July 25, 2026).
 
-That’s **+19.6%** grown from reflections alone — without selling — while the bag kept collecting.
+That’s **+19.6%** grown from reflections alone, without selling, while the bag kept collecting.
 
 | | |
 | --- | --- |
@@ -34,7 +34,7 @@ You can verify any payment on the explorer: transfers from `mon3y` with memos li
 
 ## EASY price (recent)
 
-From the Alcor EASY/XUSDC pool — price stepped up from ~$0.01 at launch into the mid‑teens of cents.
+From the Alcor EASY/XUSDC pool: price stepped up from ~$0.01 at launch into the mid-teens of cents.
 
 ![EASY price chart on Alcor](assets/easy-price-chart.png)
 
@@ -46,7 +46,7 @@ Daily volume across the main stable pools (XUSDC + XMD + XUSDT). Quiet at first,
 
 ![EASY daily volume chart](assets/easy-volume-chart.png)
 
-Where that volume sits today — top EASY pools by 24h USD:
+Where that volume sits today (top EASY pools by 24h USD):
 
 ![Top EASY pools by 24h volume](assets/easy-top-pools-volume.png)
 

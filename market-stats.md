@@ -1,6 +1,6 @@
 # Market Stats
 
-Live pulse of EASY on XPR Alcor — liquidity, volume, and pending holder rewards.
+Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 
 *Last updated: 2026-07-25 09:19 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
 
@@ -48,7 +48,7 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 | EASY/XPR | $1,012 | $23,447 | -0.2% |
 | EASY/METAL | $547.72 | $8,858 | -0.2% |
 | EASY/SNIPS | $494.73 | $5,256 | +0.5% |
-| EASY/XSOL | $240.41 | — | +0.8% |
+| EASY/XSOL | $240.41 | - | +0.8% |
 
 Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analytics: [EASY token](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
@@ -57,13 +57,13 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | | 1D | 1W | 1M |
 | --- | ---: | ---: | ---: |
 | **TVL** | $1,000,924 | (snapshot) | (snapshot) |
-| **Swap TVL** | $882,139 | — | — |
+| **Swap TVL** | $882,139 | - | - |
 | **Swap volume** | $46,241 | $290,132 | $1,366,434 |
 | **Spot volume** | $852.77 | $15,465 | $40,923 |
 | **Swap fees** | $228.32 | $1,461 | $7,523 |
 | **DAU (avg)** | ~78 | ~81 | ~77 |
-| **Liquidity pools** | 11,124 | — | — |
-| **Spot pairs** | 1,601 | — | — |
+| **Liquidity pools** | 11,124 | - | - |
+| **Spot pairs** | 1,601 | - | - |
 
 ## Holder rewards (on-chain)
 

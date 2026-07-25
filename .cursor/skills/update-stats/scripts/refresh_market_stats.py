@@ -289,7 +289,7 @@ def write_markdown(stats: dict) -> None:
     e, a = stats["easy"], stats["alcor_proton"]
     rows = []
     for p in e["top_pools"][:8]:
-        tvl = money(p["tvl"]) if p["tvl"] else "—"
+        tvl = money(p["tvl"]) if p["tvl"] else "-"
         sign = "+" if p["change24"] >= 0 else ""
         rows.append(
             f"| {p['pair']} | {money(p['vol24'])} | {tvl} | {sign}{p['change24']:.1f}% |"
@@ -298,7 +298,7 @@ def write_markdown(stats: dict) -> None:
 
     md = f"""# Market Stats
 
-Live pulse of EASY on XPR Alcor — liquidity, volume, and pending holder rewards.
+Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 
 *Last updated: {stats['updated']} · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
 
@@ -348,13 +348,13 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | | 1D | 1W | 1M |
 | --- | ---: | ---: | ---: |
 | **TVL** | {money(a['tvl_usd'])} | (snapshot) | (snapshot) |
-| **Swap TVL** | {money(a['swap_tvl_usd'])} | — | — |
+| **Swap TVL** | {money(a['swap_tvl_usd'])} | - | - |
 | **Swap volume** | {money(a['swap_volume_usd_1d'])} | {money(a.get('swap_volume_usd_1w', 0))} | {money(a['swap_volume_usd_1m'])} |
 | **Spot volume** | {money(a['spot_volume_usd_1d'])} | {money(a.get('spot_volume_usd_1w', 0))} | {money(a['spot_volume_usd_1m'])} |
 | **Swap fees** | {money(a['swap_fees_1d'])} | {money(a.get('swap_fees_1w', 0))} | {money(a['swap_fees_1m'])} |
 | **DAU (avg)** | ~{a['dau_1d']:.0f} | ~{a.get('dau_1w', a['dau_1d']):.0f} | ~{a['dau_1m']:.0f} |
-| **Liquidity pools** | {a['pools']:,} | — | — |
-| **Spot pairs** | {a['spot_pairs']:,} | — | — |
+| **Liquidity pools** | {a['pools']:,} | - | - |
+| **Spot pairs** | {a['spot_pairs']:,} | - | - |
 
 ## Holder rewards (on-chain)
 

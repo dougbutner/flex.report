@@ -1,0 +1,31 @@
+---
+description: Never use em dashes (U+2014) in docs or generated copy. Prefer commas, periods, colons, parentheses, or plain hyphens.
+globs: "**/*.{md,py,mdc}"
+alwaysApply: true
+---
+
+# No em dashes
+
+Never use the em dash character (Unicode U+2014) in documentation, skills, rules, or generated markdown.
+
+## Prefer instead
+
+| Intent | Use |
+| --- | --- |
+| Pause / aside | comma, period, or parentheses |
+| Label then detail | colon (`:`) |
+| Compound or empty table cell | plain hyphen (`-`) |
+| Numeric / date ranges | plain hyphen (`1-2`, `2025-2026`) or `to` |
+
+## Examples
+
+- Bad: `You're here` + em dash + `welcome.`
+- Good: `You're here. Welcome.` or `You're here: welcome.`
+
+- Bad: heading with em dash between title and subtitle
+- Good: `Tokenomics: EASY on XPR`
+
+- Bad: empty table cell as an em dash
+- Good: `-`
+
+Also avoid en dashes (Unicode U+2013) in prose; use a hyphen or `to` for ranges.

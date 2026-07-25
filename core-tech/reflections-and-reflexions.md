@@ -18,10 +18,10 @@ flowchart LR
 
 | Token | Reflection | Burn | Team / project | Hold to earn | Pool to pay |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| **EASY** | 2% | — | — | 100+ | 1,000 EASY |
-| **WON** | 2.2% | — | 0.8% | 1.0+ | 8 WON |
-| **MEME** | 1% | 1% | — | 1M+ | 10M MEME |
-| **GRAMS** | 1.1% | — | 0.11% | see contract | see contract |
+| **EASY** | 2% | - | - | 100+ | 1,000 EASY |
+| **WON** | 2.2% | - | 0.8% | 1.0+ | 8 WON |
+| **MEME** | 1% | 1% | - | 1M+ | 10M MEME |
+| **GRAMS** | 1.1% | - | 0.11% | see contract | see contract |
 
 Each may have additional farming rewards. EASY alone has a protocol fee path that funds Flex volunteer work and infrastructure.
 

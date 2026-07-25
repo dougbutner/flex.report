@@ -48,7 +48,7 @@ Pass a % of rewards to any account:
 
 ## Opt out of fees (+ rewards)
 
-Understand this is **one-way** — you can’t opt back in to rewards on the account.
+Understand this is **one-way**. You can’t opt back in to rewards on the account.
 
 | Token | Action |
 | --- | --- |

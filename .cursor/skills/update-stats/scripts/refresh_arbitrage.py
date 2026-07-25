@@ -85,13 +85,13 @@ def build_via_easy_matrix(easy_pools: dict) -> list[list[float | None]]:
 
 def fmt_rate(x: float | None) -> str:
     if x is None:
-        return "—"
+        return "-"
     return f"{x:.6f}"
 
 
 def fmt_bps(x: float | None) -> str:
     if x is None:
-        return "—"
+        return "-"
     bps = (x - 1.0) * 10_000
     sign = "+" if bps >= 0 else ""
     return f"{sign}{bps:.1f}"
@@ -155,7 +155,7 @@ def write_markdown(payload: dict) -> None:
     for sym in SYMBOLS:
         p = e["pools"].get(sym)
         if not p:
-            pool_lines.append(f"| {sym} | — | — | — | — |")
+            pool_lines.append(f"| {sym} | - | - | - | - |")
             continue
         pool_lines.append(
             f"| {sym} | [{p['pool_id']}](https://alcor.exchange/v/xpr/analytics/pools/{p['pool_id']}) | "
@@ -211,9 +211,9 @@ flowchart LR
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.
-- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage — always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
+- **bps** = distance from 1.0000 (parity). Green opportunity when you receive more than 1.0 of a same-peg asset after fees/slippage. Always simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before sizing.
 
-Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts — prefer routing that stays inside `swap.alcor` memos when possible.
+Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%) applies when EASY moves to non-exempt accounts. Prefer routing that stays inside `swap.alcor` memos when possible.
 
 ## Implied rates via EASY (amount of Buy per 1 Sell)
 

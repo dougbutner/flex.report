@@ -4,26 +4,26 @@ Tree-aware reflections + flex pools, minted as WON on XPR.
 
 ## Contract Surface (actions)
 
-- `create`, `issue`, `open`, `close`, `burn` — standard token lifecycle; burn reduces supply.
-- `transfer` — applies reflection/burn/project rates; fees are skipped for banned flexers and for contract-driven distributions; memo substitution is used during `radiate`.
-- `radiate` — walks flexers, distributes the reflection pool (with optional tree share), then burns and routes project pool funds.
-- `setconfig` — start key, page limit, reflection/burn/project rates, and project account.
-- `optoutoftax` — ban/unban a flexer from fees/reflections (self-ban allowed, unban requires contract auth).
-- `addpool` — register or update flex pool hints (token, contract, Alcor pool IDs).
-- `sprouttoken` — pick a preferred flex pool by symbol (blank/EASY resets to default).
-- `settree` — pick a tree recipient + rate (0–10000, default 10000).
-- `settreememo` — store a single custom memo (≤200 chars) for the tree leg.
-- `handle_transfer` (notify) — when receiving from `swap.alcor` with memos starting `Col`, forwards fees to `1won`.
+- `create`, `issue`, `open`, `close`, `burn`: standard token lifecycle; burn reduces supply.
+- `transfer`: applies reflection/burn/project rates; fees are skipped for banned flexers and for contract-driven distributions; memo substitution is used during `radiate`.
+- `radiate`: walks flexers, distributes the reflection pool (with optional tree share), then burns and routes project pool funds.
+- `setconfig`: start key, page limit, reflection/burn/project rates, and project account.
+- `optoutoftax`: ban/unban a flexer from fees/reflections (self-ban allowed, unban requires contract auth).
+- `addpool`: register or update flex pool hints (token, contract, Alcor pool IDs).
+- `sprouttoken`: pick a preferred flex pool by symbol (blank/EASY resets to default).
+- `settree`: pick a tree recipient + rate (0-10000, default 10000).
+- `settreememo`: store a single custom memo (≤200 chars) for the tree leg.
+- `handle_transfer` (notify): when receiving from `swap.alcor` with memos starting `Col`, forwards fees to `1won`.
 
 ## Data Model (tables)
 
-- `accounts` (per owner) — balances.
-- `stat` (per symbol) — supply, max_supply, reflection_pool, burn_pool, project_pool, issuer.
-- `flexers` (contract scope) — owner, balance, banned flag, flextoken, tree, tree_rate, custom_memo.
-- `flexpools` — id, token_symbol, token_contract, pool_ids (e.g. Alcor pool hints).
-- `settings` (singleton) — token_symbol, start_key, limit, reflection_rate, burn_rate, project_rate, project_account.
+- `accounts` (per owner): balances.
+- `stat` (per symbol): supply, max_supply, reflection_pool, burn_pool, project_pool, issuer.
+- `flexers` (contract scope): owner, balance, banned flag, flextoken, tree, tree_rate, custom_memo.
+- `flexpools`: id, token_symbol, token_contract, pool_ids (e.g. Alcor pool hints).
+- `settings` (singleton): token_symbol, start_key, limit, reflection_rate, burn_rate, project_rate, project_account.
 
-## Tokenomics — WON on XPR
+## Tokenomics: WON on XPR
 
 - **Supply:** 1,000,000 WON (max + initial supply).
 - **Liquidity:** 100% paired with EASY on Alcor DEX at launch.
@@ -32,14 +32,14 @@ Tree-aware reflections + flex pools, minted as WON on XPR.
 
 | WON allocation | Price range (EASY/WON) | Swap LP fee |
 | --- | --- | --- |
-| 100,000 WON | 100 – 200 | 1% |
-| 300,000 WON | 100 – 1,000 | 0.3% |
-| 600,000 WON | 100 – 10,000 | 0.05% |
+| 100,000 WON | 100-200 | 1% |
+| 300,000 WON | 100-1,000 | 0.3% |
+| 600,000 WON | 100-10,000 | 0.05% |
 
 ### Transfer fee budget (per transfer)
 
-- **2.2%** — reflected to WON holders as swaps that buy the ecovillage token (freshly launched).
-- **0.8%** — routed to volWONteers, distributed by fractal vote every two weeks.
+- **2.2%**: reflected to WON holders as swaps that buy the ecovillage token (freshly launched).
+- **0.8%**: routed to volWONteers, distributed by fractal vote every two weeks.
 
 ### Memo substitution
 
