@@ -584,14 +584,35 @@ USD value of **major** counter-assets sitting in each token’s Alcor pools (not
     path.write_text(before + block + after)
 
 
+def pick_random_won_featured() -> str:
+    """Copy a random WON art file to tokens/won/won-featured.png for onboarding."""
+    import random
+    import shutil
+
+    won_dir = ROOT / "tokens" / "won"
+    featured = won_dir / "won-featured.png"
+    candidates = [
+        p
+        for p in won_dir.glob("*.png")
+        if p.name != "won-featured.png" and p.is_file()
+    ]
+    if not candidates:
+        raise SystemExit("no WON images in tokens/won/")
+    chosen = random.choice(candidates)
+    shutil.copyfile(chosen, featured)
+    return chosen.name
+
+
 def main() -> None:
     stats = fetch_stats()
     (ROOT / "market-stats.json").write_text(json.dumps(stats, indent=2) + "\n")
     write_charts(stats)
     write_markdown(stats)
     write_tokenomics_live(stats)
+    won_art = pick_random_won_featured()
     print(f"updated {stats['updated']}")
     print(f"EASY 24h vol {stats['easy']['volume_usd_24h']} · Alcor swap 1D {stats['alcor_proton']['swap_volume_usd_1d']}")
+    print(f"WON featured art ← {won_art}")
 
 
 if __name__ == "__main__":
