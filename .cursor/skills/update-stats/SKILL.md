@@ -96,7 +96,7 @@ Do not include a direct stable↔stable pools section.
 
 Coins (fixed order): **XMD, XUSDC, XPYUSD, XPAX, XUSDT** (treat “XUSDX” as XUSDT).
 
-Keep `market-stats.md` at-a-glance order: **24h volume** first, then EASY price, EASY price in XUSDC, **Total USD backing** (sum of XMD+XUSDC+XPYUSD+XPAX+XUSDT sides in EASY pools: not Alcor `tvlUSD`), then rewards / 7d / 30d / flexers / mcap / share. Do not show “Liquidity (EASY pools TVL)”.
+Keep `market-stats.md` at-a-glance order: **24h volume** first, then EASY price, EASY price in XUSDC, **Total EASY pools TVL**, **Total USD backing** (sum of XMD+XUSDC+XPYUSD+XPAX+XUSDT sides in EASY pools: not Alcor `tvlUSD`), then rewards / 7d / 30d / flexers / mcap / share. Top pools table includes **TVL + EASY qty + other side**. Add **Stable backing** table (deepest pool each) with stable side USD, EASY in pool, and pool TVL.
 
 ## Page layout rules (ime.money-inspired)
 
@@ -117,7 +117,7 @@ Only if user asks to update reflection case-study charts:
 - History: `https://proton.eosusa.io/v2/history/get_actions?account=thelake&filter=mon3y:transfer&sort=asc`
 - Reflections = inbound transfers `from=mon3y`
 - Day-one stack ≈ inbound from `nyra` + `reflections` welcome memos
-- Regenerate PNGs under `our-story/assets/thelake-*.png` and update numbers in `our-story/success-in-community.md`
+- Regenerate PNGs under `our-story/assets/thelake-*.png` and update numbers in `our-story/success-stories.md`
 
 ## Not published
 

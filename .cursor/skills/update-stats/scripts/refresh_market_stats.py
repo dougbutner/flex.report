@@ -126,7 +126,10 @@ def fetch_stats() -> dict:
     easy = []
     backing = 0.0
     backing_by_stable = {s: 0.0 for s in stable_meta}
+    # deepest EASY↔stable pool per stable: for backing table with EASY qty
+    stable_pools = {}  # sym -> {tvl, easy_qty, other_qty, id, pair}
     price_xusdc = None  # (price, pool_tvl_for_pick)
+    easy_pools_tvl = 0.0
 
     for p in pools:
         a, b = p.get("tokenA", {}), p.get("tokenB", {})
@@ -135,6 +138,11 @@ def fetch_stats() -> dict:
         if not (easy_a or easy_b):
             continue
         other = b if easy_a else a
+        easy_tok = a if easy_a else b
+        tvl = float(p.get("tvlUSD") or 0)
+        easy_qty = float(easy_tok.get("quantity") or 0)
+        other_qty = float(other.get("quantity") or 0)
+        easy_pools_tvl += tvl
         easy.append(
             {
                 "id": p.get("id"),
@@ -142,7 +150,10 @@ def fetch_stats() -> dict:
                 "vol24": float(p.get("volumeUSD24") or 0),
                 "vol7": float(p.get("volumeUSDWeek") or 0),
                 "vol30": float(p.get("volumeUSDMonth") or 0),
-                "tvl": float(p.get("tvlUSD") or 0),
+                "tvl": tvl,
+                "easy_qty": easy_qty,
+                "other_sym": other.get("symbol"),
+                "other_qty": other_qty,
                 "change24": float(p.get("change24") or 0),
             }
         )
@@ -150,15 +161,24 @@ def fetch_stats() -> dict:
         osym, ocon = other.get("symbol"), other.get("contract")
         meta = stable_meta.get(osym)
         if meta and meta[0] == ocon:
-            qty = float(other.get("quantity") or 0)
-            side_usd = qty * stable_usd[osym]
+            side_usd = other_qty * stable_usd[osym]
             backing += side_usd
             backing_by_stable[osym] += side_usd
+            prev = stable_pools.get(osym)
+            if prev is None or tvl > prev["tvl"]:
+                stable_pools[osym] = {
+                    "id": p.get("id"),
+                    "pair": f"EASY/{osym}",
+                    "tvl": tvl,
+                    "easy_qty": easy_qty,
+                    "other_qty": other_qty,
+                    "other_usd": side_usd,
+                }
 
         # EASY price in XUSDC from deepest EASY/XUSDC pool
         if osym == "XUSDC" and ocon == "xtokens":
             cand = float(p.get("priceA") if easy_a else p.get("priceB") or 0)
-            pool_tvl = float(p.get("tvlUSD") or 0)
+            pool_tvl = tvl
             if cand > 0 and (price_xusdc is None or pool_tvl > price_xusdc[1]):
                 price_xusdc = (cand, pool_tvl)
 
@@ -209,6 +229,18 @@ def fetch_stats() -> dict:
             "price_xpr": round(float(tok["system_price"]), 4),
             "usd_backing": round(backing, 2),
             "usd_backing_by_stable": {k: round(v, 2) for k, v in backing_by_stable.items()},
+            "stable_pools": {
+                k: {
+                    "id": v["id"],
+                    "pair": v["pair"],
+                    "tvl": round(v["tvl"], 2),
+                    "easy_qty": round(v["easy_qty"], 2),
+                    "other_qty": round(v["other_qty"], 2),
+                    "other_usd": round(v["other_usd"], 2),
+                }
+                for k, v in stable_pools.items()
+            },
+            "pools_tvl_usd": round(easy_pools_tvl, 2),
             "volume_usd_24h": round(vol24, 2),
             "volume_usd_7d": round(vol7, 2),
             "volume_usd_30d": round(vol30, 2),
@@ -440,13 +472,32 @@ def write_markdown(stats: dict) -> None:
     rows = []
     for p in e["top_pools"][:8]:
         tvl = money(p["tvl"]) if p["tvl"] else "-"
+        easy_q = f"{p.get('easy_qty', 0):,.0f}" if p.get("easy_qty") else "-"
+        other = p.get("other_sym") or ""
+        other_q = f"{p.get('other_qty', 0):,.2f} {other}" if other and p.get("other_qty") is not None else "-"
         sign = "+" if p["change24"] >= 0 else ""
         rows.append(
-            f"| {p['pair']} | {money(p['vol24'])} | {tvl} | {sign}{p['change24']:.1f}% |"
+            f"| {p['pair']} | {money(p['vol24'])} | {tvl} | {easy_q} EASY | {other_q} | {sign}{p['change24']:.1f}% |"
         )
     pool_table = "\n".join(rows)
 
+    stable_order = ["XMD", "XUSDC", "XPYUSD", "XPAX", "XUSDT"]
+    sp = e.get("stable_pools") or {}
+    stable_rows = []
+    for sym in stable_order:
+        s = sp.get(sym)
+        if not s:
+            continue
+        pid = s.get("id")
+        link = f"[{s['pair']}](https://alcor.exchange/v/xpr/analytics/pools/{pid})" if pid else s["pair"]
+        stable_rows.append(
+            f"| {link} | {money(s['other_usd'])} {sym} | {s['easy_qty']:,.0f} EASY | {money(s['tvl'])} |"
+        )
+    stable_table = "\n".join(stable_rows)
+
     md = f"""# Market Stats
+
+![Market Stats](assets/heroes/market-stats.png)
 
 Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 
@@ -459,7 +510,8 @@ Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 | **24h volume (all EASY pools)** | **{money(e['volume_usd_24h'])}** |
 | **EASY price** | **${e['price_usd']:.4f}** (~{e['price_xpr']:.2f} XPR) |
 | **EASY price in XUSDC** | **{e.get('price_xusdc', e['price_usd']):.6f} XUSDC** |
-| **Total USD backing** | **{money(e.get('usd_backing', 0))}** (XMD + XUSDC + XPYUSD + XPAX + XUSDT in EASY pools) |
+| **Total EASY pools TVL** | **{money(e.get('pools_tvl_usd', 0))}** |
+| **Total USD backing (stables)** | **{money(e.get('usd_backing', 0))}** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
 | **Pending holder rewards** | **{e['reflection_pool_easy']:,.2f} EASY** (~{money(e['reflection_pool_usd'])}) in the reflection pool |
 | **7d volume** | **{money(e['volume_usd_7d'])}** |
 | **30d volume** | **{money(e['volume_usd_30d'])}** |
@@ -487,9 +539,15 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 
 ### Top EASY pools (24h)
 
-| Pool | 24h volume | TVL | 24h Δ |
-| --- | ---: | ---: | ---: |
+| Pool | 24h volume | TVL | EASY in pool | Other side | 24h Δ |
+| --- | ---: | ---: | ---: | ---: | ---: |
 {pool_table}
+
+### Stable backing (deepest pool each)
+
+| Pool | Stable side | EASY in pool | Pool TVL |
+| --- | ---: | ---: | ---: |
+{stable_table}
 
 Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analytics: [EASY token](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
@@ -515,7 +573,7 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | How it fills | 2% transfer tax into the pool |
 | How it pays | Anyone calls `distribute` → splash to flexers |
 
-Track a real bag over time on [Success in Community](our-story/success-in-community.md) (`thelake`).
+Track real bags over time on [Success Stories](our-story/success-stories.md).
 """
     (ROOT / "market-stats.md").write_text(md)
 

@@ -1,4 +1,4 @@
-# Success in Community
+# Success Stories
 
 Pics or it didn’t happen.
 
@@ -33,6 +33,14 @@ That’s **+19.6% in EASY** from reflections alone (about **~38% APY** annualize
 
 You can verify any payment on the explorer: transfers from `mon3y` with memos like “Take it EASY 🍹 Reflect & Collect ❇️” / “Be EASY 🍹 flex.town 🏘”.
 
+## `kinship1`
+
+[`kinship1`](https://explorer.xprnetwork.org/account/kinship1) got **1,000 EASY** from `reflections` on **Nov 27, 2025** (“When things seem hard, Take it EASY”). Since then it has taken **298.67 EASY** in reflections across **720** payments (~**$4.94 USDC** at ~$0.0165), a **+29.8%** gain in EASY (~**48.5% APY** over ~8 months). Balance now: **1,300.86 EASY** (~**$21.50 USDC**).
+
+## `montauk`
+
+[`montauk`](https://explorer.xprnetwork.org/account/montauk) was welcomed with **5,611 EASY** on **Dec 30, 2025**, then stacked more through Alcor swaps. Reflections since late December: **2,766 EASY** across **503** payments (~**$45.71 USDC**). Balance now: **39,962 EASY** (~**$660 USDC**). Net of reflections already in the bag, that stack is about **+7.4% in EASY** (~**13.5% APY**) while size kept growing.
+
 ## EASY price (recent)
 
 From the Alcor EASY/XUSDC pool: price stepped up from ~$0.01 at launch into the mid-teens of cents.
@@ -57,4 +65,4 @@ Volume followed. See [Unintended Consequences](unintended-consequences.md) for h
 
 Extensive rewards pools for [Alcor Farms (XPR)](https://alcor.exchange/v/xpr/analytics?tab=farms).
 
-Flex tokens are not magic. The feeling you get when you check your wallet and see it working for you, that’s magic.
+This is just what happens if you **buy and hold**. There are also other ways to earn with EASY, including the [Welcome Program](../maximizing-your-easy.md#welcome-program) and [providing liquidity](../maximizing-your-easy.md#lp-the-smart-way) against other coins.

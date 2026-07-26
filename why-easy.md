@@ -57,7 +57,7 @@ Tokens can be used in a voting system, governing system, legal system, patterns 
 
 Imagine: all distributions of “tax money” are transparent, the people (or reps) vote on budgets and proposals with clarity in decision, checked by public knowledge.
 
-If you’re here for dead-simple yield you can still see in your wallet, you’re in the right place. If you’re here to help rebuild how value moves, you’re in good company. Live pulse: [Market Stats](market-stats.md). Proof on a real bag: [Success in Community](our-story/success-in-community.md). The builder’s arc: [Founder Story](our-story/founder-story.md).
+If you’re here for dead-simple yield you can still see in your wallet, you’re in the right place. If you’re here to help rebuild how value moves, you’re in good company. Live pulse: [Market Stats](market-stats.md). Proof on a real bag: [Success Stories](our-story/success-stories.md). The builder’s arc: [Founder Story](our-story/founder-story.md).
 
 [^1]: [Bridged EASY contracts](https://github.com/dougbutner/Bridged-EASY-Contracts)
 

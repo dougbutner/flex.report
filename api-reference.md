@@ -148,4 +148,4 @@ Inbound `from=mon3y` transfers ≈ reflection payments for that account.
 | [Swap EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y) | Exact XUSDC → EASY pair |
 | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | Alcor XPR farms |
 
-Pages powered by these calls: [Market Stats](market-stats.md) · [Stablecoin Arbitrage](arbitrage.md) · [Success in Community](our-story/success-in-community.md).
+Pages powered by these calls: [Market Stats](market-stats.md) · [Stablecoin Arbitrage](arbitrage.md) · [Success Stories](our-story/success-stories.md).

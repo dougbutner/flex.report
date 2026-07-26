@@ -9,7 +9,7 @@
 * [Stablecoin Arbitrage](arbitrage.md)
 * [Our Story](our-story/README.md)
   * [Founder Story](our-story/founder-story.md)
-  * [Success in Community](our-story/success-in-community.md)
+  * [Success Stories](our-story/success-stories.md)
   * [Unintended Consequences](our-story/unintended-consequences.md)
 * [Core Tech](core-tech/README.md)
   * [Reflections and Reflexions](core-tech/reflections-and-reflexions.md)

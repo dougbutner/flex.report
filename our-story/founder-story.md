@@ -49,4 +49,4 @@ EOSIO enabled me to build the systems I couldn't fake on hype chains: real contr
 
 Welcome to the first day of the rest of your life.
 
-Take it EASY: then check [Success in Community](success-in-community.md) for what reflections look like on a real account.
+Take it EASY: then check [Success Stories](success-stories.md) for what reflections look like on a real account.
