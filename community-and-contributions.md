@@ -28,6 +28,10 @@ Pool is split into **shares** (example week: **8,800 EASY** / 8 shares ≈ **1,1
 | Top | 3 |
 | 2nd | 2 |
 | 3rd | 1 |
+| Host | 1 |
+| Host giveaway | 1 (at the host’s discretion) |
+
+We **reserve one share for the host**, and **one share the host may give away** at their discretion.
 
 | Cadence | What |
 | --- | --- |

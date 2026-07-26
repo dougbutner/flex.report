@@ -1,5 +1,5 @@
 # flex.town Tools
 
-Bookmark **[flex.town](https://flex.town)** to send reflections, change rewards, and more.
+Bookmark **[flex.town](https://www.flex.town/)** for Send It, reward token changes, opt-out of tax, Welcome, swap, and bridge.
 
-Use flex.town to change your reward token, send reflections, set beneficiary, and manage everything.
+Full walkthrough (with screenshots): [Maximizing Your EASY](maximizing-your-easy.md).

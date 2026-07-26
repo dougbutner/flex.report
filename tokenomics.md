@@ -28,16 +28,17 @@ EASY provides a highly-used service to the market, liquidity for humans and bots
 
 ```mermaid
 flowchart TB
-  P[Swap profits]
-  P -->|EASY side| R[Re-pool into liquidity]
-  P -->|USD side| B[Buy EASY → raise floor]
-  R --> C[~33% Club budget]
-  R --> I[Rest infinitely re-pools]
+  P[EASY pool swap fees]
+  P --> I["38.2% invite.mon3y"]
+  P --> C["38.2% Contributor Club (reflections)"]
+  P --> M["23.6% MEME buyback → glitch.mon3y"]
 ```
 
-- 100% of EASY swap profits are infinitely re-pooling.
-- 100% of USD(c) profits used to purchase EASY (raising the redeemable price of EASY).
-- ~33% re-pool profits paid to Club budget, the rest infinitely re-pools.
+- **38.2%** → [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (Welcome Program)
+- **38.2%** → Contributor Club budget (`reflections`)
+- **23.6%** → MEME buyback to [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y)
+
+Reasoning: the Welcome Program has led to many smaller accounts, which means less EASY to give out at Contributor Club meetings, so a larger share now funds invites + Club, with the rest buying MEME.
 
 ## Day-one liquidity allocation
 
