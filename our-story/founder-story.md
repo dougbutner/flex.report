@@ -1,6 +1,6 @@
 # Founder Story
 
-![Douglas at ~15 coding on a CRT](assets/douglas-founder-pokerstars.png)
+![Douglas at age 15 coding on a CRT](assets/douglas-founder-pokerstars.png)
 
 *The first thing I coded was a bot to play PokerStars using AutoIt, at age 15.*
 

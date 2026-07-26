@@ -8,7 +8,7 @@
 
 Live examples (fee APY ≈ 24h volume × fee × 365 ÷ TVL; moves with volume):
 
-- [EASY/XPR](https://alcor.exchange/v/xpr/analytics/pools/4512) · **1% fee** · roughly **~14% fee APY** on recent volume (~$890/day on ~$24k TVL)
+- [EASY/XPR](https://alcor.exchange/v/xpr/analytics/pools/4512) · **1% fee** · roughly **≈14% fee APY** on recent volume (≈$890/day on ≈$24k TVL)
 - Other busy **1%** books (METAL, XXRP, and thinner alts) can print higher or lower day to day; check [Alcor Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) and [EASY analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) before sizing
 
 Doing that with EASY is inherently stronger than parking the same energy in plain **USDC** LP: you sit in the route that already attracts the volume.
@@ -46,7 +46,7 @@ This is **one-way** for that account: you renounce reflection rewards forever on
 
 The Welcome Program runs on [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (contract: `easyinvite`), with banked EASY in [`inbank.mon3y`](https://explorer.xprnetwork.org/account/inbank.mon3y). The UI is on [flex.town → Welcome](https://www.flex.town/). EASY itself is the flex token contract (`takeiteasy` / [`mon3y`](https://explorer.xprnetwork.org/account/mon3y)).
 
-**Request your first ~100 EASY.** Submit **Request a welcome** on flex.town (`invite.mon3y::ask4invite`). Someone later pays the welcome package: **200 EASY** total → **100 EASY to your wallet** and **100 EASY to the collective vault** (`inbank.mon3y`). Vault yield splits among participants; multipliers grow with your network.
+**Request your first ≈100 EASY.** Submit **Request a welcome** on flex.town (`invite.mon3y::ask4invite`). Someone later pays the welcome package: **200 EASY** total → **100 EASY to your wallet** and **100 EASY to the collective vault** (`inbank.mon3y`). Vault yield splits among participants; multipliers grow with your network.
 
 **Invite people for infinite money forever.** Once you are welcomed, welcome others the same way. Each welcome bumps invite score up your upline, banks your share in the vault, and compounds network rewards when anyone calls claim. Grow the tree; claim forever.
 

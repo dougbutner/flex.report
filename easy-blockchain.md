@@ -83,4 +83,4 @@ The EASY Blockchain helps people earn passive income on existing assets, without
 - Lock EASY on XPR as investment in the new chain; incentives before the **October 24** buyback window
 - Buy-in via bluechip deposit addresses; discounts for Antelope tokens (A/EOS, WAX, Telos, XPR)
 - FIAT / institutional pre-sales off-chain for infra + marketing
-- Build over **21 months**; mainnet anytime before then, with **~3 months testnet** aiming for **October 24, 2026** to match EASY’s buyback
+- Build over **21 months**; mainnet anytime before then, with **≈3 months testnet** aiming for **October 24, 2026** to match EASY’s buyback

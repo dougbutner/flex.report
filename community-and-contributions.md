@@ -19,7 +19,7 @@ We’re **actively improving this process**; details and the living [Contributio
 | Time | Block |
 | --- | --- |
 | 10 min | Landing |
-| 30 min | Each present for ~3 mins |
+| 30 min | Each present for ≈3 mins |
 | 20 min | 1 · 2 · 3 consensus |
 | 20 min | Roundtable / party |
 

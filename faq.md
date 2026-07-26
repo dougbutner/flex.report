@@ -54,7 +54,7 @@ Always match the **network** on the withdrawal screen to XPR / the bridge instru
 
 ## Is KYC hard? Is it free?
 
-WebAuth / Metallicus identity is the compliant path for Metal Pay and Metal X features. Verification is **free**. Many people finish in **under an hour**; accounts that need manual review can take longer (Metallicus docs mention up to ~24 hours in those cases). Start at [identity.metallicus.com](https://identity.metallicus.com) / [identity.metalx.com](https://identity.metalx.com) from WebAuth.
+WebAuth / Metallicus identity is the compliant path for Metal Pay and Metal X features. Verification is **free**. Many people finish in **under an hour**; accounts that need manual review can take longer (Metallicus docs mention up to ≈24 hours in those cases). Start at [identity.metallicus.com](https://identity.metallicus.com) / [identity.metalx.com](https://identity.metalx.com) from WebAuth.
 
 ## Do I need KYC to get funds onto EASY?
 

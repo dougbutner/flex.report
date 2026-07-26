@@ -510,16 +510,16 @@ Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 | | |
 | --- | --- |
 | **24h volume (all EASY pools)** | **{money(e['volume_usd_24h'])}** |
-| **EASY price** | **${e['price_usd']:.4f}** (~{e['price_xpr']:.2f} XPR) |
+| **EASY price** | **${e['price_usd']:.4f}** (≈{e['price_xpr']:.2f} XPR) |
 | **EASY price in XUSDC** | **{e.get('price_xusdc', e['price_usd']):.6f} XUSDC** |
 | **Total EASY pools TVL** | **{money(e.get('pools_tvl_usd', 0))}** |
 | **Total USD backing (stables)** | **{money(e.get('usd_backing', 0))}** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
-| **Pending holder rewards** | **{e['reflection_pool_easy']:,.2f} EASY** (~{money(e['reflection_pool_usd'])}) in the reflection pool |
+| **Pending holder rewards** | **{e['reflection_pool_easy']:,.2f} EASY** (≈{money(e['reflection_pool_usd'])}) in the reflection pool |
 | **7d volume** | **{money(e['volume_usd_7d'])}** |
 | **30d volume** | **{money(e['volume_usd_30d'])}** |
 | **Flexers (holders on contract)** | **{e['flexers']:,}** |
 | **Market cap (fully circulating)** | **{money(e['mcap_usd'])}** |
-| **Share of Alcor Proton swap volume (24h)** | **~{e['share_of_alcor_swap_24h_pct']}%** |
+| **Share of Alcor Proton swap volume (24h)** | **≈{e['share_of_alcor_swap_24h_pct']}%** |
 
 USDC-style rewards dashboards inspired this layout: **liquidity**, **pending rewards**, and **volume that feeds holders**.
 
@@ -562,7 +562,7 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | **Swap volume** | {money(a['swap_volume_usd_1d'])} | {money(a.get('swap_volume_usd_1w', 0))} | {money(a['swap_volume_usd_1m'])} |
 | **Spot volume** | {money(a['spot_volume_usd_1d'])} | {money(a.get('spot_volume_usd_1w', 0))} | {money(a['spot_volume_usd_1m'])} |
 | **Swap fees** | {money(a['swap_fees_1d'])} | {money(a.get('swap_fees_1w', 0))} | {money(a['swap_fees_1m'])} |
-| **DAU (avg)** | ~{a['dau_1d']:.0f} | ~{a.get('dau_1w', a['dau_1d']):.0f} | ~{a['dau_1m']:.0f} |
+| **DAU (avg)** | ≈{a['dau_1d']:.0f} | ≈{a.get('dau_1w', a['dau_1d']):.0f} | ≈{a['dau_1m']:.0f} |
 | **Liquidity pools** | {a['pools']:,} | - | - |
 | **Spot pairs** | {a['spot_pairs']:,} | - | - |
 
@@ -571,7 +571,7 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 | | |
 | --- | --- |
 | Reflection pool (`mon3y` / EASY `stat`) | **{e['reflection_pool_easy']:,.2f} EASY** |
-| Approx. USD | **~{money(e['reflection_pool_usd'])}** |
+| Approx. USD | **≈{money(e['reflection_pool_usd'])}** |
 | How it fills | 2% transfer tax into the pool |
 | How it pays | Anyone calls `distribute` → splash to flexers |
 
