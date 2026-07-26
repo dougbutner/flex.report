@@ -15,7 +15,7 @@ Tree-aware reflections + flex pools, minted as WON on XPR.
 - `sprouttoken`: pick a preferred flex pool by symbol (blank/EASY resets to default).
 - `settree`: pick a tree recipient + rate (0-10000, default 10000).
 - `settreememo`: store a single custom memo (≤200 chars) for the tree leg.
-- `handle_transfer` (notify): when receiving from `swap.alcor` with memos starting `Col`, forwards fees to `1won`.
+- `handle_transfer` (notify): when receiving pool fees from `swap.alcor`, forwards them to `1won`.
 
 ## Data Model (tables)
 

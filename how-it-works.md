@@ -15,22 +15,9 @@ All Flex tokens send **proportional rewards** straight to your wallet. Those rew
 3. Anyone can call the payout action (`distribute` / `radiate` / `reflect`).
 4. Holders receive their share in-wallet. You can keep the same token (**reflect**) or **flex** rewards into another token via Alcor (BTC, SOL, other Flex tokens, and more).
 
-```mermaid
-flowchart LR
-  Move[Transfer or swap] --> Tax[Transfer tax]
-  Tax --> Pool[Reflection pool]
-  Tax -.-> Burn[Burn optional]
-  Tax -.-> Team[Team optional]
-  Pool --> Pay[Payout action]
-  Pay --> Wallet[Your wallet]
-```
+![Money flow](assets/diagrams/how-money-flow.png)
 
-```mermaid
-flowchart TB
-  Hold[You hold Flex token] --> Choice{Reward choice}
-  Choice -->|Default| Same[Same token reflects in]
-  Choice -->|Flex| Other[Other token via Alcor]
-```
+![Reward choice](assets/diagrams/reward-choice.png)
 
 Protocol fees (separate from the transfer tax above) are explained in [Legal & Terms](legal-and-terms.md).
 

@@ -28,5 +28,6 @@
   * [MEME (m3m3)](smart-contracts/meme.md)
   * [GRAMS (gold.mon3y)](smart-contracts/grams.md)
 * [API Reference](api-reference.md)
+* [FAQ](faq.md)
 * [Legal & Terms](legal-and-terms.md)
 * [Resources](resources.md)

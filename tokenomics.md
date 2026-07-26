@@ -22,38 +22,26 @@ Fair launched 100% max supply into Alcor pools from $0.01-100,000 USD(c).
 
 The math keeping EASY on the up and up is… easy… Every token was purchased with at least 0.01 USD(c) and is instantly redeemable in the same liquidity pools it was originally purchased from. There’s over 25K USD in stablecoins (USDC, USDT, PyUSD, XMD, and PAX) backing EASY, and growing.
 
-Pools earn some profit on EASY/USD(c) swap fee of 0.05%-1%.
+Pools earn fees on the **day-one project pools** the team set up at launch (EASY paired into XMD, XUSDC, XPYUSD, XPAX, XUSDT). Swap fees are typically 0.05%–1% depending on the pool.
 
-EASY provides a highly-used service to the market, liquidity for humans and bots to trade. Over 1.6M USD in 90d volume (and growing).
+**How those fees are used**
 
-![Pool fee split](assets/heroes/fee-split.png)
+- **Stablecoin-side fees** (USD(c) earned in the pools) are **automatically bought back into EASY** by smart contract, then **re-pooled** (raising redeemable depth).
+- **EASY-side fees only** are split for ecosystem use. That EASY is what funds Welcome, Contributors Club, and MEME buybacks into the locked [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y) contract.
 
-```mermaid
-flowchart TB
-  P[EASY pool swap fees]
-  P --> I["38.2% invite.mon3y"]
-  P --> C["38.2% Contributor Club (reflections)"]
-  P --> M["23.6% MEME buyback → glitch.mon3y"]
-```
+![Pool fee flow](assets/diagrams/pool-fee-flow.png)
 
-- **38.2%** → [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (Welcome Program)
+- **38.2%** of EASY-side fees → [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (Welcome Program)
 - **38.2%** → Contributor Club budget (`reflections`)
-- **23.6%** → MEME buyback to [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y)
+- **23.6%** → MEME buyback to locked [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y)
 
-Reasoning: the Welcome Program has led to many smaller accounts, which means less EASY to give out at Contributor Club meetings, so a larger share now funds invites + Club, with the rest buying MEME.
+Reasoning: the Welcome Program has led to many smaller accounts, which means less EASY to give out at Contributor Club meetings, so a larger share now funds invites + Club, with the rest buying MEME into `glitch.mon3y`.
 
 ## Day-one liquidity allocation
 
 4,200,000 EASY paired day-one into each stable pool on `hands.mon3y` (100% of supply):
 
-```mermaid
-flowchart LR
-  S["21M EASY"] --> A["4.2M × XMD"]
-  S --> B["4.2M × XUSDC"]
-  S --> C["4.2M × XPYUSD"]
-  S --> D["4.2M × XPAX"]
-  S --> E["4.2M × XUSDT"]
-```
+![Day-one allocation](assets/diagrams/day-one-allocation.png)
 
 | Pool | EASY day one | Alcor |
 | --- | ---: | --- |
@@ -69,16 +57,18 @@ Live depth and volume: [Market Stats](market-stats.md) · Venus unlocks (one poo
 ## Flex family (all tokens)
 
 <!-- LIVE:FLEX-TOKENOMICS -->
-*Live snapshot: **2026-07-26 06:37 UTC** · Alcor + chain `stat` tables*
+*Live snapshot: **2026-07-26 06:58 UTC** · Alcor + chain `stat` tables*
 
 ### Supply (all Flex tokens)
 
-| Token | Supply | Max | Price (USD) | Reflection pool |
-| --- | ---: | ---: | ---: | ---: |
-| **EASY** | 21,000,000 | 21,000,000 | $0.016546 | 2,804.8234 EASY |
-| **WON** | 1,000,000 | 1,000,000 | $1.667161 | 6.9441 WON |
-| **MEME** | 9,986,239,981,744 | 10,000,000,000,000 | $0.000000 | 65,428,034.1890 MEME |
-| **GRAMS** | 1,000,000,000 | 1,000,000,000 | $134.734575 | 0.0716 GRAMS |
+| Token | Circulating Supply | Max Supply | Price (USD) |
+| --- | ---: | ---: | ---: |
+| **EASY** | 21M | 21M | $0.016542 |
+| **WON** | 1M | 1M | $1.666835 |
+| **MEME** | 9.986T | 10T | $0.000000 |
+| **GRAMS** | 1B | 1B | $134.708275 |
+
+**MEME burned:** **0.14%** of max supply (13.76B of 10T burned; circulating 9.986T).
 
 ### Fee rates
 

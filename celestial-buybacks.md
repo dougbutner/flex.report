@@ -39,30 +39,22 @@ I welcome all questions. For a better understanding + visual explanation, [watch
 | EASY / XPAX | [4070](https://alcor.exchange/v/xpr/analytics/pools/4070) |
 | EASY / XUSDT | [4066](https://alcor.exchange/v/xpr/analytics/pools/4066) |
 
-```mermaid
-flowchart LR
-  Lock[5 pools locked] --> V["Venus · ~1.6y"]
-  V --> One[Clear 1 pool]
-  One --> Reseed[Reseed higher band]
-  Reseed --> Lock
-```
+![Venus buyback loop](assets/diagrams/venus-loop.png)
 
-Between Venus beats, day-to-day floor support still comes from the living loop: USD(c) swap profits buy EASY; EASY-side profits re-pool. See [Tokenomics](tokenomics.md) and [Liquidity & Farms](core-tech/liquidity-and-farms.md).
+Between Venus beats, day-to-day floor support still comes from the living loop: **stablecoin-side** swap fees buy EASY and re-pool; **EASY-side** fees fund Welcome / Club / MEME. See [Tokenomics](tokenomics.md) and [Liquidity & Farms](core-tech/liquidity-and-farms.md).
 
-## WON buybacks (half-step)
+## WON buybacks (superior conjunction)
 
-**WON** buybacks run on the **half-step** of the Venus cycle, every **292 days** (~½ × 584).
+**WON** buybacks use the **same ~584-day Venus synodic cadence** as EASY, but they start on the **superior conjunction** (Venus on the far side of the Sun), not the **inferior conjunction** (Venus between Earth and the Sun) that EASY uses.
+
+That puts WON beats about **~292 days offset** from EASY Venus unlocks inside the same cycle: one EASY beat and one WON beat per ~584 days, on opposite conjunctions.
 
 | | |
 | --- | --- |
-| **Cadence** | Every **292 days** (half Venus) |
+| **Cadence** | Every **~584 days** (Venus synodic), keyed to **superior conjunction** |
 | **What** | Buybacks supporting the WON / EASY stack |
-| **Relation** | Two WON beats per one EASY Venus beat |
+| **Relation to EASY** | Same period as EASY Venus; opposite conjunction (~292 days apart) |
 
-```mermaid
-flowchart LR
-  V["EASY Venus ~1.6y"] --> H1["WON half-step 292d"]
-  V --> H2["WON half-step 292d"]
-```
+![WON and EASY Venus series](assets/diagrams/won-half-step.png)
 
 Live depth and volume while you wait: [Market Stats](market-stats.md). Trade: [Swap EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y).

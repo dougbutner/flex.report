@@ -2,7 +2,22 @@
 
 ![Maximize Your EASY](assets/heroes/maximizing.png)
 
-Do everything on **[flex.town](https://www.flex.town/)**. Connect your WebAuth wallet and use Flex Tools. You do not need contract actions for day-to-day use.
+## Provide liquidity
+
+**Prefer 1% fee pools** when you LP. Higher-fee EASY pools capture more value from volume, which feeds the live fee split in [Tokenomics](tokenomics.md) (Welcome, Contributors Club, MEME buyback into `glitch.mon3y`).
+
+Live examples (fee APY ≈ 24h volume × fee × 365 ÷ TVL; moves with volume):
+
+- [EASY/XPR](https://alcor.exchange/v/xpr/analytics/pools/4512) · **1% fee** · roughly **~14% fee APY** on recent volume (~$890/day on ~$24k TVL)
+- Other busy **1%** books (METAL, XXRP, and thinner alts) can print higher or lower day to day; check [Alcor Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) and [EASY analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) before sizing
+
+Doing that with EASY is inherently stronger than parking the same energy in plain **USDC** LP: you sit in the route that already attracts the volume.
+
+If you plan to LP with EASY, it is wise to **opt out of the tax first** on that account, then LP from it, so deposits, rebalances, and exits are not taxed 2% every time EASY moves (see below).
+
+If you don’t have much capital to LP, you only need **100 EASY** to enjoy all the benefits of **reflection**: hold that threshold, get paid when anyone calls Send It / `distribute`, and flex your reward token on flex.town.
+
+Do everything else on **[flex.town](https://www.flex.town/)**. Connect your WebAuth wallet and use Flex Tools. You do not need contract actions for day-to-day use.
 
 ![Flex Tools on flex.town](assets/flextown/flex-tools.png)
 
@@ -19,23 +34,11 @@ Do everything on **[flex.town](https://www.flex.town/)**. Connect your WebAuth w
 
 Contract details live under [Smart Contracts](smart-contracts/README.md) and [API Reference](api-reference.md) if you need them.
 
-## Trade efficiently
-
-**Prefer 1% fee pools** when you provide liquidity or route size. Higher-fee EASY pools capture more value from volume, which feeds the live fee split in [Tokenomics](tokenomics.md) (Welcome, Contributors Club, MEME buyback).
-
 ## Ban yourself to drop the reflection tax
 
-If you move EASY often and want maximum transfer efficiency, use **Opt out of tax** on [flex.town Flex Tools](https://www.flex.town/). That self-ban (`noflexzone` on EASY) removes the **2% reflection tax** on your transfers.
+If you move EASY often (including for LP) and want maximum transfer efficiency, use **Opt out of tax** on [flex.town Flex Tools](https://www.flex.town/). That self-ban (`noflexzone` on EASY) removes the **2% reflection tax** on your transfers.
 
 This is **one-way** for that account: you renounce reflection rewards forever on that wallet. Use a separate account if you still want to earn reflections.
-
-## LP the smart way
-
-Liquidity providing is where a lot of the real yield lives. If you plan to LP with EASY, it is wise to **opt out of the tax first** on that account, then LP from it, so deposits, rebalances, and exits are not taxed 2% every time EASY moves.
-
-You can also chase solid APY on high-volume pairs like **EASY/XPR** (and other busy Alcor markets). Doing that with EASY is inherently stronger than parking the same energy in plain **USDC** LP: you sit in the route that already attracts the volume, you can earn pool fees on a token people actually trade through, and the ecosystem loop (fees → Welcome / Club / MEME) keeps working around you.
-
-Farm and pool links: [Alcor Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) · [EASY analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y).
 
 ## Welcome Program
 
@@ -54,4 +57,4 @@ The Welcome Program runs on [`invite.mon3y`](https://explorer.xprnetwork.org/acc
 | Share invite links | Welcome → Telegram / WhatsApp / X / email / text |
 | View your network | Welcome → View welcome network |
 
-Pool swap fees also fund invites: **38.2%** of EASY pool fees go to `invite.mon3y`. See [Tokenomics](tokenomics.md).
+Pool swap fees also fund invites: **38.2%** of EASY-side pool fees go to `invite.mon3y`. See [Tokenomics](tokenomics.md).

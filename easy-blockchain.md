@@ -10,16 +10,7 @@ The EASY Blockchain helps people earn passive income on existing assets, without
 
 ## Layers
 
-```mermaid
-flowchart TB
-  L1[Token · Bridges]
-  L2[Wallet · Blockchain]
-  L3[Stable-backing · DeFi]
-  L4[Human · Infra + BP]
-  L5[Application · Attention]
-  L6[Lifestyle · EASY Wins · Super Club]
-  L1 --> L2 --> L3 --> L4 --> L5 --> L6
-```
+![EASY Blockchain layers](assets/diagrams/easy-chain-layers.png)
 
 - **Token**: efficient reflections (direct-to-wallet earnings from transfer tax)
 - **Bridges**: reflective / non-reflective version of each bridged token
@@ -86,13 +77,7 @@ flowchart TB
 
 ## Launch (21 months)
 
-```mermaid
-flowchart LR
-  Now[EASY on XPR] --> Lock[Lock for Genesis]
-  Lock --> Test[Testnet ~3 mo]
-  Test --> Main[Mainnet ≤ 21 mo]
-  Main --> BB["Oct 24, 2026 buyback goal"]
-```
+![Path to mainnet](assets/diagrams/easy-chain-path.png)
 
 - Ride EASY-on-XPR momentum: referrals, frequent votes, hype while securing funding
 - Lock EASY on XPR as investment in the new chain; incentives before the **October 24** buyback window

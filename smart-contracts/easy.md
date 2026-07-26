@@ -4,13 +4,7 @@
 
 Reflexive EOSIO token with flexible swap targets and configurable burn.
 
-```mermaid
-flowchart LR
-  T[transfer] --> Pool[reflection_pool]
-  Pool --> D[distribute]
-  D --> W[Holders]
-  T -.->|Col memo from swap.alcor| R[reflections]
-```
+![EASY contract flow](../assets/diagrams/easy-contract-flow.png)
 
 ## Contract Surface (actions)
 
@@ -21,7 +15,7 @@ flowchart LR
 - `noflexzone`: ban/unban a flexer from fees/reflections (self-ban allowed; unban requires contract auth).
 - `setflexpool`: register or update a flex pool hint (token, contract, Alcor pool IDs).
 - `setflextoken`: pick a preferred flex pool by symbol (blank/EASY resets to default).
-- `handle_transfer` (notify): when receiving from `swap.alcor` with memos starting `Col`, forwards fees to `reflections`.
+- `handle_transfer` (notify): when receiving pool fees from `swap.alcor`, forwards them to `reflections`.
 
 ## Data Model (tables)
 

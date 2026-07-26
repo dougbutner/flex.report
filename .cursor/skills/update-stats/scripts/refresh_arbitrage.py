@@ -216,11 +216,7 @@ Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT*
 
 ## How to read
 
-```mermaid
-flowchart LR
-  Sell[Sell stable] --> Easy[EASY pool]
-  Easy --> Buy[Buy stable]
-```
+![Stablecoin arb path](assets/diagrams/arbitrage-path.png)
 
 - Rows = **sell** this coin. Columns = **buy** that coin.
 - Cell = how many **buy** tokens you get per **1.0 sell** token (implied), routing **sell → EASY → buy**.

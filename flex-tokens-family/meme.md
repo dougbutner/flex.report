@@ -15,12 +15,7 @@ M3m3 is the only FLEX token using the burn functionality, and has the highest su
 
 We use MEME as farm rewards for pools for WON, EASY, and INDEX (our experimental, unadvertised, non-reflective index of XPR).
 
-```mermaid
-flowchart LR
-  LP[Provide liquidity] --> Farm[MEME farms]
-  Farm --> Bag[Stack MEME]
-  Burn[1% burn on transfers] --> Scarce[Supply shrinks]
-```
+![MEME loop](../assets/diagrams/meme-loop.png)
 
 Maybe don’t ape into m3m3 as an investment, it’s not backed by anything but laughs and community alt-coins.
 

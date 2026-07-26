@@ -352,6 +352,8 @@ def fetch_flex_family(pools: list, stable_usd: dict, easy_usd: float) -> list[di
                 "price_usd": round(px, 6),
                 "supply": supply,
                 "max_supply": max_s,
+                "burned": max(max_s - supply, 0.0),
+                "burned_pct_of_max": round(100.0 * max(max_s - supply, 0.0) / max_s, 4) if max_s else 0.0,
                 "reflection_pool": round(refl, 6),
                 "usd_backing": round(backing, 2),
                 "usd_backing_by_major": {k: round(v, 2) for k, v in by_major.items()},
@@ -578,6 +580,25 @@ Track real bags over time on [Success Stories](our-story/success-stories.md).
     (ROOT / "market-stats.md").write_text(md)
 
 
+def short_qty(n: float) -> str:
+    """Human shorthand: 21M, 1B, 10T, 9.986T."""
+    n = float(n)
+    abs_n = abs(n)
+    if abs_n >= 1e12:
+        s = f"{n / 1e12:.3f}".rstrip("0").rstrip(".")
+        return f"{s}T"
+    if abs_n >= 1e9:
+        s = f"{n / 1e9:.3f}".rstrip("0").rstrip(".")
+        return f"{s}B"
+    if abs_n >= 1e6:
+        s = f"{n / 1e6:.3f}".rstrip("0").rstrip(".")
+        return f"{s}M"
+    if abs_n >= 1e3:
+        s = f"{n / 1e3:.3f}".rstrip("0").rstrip(".")
+        return f"{s}K"
+    return f"{n:,.0f}"
+
+
 def write_tokenomics_live(stats: dict) -> None:
     """Replace the live Flex tables block inside tokenomics.md."""
     path = ROOT / "tokenomics.md"
@@ -592,10 +613,10 @@ def write_tokenomics_live(stats: dict) -> None:
     supply_rows = []
     fee_rows = []
     backing_rows = []
+    meme_burn_note = ""
     for t in fam:
         supply_rows.append(
-            f"| **{t['sym']}** | {t['supply']:,.0f} | {t['max_supply']:,.0f} | ${t['price_usd']:.6f} | "
-            f"{t['reflection_pool']:,.4f} {t['sym']} |"
+            f"| **{t['sym']}** | {short_qty(t['supply'])} | {short_qty(t['max_supply'])} | ${t['price_usd']:.6f} |"
         )
         fee_rows.append(
             f"| **{t['sym']}** | {t['reflection']} | {t['burn']} | {t['team']} | {t['hold']} | {t['pool_min']} | {t['tagline']} |"
@@ -606,16 +627,21 @@ def write_tokenomics_live(stats: dict) -> None:
         backing_rows.append(
             f"| **{t['sym']}** | **{money(t['usd_backing'])}** | {majors} |"
         )
+        if t["sym"] == "MEME" and t.get("burned_pct_of_max") is not None:
+            meme_burn_note = (
+                f"\n**MEME burned:** **{t['burned_pct_of_max']:.2f}%** of max supply "
+                f"({short_qty(t['burned'])} of {short_qty(t['max_supply'])} burned; circulating {short_qty(t['supply'])}).\n"
+            )
 
     block = f"""{start}
 *Live snapshot: **{updated}** · Alcor + chain `stat` tables*
 
 ### Supply (all Flex tokens)
 
-| Token | Supply | Max | Price (USD) | Reflection pool |
-| --- | ---: | ---: | ---: | ---: |
+| Token | Circulating Supply | Max Supply | Price (USD) |
+| --- | ---: | ---: | ---: |
 {chr(10).join(supply_rows)}
-
+{meme_burn_note}
 ### Fee rates
 
 | Token | Reflection | Burn | Team | Hold to earn | Pool to pay | Tagline |

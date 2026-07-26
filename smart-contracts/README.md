@@ -11,13 +11,7 @@ Reflexive EOSIO tokens with flexible swap targets. Each Flex token lives on its 
 | MEME | [`m3m3`](https://explorer.xprnetwork.org/account/m3m3) |
 | GRAMS | [`gold.mon3y`](https://explorer.xprnetwork.org/account/gold.mon3y) |
 
-```mermaid
-flowchart LR
-  C[Flex contracts] --> A[Alcor pools]
-  C --> R[Reflection pool]
-  R --> H[Holders]
-  A -.->|fees / Col memos| Ref[reflections]
-```
+![Flex contracts flow](../assets/diagrams/smart-contracts-flow.png)
 
 Open any account above, then click **contract** on the explorer to see the actions you’ll use to submit transactions.
 

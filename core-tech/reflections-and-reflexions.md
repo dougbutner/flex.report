@@ -4,15 +4,7 @@
 
 All transfer fees go in the reflection pool. The reflection rate goes to direct payments to accounts holding that token.
 
-```mermaid
-flowchart LR
-  T[Transfer] --> F[Transfer tax]
-  F --> P[Reflection pool]
-  P --> D["distribute / radiate / reflect"]
-  D --> R{Reward choice}
-  R -->|Default| H[Same token in wallet]
-  R -->|Flex| X[Other token via Alcor]
-```
+![Reflections flow](../assets/diagrams/reflections-flow.png)
 
 **Reflect** = rewards stay in the same token. **Reflexive** = you flex rewards into something else (XBTC, GRAMS, …).
 
