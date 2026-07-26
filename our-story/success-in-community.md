@@ -13,15 +13,16 @@ On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.or
 
 **Reflections earned since then:** **1,671.98 EASY** across **578** on-chain payments from `mon3y` (through July 25, 2026).
 
-That’s **+19.6%** grown from reflections alone, without selling, while the bag kept collecting.
+That’s **+19.6% in EASY** from reflections alone (about **~38% APY** annualized over ~7 months), without selling, while the bag kept collecting. At the current EASY price (~**$0.0165**), that is roughly **+$27.62 USDC** earned in reflections, and the bag is worth about **$170.48 USDC** now.
 
 | | |
 | --- | --- |
 | Account created | Dec 22, 2025 |
-| Day-one stack | 8,535.71 EASY |
-| Reflections (mon3y → thelake) | **1,671.98 EASY** |
+| Day-one stack | 8,535.71 EASY (~$141 at today’s price) |
+| Reflections (mon3y → thelake) | **1,671.98 EASY** (~**$27.62 USDC**) |
+| Reflection gain | **+19.6% EASY** · **~38% APY** |
 | Reflection payments | 578 |
-| Balance now | **10,320.67 EASY** |
+| Balance now | **10,320.67 EASY** (~**$170.48 USDC**) |
 | Explorer | [thelake](https://explorer.xprnetwork.org/account/thelake) |
 
 ![thelake reflections summary](assets/thelake-reflections-summary.png)

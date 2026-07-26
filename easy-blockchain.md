@@ -31,6 +31,8 @@ flowchart TB
 - **Infra + BP**: democratically vetted core group paid in USDC; finalizers paid in RAM
 - **Application**: WebAuth-signed experiences
 - **Advertising / Attention**: tokenized offers for non-tokenized goods/services on a global map, fulfilled by EASY (based on [cXc.world](https://cxc.world))
+
+![cXc.world](assets/cxc-world.png)
 - **EASY Lifestyle**: tech-positive minimalists maximizing output; paid Skool community (optional lifetime buy-in with EASY)
 - **EASY Wins**: retroactive public goods game
 - **Super Club**: fractal meetings with rewards every 2 weeks

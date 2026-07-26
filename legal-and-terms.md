@@ -40,7 +40,7 @@ Proceeds are used to **pay developers**, fund **Contributors Club**, and support
 
 Transfer taxes (reflection / burn / team rates on each Flex token) are separate from this protocol fee. See [How it works](how-it-works.md). Pool-fee routing (Welcome / Club / MEME buyback) is documented under [Tokenomics](tokenomics.md).
 
-As always, we do our best and you’ll see that in our track record, including cXc.world, xparty.win, and the performance of EASY in the markets.
+As always, we do our best and you’ll see that in our track record, including cXc.world and the performance of EASY in the markets.
 
 This legal note protects our volunteers and those we serve. Thank you for your trust in the project and the developer, Douglas James Butner.
 

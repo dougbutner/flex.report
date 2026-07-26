@@ -24,12 +24,12 @@ Along the way:
 - **Ups**: time-token voting / “web4 Reddit” contract patterns for collective curation
 - **Loot**: gamified NFT staking
 - **[Aquarius Academy](https://aquarius.academy)**: open education around consciousness, geometry, and new-earth systems
-- **[Tetra](https://tetra.earth)** / **[XParty](https://xparty.win)**: experiments in fractal coordination and collective play
+- **[Tetra](https://tetra.earth)**: experiments in fractal coordination and collective play
 - Grants-backed work across **WAX**, **TONO**, and **EOS** (from 2021 onward)
 
 ![Douglas with Alejandro at Hash Fest 2023](assets/douglas-hash-fest-2023.jpeg)
 
-![cXc geotemporal music map](assets/cxc-music-map.png)
+![cXc.world](assets/cxc-world.png)
 
 I write about this stack in pieces like the [Web 4 Manifesto](https://douglas-life.medium.com/provable-democracy-the-web-4-manifesto-by-douglas-butner-3c8785d2f92a): provable democracy, time tokens, geotribes, and systems that make collaboration visible on-chain.
 
