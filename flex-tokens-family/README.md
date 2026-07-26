@@ -1,5 +1,7 @@
 # Flex Tokens Family
 
+![Flex Tokens Family](../assets/heroes/flex-family.png)
+
 The Flex token family: EASY, WON, MEME, and GRAMS, each with its own supply and fee design.
 
 | Token | Supply | Reflection | Extra | Backing / role |

@@ -1,5 +1,7 @@
 # Maximizing Your EASY
 
+![Maximize Your EASY](assets/heroes/maximizing.png)
+
 Do everything on **[flex.town](https://www.flex.town/)**. Connect your WebAuth wallet and use Flex Tools. You do not need contract actions for day-to-day use.
 
 ![Flex Tools on flex.town](assets/flextown/flex-tools.png)

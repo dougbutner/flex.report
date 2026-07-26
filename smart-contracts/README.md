@@ -1,5 +1,7 @@
 # Smart Contracts
 
+![Smart Contracts](../assets/heroes/smart-contracts.png)
+
 Reflexive EOSIO tokens with flexible swap targets. Each Flex token lives on its own contract account.
 
 | Token | Contract |

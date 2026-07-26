@@ -1,5 +1,7 @@
 # Tokenomics
 
+![Tokenomics](assets/heroes/tokenomics.png)
+
 [Get a Wallet](https://webauth.com) | [Buy EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y) | [Analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y) | [Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) | [Telegram](https://t.me/flextokens)
 
 ## EASY
@@ -23,6 +25,8 @@ The math keeping EASY on the up and up is… easy… Every token was purchased w
 Pools earn some profit on EASY/USD(c) swap fee of 0.05%-1%.
 
 EASY provides a highly-used service to the market, liquidity for humans and bots to trade. Over 1.6M USD in 90d volume (and growing).
+
+![Pool fee split](assets/heroes/fee-split.png)
 
 ```mermaid
 flowchart TB

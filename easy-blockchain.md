@@ -1,5 +1,7 @@
 # Soon: The EASY Blockchain
 
+![The EASY Blockchain](assets/heroes/easy-blockchain.png)
+
 **The EASY Blockchain Manifesto**, by Gudasol
 
 Blockchain was supposed to make money better. **EASY is better money.**

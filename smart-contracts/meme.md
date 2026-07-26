@@ -1,5 +1,7 @@
 # MEME (contract: [`m3m3`](https://explorer.xprnetwork.org/account/m3m3))
 
+![MEME contract](../assets/heroes/contract-meme.png)
+
 Reflexive EOSIO token with flexible swap targets and configurable burn.
 
 ## Contract Surface (actions)

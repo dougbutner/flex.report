@@ -1,5 +1,7 @@
 # How it works
 
+![How it works](assets/heroes/how-it-works.png)
+
 Welcome.
 
 > Flex Tokens live on **XPR Network**: free-feeling transfers, human-readable accounts, and a wallet built for one-click actions. Start with the [WebAuth wallet](https://www.xprnetwork.org/wallet), read the [XPR whitepaper](https://xprnetwork.org/whitepaper) and [docs](https://docs.xprnetwork.org/), and move assets in via the [Metal X bridge](https://app.metalx.com/bridge).

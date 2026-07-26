@@ -1,5 +1,7 @@
 # API Reference
 
+![API Reference](assets/heroes/api-reference.png)
+
 Public reads used by this docs site, published here as a builder’s map. Endpoints are **Alcor (XPR)** and **XPR chain RPC**; treat them like Flex Report’s data plane.
 
 Base hosts:

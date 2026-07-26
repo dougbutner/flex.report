@@ -1,5 +1,7 @@
 # Reflections and Reflexions
 
+![Reflections and Reflexions](../assets/heroes/reflections.png)
+
 All transfer fees go in the reflection pool. The reflection rate goes to direct payments to accounts holding that token.
 
 ```mermaid

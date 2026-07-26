@@ -1,5 +1,7 @@
 # Resources
 
+![Resources](assets/heroes/resources.png)
+
 Actions you might take next:
 
 - Ask questions in [Telegram](https://t.me/flextokens)

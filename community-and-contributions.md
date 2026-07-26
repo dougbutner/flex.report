@@ -1,5 +1,7 @@
 # Community & Contributions
 
+![Contributors Club](assets/heroes/community.png)
+
 We need go-getters so the world knows how to take it EASY.
 
 ## Break Bread: Biweekly Online [Contributors Club](https://www.notion.so/aquariusacademy/2e7ac693574b80eda6a1eda98e6732e0?v=2e7ac693574b80aa8435000c8a44e1ae)

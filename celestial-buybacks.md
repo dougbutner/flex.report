@@ -1,5 +1,7 @@
 # Celestial Buybacks
 
+![Celestial Buybacks](assets/heroes/celestial-buybacks.png)
+
 Scheduled buybacks on celestial time, not arbitrary calendars. Liquidity stays locked until a Venus window; then **one** project pool is cleared and re-seeded higher.
 
 ## The Venus Buyback Option

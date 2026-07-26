@@ -1,5 +1,7 @@
 # EASY (contract: [`mon3y`](https://explorer.xprnetwork.org/account/mon3y))
 
+![EASY contract](../assets/heroes/contract-easy.png)
+
 Reflexive EOSIO token with flexible swap targets and configurable burn.
 
 ```mermaid

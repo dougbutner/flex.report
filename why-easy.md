@@ -1,5 +1,7 @@
 # Why EASY
 
+![Why EASY](assets/heroes/why-easy.png)
+
 ## Why I Built EASY, and all Flex Tokens.
 
 I believe token tech can free people financially to love more in their unique way.  

@@ -1,5 +1,7 @@
 # Legal & Terms
 
+![Legal & Terms](assets/heroes/legal.png)
+
 Applies for all Flex tokens.
 
 **This project is not for profit.** It is a volunteer experiment in New Earth finance, not a company selling securities.

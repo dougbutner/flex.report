@@ -1,5 +1,7 @@
 # MEME
 
+![MEME](../assets/heroes/meme.png)
+
 | | |
 | --- | --- |
 | **Max supply** | 10T MEME |

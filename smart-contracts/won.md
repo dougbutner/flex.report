@@ -1,5 +1,7 @@
 # WON (contract: [`w3won`](https://explorer.xprnetwork.org/account/w3won))
 
+![WON contract](../assets/heroes/contract-won.png)
+
 Tree-aware reflections + flex pools, minted as WON on XPR.
 
 ## Contract Surface (actions)

@@ -1,5 +1,7 @@
 # Stablecoin Arbitrage (XPR)
 
+![Stablecoin Arbitrage](assets/heroes/arbitrage.png)
+
 Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT** into the others on Alcor (XPR Network).
 
 *Snapshot: **2026-07-25 20:03 UTC** · Primary path: deepest **EASY**↔stable pools*

@@ -1,6 +1,6 @@
 # Founder Story
 
-![Builder at the edge of geometry and maps](assets/founder-banner.png)
+![Founder story timeline](assets/founder-banner.png)
 
 Hi, I'm **Douglas James Butner**, and I'm pleased you're here.
 
@@ -23,7 +23,7 @@ Along the way:
 - **[Tetra](https://tetra.earth)** / **[XParty](https://xparty.win)**: experiments in fractal coordination and collective play
 - Grants-backed work across **WAX**, **TONO**, and **EOS** (from 2021 onward)
 
-![cXc as a map of music and place](assets/cxc-music-map.png)
+![cXc geotemporal music map](assets/cxc-music-map.png)
 
 I write about this stack in pieces like the [Web 4 Manifesto](https://douglas-life.medium.com/provable-democracy-the-web-4-manifesto-by-douglas-butner-3c8785d2f92a): provable democracy, time tokens, geotribes, and systems that make collaboration visible on-chain.
 

@@ -2,7 +2,7 @@
 
 Pics or it didn’t happen.
 
-![Reflections landing like rain on a lake](assets/reflections-lake.png)
+![thelake reflections case study](assets/reflections-lake.png)
 
 ## Case study: `thelake`
 

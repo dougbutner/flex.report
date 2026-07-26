@@ -1,5 +1,7 @@
 # Liquidity & Farms
 
+![Liquidity & Farms](../assets/heroes/liquidity-farms.png)
+
 100% of supply stashed in stablecoin pools day 1.  
 100% of USD(c) profits used to purchase EASY (raising the redeemable price of EASY).  
 Extensive rewards pools available. Farm MEME by providing liquidity.

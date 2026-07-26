@@ -1,5 +1,7 @@
 # GRAMS (contract: [`gold.mon3y`](https://explorer.xprnetwork.org/account/gold.mon3y))
 
+![GRAMS contract](../assets/heroes/contract-grams.png)
+
 Tree-aware reflections + flex pools (same pattern as WON, with gold-themed action names). Minted as GRAMS on XPR.
 
 **Backed by XPAXG** (Paxos Gold on XPR via `xtokens`). Pure liquid for gold: 100% of supply vaulted into GRAMS/XPAXG liquidity.

@@ -1,5 +1,7 @@
 # WON
 
+![WON](../assets/heroes/won.png)
+
 | | |
 | --- | --- |
 | **Max supply** | 1,000,000 WON |
