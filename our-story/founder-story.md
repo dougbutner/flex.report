@@ -1,12 +1,16 @@
 # Founder Story
 
+![Douglas at ~15 coding on a CRT](assets/douglas-founder-pokerstars.png)
+
+*The first thing I coded was a bot to play PokerStars using AutoIt, at age 15.*
+
 ![Founder story timeline](assets/founder-banner.png)
 
 Hi, I'm **Douglas James Butner**, and I'm pleased you're here.
 
 Since age 16 (2008), I've channeled passion to build, release, and maintain web apps: starting with a Myspace-style social network, then a long arc toward maps, music, and money that behave like living systems.
 
-I grew up near Deep Creek Lake, Maryland. For years I've been a digital nomad across the Americas: mostly Latin America: based between Medellín and Lago de Atitlán. Travel sharpened the question that runs through everything I ship: how do people coordinate freely, create together, and keep the value they generate?
+Learn about me at [douglas.life](https://douglas.life/) or on GitHub ([dougbutner](https://github.com/dougbutner)).
 
 ## What I build
 
@@ -23,11 +27,11 @@ Along the way:
 - **[Tetra](https://tetra.earth)** / **[XParty](https://xparty.win)**: experiments in fractal coordination and collective play
 - Grants-backed work across **WAX**, **TONO**, and **EOS** (from 2021 onward)
 
+![Douglas with Alejandro at Hash Fest 2023](assets/douglas-hash-fest-2023.jpeg)
+
 ![cXc geotemporal music map](assets/cxc-music-map.png)
 
 I write about this stack in pieces like the [Web 4 Manifesto](https://douglas-life.medium.com/provable-democracy-the-web-4-manifesto-by-douglas-butner-3c8785d2f92a): provable democracy, time tokens, geotribes, and systems that make collaboration visible on-chain.
-
-More: [douglas.life](https://douglas.life/) · [GitHub @dougbutner](https://github.com/dougbutner) · [LinkedIn](https://www.linkedin.com/in/douglasbutner)
 
 ## Why Flex Tokens
 

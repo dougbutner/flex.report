@@ -29,6 +29,14 @@ If you move EASY often and want maximum transfer efficiency, use **Opt out of ta
 
 This is **one-way** for that account: you renounce reflection rewards forever on that wallet. Use a separate account if you still want to earn reflections.
 
+## LP the smart way
+
+Liquidity providing is where a lot of the real yield lives. If you plan to LP with EASY, it is wise to **opt out of the tax first** on that account, then LP from it, so deposits, rebalances, and exits are not taxed 2% every time EASY moves.
+
+You can also chase solid APY on high-volume pairs like **EASY/XPR** (and other busy Alcor markets). Doing that with EASY is inherently stronger than parking the same energy in plain **USDC** LP: you sit in the route that already attracts the volume, you can earn pool fees on a token people actually trade through, and the ecosystem loop (fees → Welcome / Club / MEME) keeps working around you.
+
+Farm and pool links: [Alcor Farms](https://alcor.exchange/v/xpr/analytics?tab=farms) · [EASY analytics](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y).
+
 ## Welcome Program
 
 ![Welcome Program on flex.town](assets/flextown/welcome.png)
