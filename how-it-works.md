@@ -17,6 +17,17 @@ All Flex tokens send **proportional rewards** straight to your wallet. Those rew
 
 ![Money flow](assets/diagrams/how-money-flow.png)
 
+**EASY holder reflections by month** (finished months only; on-chain `distribute` payouts to wallets)
+
+| Month | Payments | EASY paid | Unique recipients | `distribute` runs |
+| --- | ---: | ---: | ---: | ---: |
+| Jan 2026 | 11,285 | 60,177 | 190 | 2,255 |
+| Feb 2026 | 22,582 | 104,236 | 199 | 2,398 |
+| Mar 2026 | 15,161 | 69,813 | 211 | 1,345 |
+| Apr 2026 | 12,395 | 66,680 | 213 | 287 |
+| May 2026 | 13,308 | 67,127 | 332 | 578 |
+| Jun 2026 | 22,211 | 57,883 | 392 | 859 |
+
 ![Reward choice](assets/diagrams/reward-choice.png)
 
 Protocol fees (separate from the transfer tax above) are explained in [Legal & Terms](legal-and-terms.md).

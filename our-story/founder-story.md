@@ -1,6 +1,6 @@
 # Founder Story
 
-![Douglas at age 15 coding on a CRT](assets/douglas-founder-pokerstars.png)
+![Douglas at age 15 playing PokerStars](assets/douglas-founder-pokerstars.png)
 
 *The first thing I coded was a bot to play PokerStars using AutoIt, at age 15.*
 
@@ -23,7 +23,6 @@ Along the way:
 - **[cXc.world](https://cxc.world)**: a geotemporal dmap of music (web3 → web4), plus open media NFT metadata standards and minter tools
 - **Ups**: time-token voting / “web4 Reddit” contract patterns for collective curation
 - **Loot**: gamified NFT staking
-- **[Aquarius Academy](https://aquarius.academy)**: open education around consciousness, geometry, and new-earth systems
 - **[Tetra](https://tetra.earth)**: experiments in fractal coordination and collective play
 - Grants-backed work across **WAX**, **TONO**, and **EOS** (from 2021 onward)
 

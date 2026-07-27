@@ -21,8 +21,6 @@ Gasp! The channel is leaking, to the tune of ~ a trillion dollars a year (USA)
 
 The crack is interest on interest resulting in 20% of the revenue to the US government (40% of all revenue from citizens' taxes) paid to other nations.
 
-We can explore the problems of compound interest in national financing another time.
-
 Today, we work below that layer, on a money that is an evolution of money: Flex Tokens.
 
 Reflexive technology allows more than a quick interest payment. It turns the energy of time into an investment in tokens that represent your interests and beliefs, by letting you collect that interest in other tokens like XBTC (wrapped BTC), GRAMS, or 20+ others.

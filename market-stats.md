@@ -22,8 +22,6 @@ Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 | **Market cap (fully circulating)** | **$347,019** |
 | **Share of Alcor Proton swap volume (24h)** | **≈19.3%** |
 
-USDC-style rewards dashboards inspired this layout: **liquidity**, **pending rewards**, and **volume that feeds holders**.
-
 ## Volume
 
 EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth` across every Alcor swap pool where one side is `EASY@mon3y`.
