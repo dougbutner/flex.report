@@ -23,7 +23,9 @@ python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
 python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
 ```
 
-Requires network. Needs `matplotlib` for chart PNGs (`pip install matplotlib` if missing).
+Requires network. Needs `matplotlib` for chart PNGs (`pip install -r .cursor/skills/update-stats/requirements.txt` if missing).
+
+GitHub Actions runs the same two scripts daily at **9 AM Eastern** (`.github/workflows/update-stats.yml`) and commits updated files to `main`. Manual run: Actions → Update stats → Run workflow.
 
 2. Confirm these files changed:
 

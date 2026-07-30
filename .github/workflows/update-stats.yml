@@ -1,0 +1,76 @@
+# Refresh market-stats + arbitrage from Alcor / chain every day at 9 AM Eastern.
+# GitHub cron is UTC-only, so we fire at both 13:00 and 14:00 UTC and only
+# continue when America/New_York local hour is 09 (handles EST/EDT).
+
+name: Update stats
+
+on:
+  schedule:
+    - cron: "0 13,14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check 9 AM Eastern
+        id: gate
+        run: |
+          HOUR=$(TZ=America/New_York date +%H)
+          echo "Eastern hour: $HOUR ($(TZ=America/New_York date))"
+          if [ "$HOUR" = "09" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .cursor/skills/update-stats/requirements.txt
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r .cursor/skills/update-stats/requirements.txt
+
+      - name: Refresh market stats + arbitrage
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
+          python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
+
+      - name: Commit and push if changed
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            market-stats.md \
+            market-stats.json \
+            arbitrage.md \
+            arbitrage.json \
+            tokenomics.md \
+            assets/market-easy-pools-24h.png \
+            assets/market-easy-share.png \
+            assets/arbitrage-heatmap.png \
+            tokens/won/won-featured.png
+          if git diff --staged --quiet; then
+            echo "No stats changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh market stats and arbitrage"
+          git push

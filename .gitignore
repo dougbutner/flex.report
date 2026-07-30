@@ -8,3 +8,7 @@ Flex Docs base.pdf
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Python
+**/__pycache__/
+*.py[cod]
