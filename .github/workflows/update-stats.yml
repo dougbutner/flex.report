@@ -1,7 +1,6 @@
 # Refresh market-stats + arbitrage daily around 9 AM Eastern.
 # Cron is UTC-only: 13:00 UTC = 9 AM EDT / 8 AM EST.
-# Do not gate on exact local hour: GitHub often starts scheduled jobs late,
-# which previously skipped the refresh while still reporting success.
+# Do not gate on exact local hour: GitHub often starts scheduled jobs late.
 
 name: Update stats
 
@@ -22,10 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -58,5 +60,5 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh market stats and arbitrage"
-          git pull --rebase origin main
-          git push
+          # Scheduled runs can be detached HEAD; push explicitly to main.
+          git push origin HEAD:main
