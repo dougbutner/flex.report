@@ -1,12 +1,13 @@
-# Refresh market-stats + arbitrage from Alcor / chain every day at 9 AM Eastern.
-# GitHub cron is UTC-only, so we fire at both 13:00 and 14:00 UTC and only
-# continue when America/New_York local hour is 09 (handles EST/EDT).
+# Refresh market-stats + arbitrage daily around 9 AM Eastern.
+# Cron is UTC-only: 13:00 UTC = 9 AM EDT / 8 AM EST.
+# Do not gate on exact local hour: GitHub often starts scheduled jobs late,
+# which previously skipped the refresh while still reporting success.
 
 name: Update stats
 
 on:
   schedule:
-    - cron: "0 13,14 * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,23 +21,10 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Check 9 AM Eastern
-        id: gate
-        run: |
-          HOUR=$(TZ=America/New_York date +%H)
-          echo "Eastern hour: $HOUR ($(TZ=America/New_York date))"
-          if [ "$HOUR" = "09" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Checkout
-        if: steps.gate.outputs.run == 'true'
         uses: actions/checkout@v4
 
       - name: Set up Python
-        if: steps.gate.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,17 +32,14 @@ jobs:
           cache-dependency-path: .cursor/skills/update-stats/requirements.txt
 
       - name: Install dependencies
-        if: steps.gate.outputs.run == 'true'
         run: pip install -r .cursor/skills/update-stats/requirements.txt
 
       - name: Refresh market stats + arbitrage
-        if: steps.gate.outputs.run == 'true'
         run: |
           python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
           python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
 
       - name: Commit and push if changed
-        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -73,4 +58,5 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh market stats and arbitrage"
+          git pull --rebase origin main
           git push
