@@ -57,18 +57,18 @@ Live depth and volume: [Market Stats](market-stats.md) · Venus unlocks (one poo
 ## Flex family (all tokens)
 
 <!-- LIVE:FLEX-TOKENOMICS -->
-*Live snapshot: **2026-08-14 14:09 UTC** · Alcor + chain `stat` tables*
+*Live snapshot: **2026-08-15 13:24 UTC** · Alcor + chain `stat` tables*
 
 ### Supply (all Flex tokens)
 
 | Token | Circulating Supply | Max Supply | Price (USD) |
 | --- | ---: | ---: | ---: |
-| **EASY** | 21M | 21M | $0.016381 |
-| **WON** | 1M | 1M | $1.640800 |
+| **EASY** | 21M | 21M | $0.016531 |
+| **WON** | 1M | 1M | $1.650025 |
 | **MEME** | 9.985T | 10T | $0.000000 |
-| **GRAMS** | 1B | 1B | $125.702576 |
+| **GRAMS** | 1B | 1B | $126.828271 |
 
-**MEME burned:** **0.15%** of max supply (14.694B of 10T burned; circulating 9.985T).
+**MEME burned:** **0.15%** of max supply (14.705B of 10T burned; circulating 9.985T).
 
 ### Fee rates
 
@@ -85,10 +85,10 @@ USD value of **major** counter-assets sitting in each token’s Alcor pools (not
 
 | Token | Total major backing | Breakdown |
 | --- | ---: | --- |
-| **EASY** | **$64,535** | XMD $11,960, XUSDC $15,612, XPYUSD $12,228, XPAX $12,576, XUSDT $12,160 |
-| **WON** | **$1,508** | EASY $1,416, XPR $92.19 |
-| **MEME** | **$1,353** | XPR $318.16, XUSDC $267.17, EASY $767.22 |
-| **GRAMS** | **$1,022** | XPAXG $1,022 |
+| **EASY** | **$60,509** | XMD $11,994, XUSDC $12,043, XPYUSD $12,098, XPAX $12,629, XUSDT $11,746 |
+| **WON** | **$1,516** | EASY $1,423, XPR $92.40 |
+| **MEME** | **$1,360** | XPR $318.53, XUSDC $266.99, EASY $774.56 |
+| **GRAMS** | **$1,030** | XPAXG $1,030 |
 
 - **EASY majors:** XMD · XUSDC · XPYUSD · XPAX · XUSDT  
 - **WON majors:** EASY · XPR  
