@@ -4,23 +4,23 @@
 
 Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 
-*Last updated: 2026-08-18 13:35 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
+*Last updated: 2026-08-19 13:37 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
 
 ## At a glance
 
 | | |
 | --- | --- |
-| **24h volume (all EASY pools)** | **$9,210** |
-| **EASY price** | **$0.0169** (≈6.74 XPR) |
-| **EASY price in XUSDC** | **0.016949 XUSDC** |
-| **Total EASY pools TVL** | **$2,086,214** |
-| **Total USD backing (stables)** | **$64,877** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
-| **Pending holder rewards** | **874.74 EASY** (≈$14.78) in the reflection pool |
-| **7d volume** | **$59,191** |
-| **30d volume** | **$350,198** |
+| **24h volume (all EASY pools)** | **$10,590** |
+| **EASY price** | **$0.0173** (≈6.66 XPR) |
+| **EASY price in XUSDC** | **0.017315 XUSDC** |
+| **Total EASY pools TVL** | **$2,135,590** |
+| **Total USD backing (stables)** | **$67,775** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
+| **Pending holder rewards** | **1,045.25 EASY** (≈$18.11) in the reflection pool |
+| **7d volume** | **$63,712** |
+| **30d volume** | **$343,747** |
 | **Flexers (holders on contract)** | **942** |
-| **Market cap (fully circulating)** | **$354,798** |
-| **Share of Alcor Proton swap volume (24h)** | **≈36.38%** |
+| **Market cap (fully circulating)** | **$363,901** |
+| **Share of Alcor Proton swap volume (24h)** | **≈33.93%** |
 
 ## Volume
 
@@ -30,9 +30,9 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 
 | Window | EASY pools | Rest of Alcor swap | EASY share |
 | --- | ---: | ---: | ---: |
-| 24h | $9,210 | $16,105 | **36.4%** |
-| 7d | $59,191 | $141,371 | **29.5%** |
-| 30d | $350,198 | $737,702 | **32.2%** |
+| 24h | $10,590 | $20,625 | **33.9%** |
+| 7d | $63,712 | $134,263 | **32.2%** |
+| 30d | $343,747 | $741,118 | **31.7%** |
 
 ![EASY share of Alcor Proton swap volume](assets/market-easy-share.png)
 
@@ -42,24 +42,24 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 
 | Pool | 24h volume | TVL | EASY in pool | Other side | 24h Δ |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| EASY/XUSDC | $3,664 | $67,191 | 3,226,549 EASY | 12,677.95 XUSDC | -0.2% |
-| EASY/LOAN | $1,880 | $3,593 | 2,461 EASY | 9,160,666.52 LOAN | +0.6% |
-| EASY/XMD | $1,037 | $67,113 | 3,226,742 EASY | 12,677.95 XMD | -0.2% |
-| EASY/XPR | $964.70 | $33,750 | 821,642 EASY | 7,923,971.87 XPR | -0.1% |
-| EASY/XUSDT | $945.33 | $67,219 | 3,229,758 EASY | 12,621.81 XUSDT | -0.2% |
-| EASY/METAL | $233.38 | $2,697 | 110,495 EASY | 7,938.91 METAL | -1.1% |
-| EASY/XPYUSD | $125.57 | $54,500 | 3,225,799 EASY | 12,688.15 XPYUSD | +0.3% |
-| EASY/XXRP | $82.38 | $14,434 | 196,744 EASY | 11,213.35 XXRP | -0.2% |
+| EASY/XUSDC | $2,418 | $68,584 | 3,192,279 EASY | 13,266.24 XUSDC | +1.1% |
+| EASY/XMD | $2,407 | $68,549 | 3,193,141 EASY | 13,254.59 XMD | +1.0% |
+| EASY/XPR | $2,270 | $34,864 | 947,279 EASY | 7,091,176.57 XPR | +0.6% |
+| EASY/XUSDT | $1,093 | $68,593 | 3,192,069 EASY | 13,267.37 XUSDT | +1.2% |
+| EASY/XMT | $844.82 | $2,169 | 8,962 EASY | 10,834.39 XMT | -0.3% |
+| EASY/XMD | $423.52 | $2,539 | 49,688 EASY | 1,682.47 XMD | +0.8% |
+| EASY/METAL | $240.02 | $2,785 | 120,329 EASY | 6,387.11 METAL | -1.6% |
+| EASY/XHBAR | $169.78 | $887.89 | 13,305 EASY | 9,754.17 XHBAR | -0.7% |
 
 ### Stable backing (deepest pool each)
 
 | Pool | Stable side | EASY in pool | Pool TVL |
 | --- | ---: | ---: | ---: |
-| [EASY/XMD](https://alcor.exchange/v/xpr/analytics/pools/4067) | $12,597 XMD | 3,226,742 EASY | $67,113 |
-| [EASY/XUSDC](https://alcor.exchange/v/xpr/analytics/pools/4065) | $12,678 XUSDC | 3,226,549 EASY | $67,191 |
-| [EASY/XPYUSD](https://alcor.exchange/v/xpr/analytics/pools/4068) | $12,724 XPYUSD | 3,225,799 EASY | $54,500 |
-| [EASY/XPAX](https://alcor.exchange/v/xpr/analytics/pools/4070) | $12,916 XPAX | 3,290,881 EASY | $55,600 |
-| [EASY/XUSDT](https://alcor.exchange/v/xpr/analytics/pools/4066) | $12,652 XUSDT | 3,229,758 EASY | $67,219 |
+| [EASY/XMD](https://alcor.exchange/v/xpr/analytics/pools/4067) | $13,216 XMD | 3,193,141 EASY | $68,549 |
+| [EASY/XUSDC](https://alcor.exchange/v/xpr/analytics/pools/4065) | $13,266 XUSDC | 3,192,279 EASY | $68,584 |
+| [EASY/XPYUSD](https://alcor.exchange/v/xpr/analytics/pools/4068) | $12,933 XPYUSD | 3,217,616 EASY | $55,757 |
+| [EASY/XPAX](https://alcor.exchange/v/xpr/analytics/pools/4070) | $13,319 XPAX | 3,290,498 EASY | $57,020 |
+| [EASY/XUSDT](https://alcor.exchange/v/xpr/analytics/pools/4066) | $13,279 XUSDT | 3,192,069 EASY | $68,593 |
 
 Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analytics: [EASY token](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
@@ -67,21 +67,21 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 
 | | 1D | 1W | 1M |
 | --- | ---: | ---: | ---: |
-| **TVL** | $2,735,799 | (snapshot) | (snapshot) |
-| **Swap TVL** | $2,595,917 | - | - |
-| **Swap volume** | $25,314 | $200,562 | $1,087,900 |
-| **Spot volume** | $38.43 | $1,674 | $25,384 |
-| **Swap fees** | $122.50 | $982.98 | $5,638 |
-| **DAU (avg)** | ≈69 | ≈74 | ≈78 |
-| **Liquidity pools** | 11,358 | - | - |
+| **TVL** | $2,824,940 | (snapshot) | (snapshot) |
+| **Swap TVL** | $2,680,481 | - | - |
+| **Swap volume** | $31,215 | $197,975 | $1,084,865 |
+| **Spot volume** | $31.98 | $1,339 | $25,094 |
+| **Swap fees** | $155.19 | $972.33 | $5,642 |
+| **DAU (avg)** | ≈69 | ≈73 | ≈77 |
+| **Liquidity pools** | 11,361 | - | - |
 | **Spot pairs** | 1,656 | - | - |
 
 ## Holder rewards (on-chain)
 
 | | |
 | --- | --- |
-| Reflection pool (`mon3y` / EASY `stat`) | **874.74 EASY** |
-| Approx. USD | **≈$14.78** |
+| Reflection pool (`mon3y` / EASY `stat`) | **1,045.25 EASY** |
+| Approx. USD | **≈$18.11** |
 | How it fills | 2% transfer tax into the pool |
 | How it pays | Anyone calls `distribute` → splash to flexers |
 
