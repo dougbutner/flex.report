@@ -1,0 +1,8 @@
+# Keep Cursor skills / private image tooling out of GitBook import
+.cursor/
+.cursor/**
+
+# Legacy ignore names some GitBook importers still honor
+.bookignore
+.gitignore
+our-story/success-stories.json

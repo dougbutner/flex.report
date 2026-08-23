@@ -1,4 +1,4 @@
-# Refresh market-stats + arbitrage daily around 9 AM Eastern.
+# Refresh market-stats, arbitrage, and thelake success stories daily around 9 AM Eastern.
 # Cron is UTC-only: 13:00 UTC = 9 AM EDT / 8 AM EST.
 # Do not gate on exact local hour: GitHub often starts scheduled jobs late.
 
@@ -36,10 +36,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r .cursor/skills/update-stats/requirements.txt
 
-      - name: Refresh market stats + arbitrage
+      - name: Refresh market stats + arbitrage + success stories
         run: |
           python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
           python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
+          python3 .cursor/skills/update-stats/scripts/refresh_success_stories.py
 
       - name: Commit and push if changed
         run: |
@@ -54,11 +55,18 @@ jobs:
             assets/market-easy-pools-24h.png \
             assets/market-easy-share.png \
             assets/arbitrage-heatmap.png \
-            tokens/won/won-featured.png
+            tokens/won/won-featured.png \
+            our-story/success-stories.md \
+            our-story/success-stories.json \
+            our-story/assets/reflections-lake.png \
+            our-story/assets/thelake-reflections-summary.png \
+            our-story/assets/thelake-reflections-cumulative.png \
+            our-story/assets/thelake-reflections-monthly.png \
+            our-story/assets/thelake-vs-bluechips.png
           if git diff --staged --quiet; then
             echo "No stats changes to commit."
             exit 0
           fi
-          git commit -m "chore: refresh market stats and arbitrage"
+          git commit -m "chore: refresh market stats, arbitrage, and success stories"
           # Scheduled runs can be detached HEAD; push explicitly to main.
           git push origin HEAD:main

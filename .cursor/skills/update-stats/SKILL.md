@@ -1,11 +1,12 @@
 ---
 name: update-stats
 description: >-
-  Refresh Flex Report market stats and stablecoin arbitrage matrices from XPR
-  Alcor APIs and on-chain mon3y tables. Use when the user says "update stats",
-  "refresh stats", "update market stats", "update arbitrage", or asks to pull
-  latest EASY/Alcor volume, TVL, price, reflection pool, or XMD/XUSDC/XPYUSD/XPAX/XUSDT
-  cross-rates into the docs.
+  Refresh Flex Report market stats, stablecoin arbitrage matrices, and thelake
+  success-story numbers from XPR Alcor APIs, on-chain mon3y tables, Binance,
+  and DefiLlama. Use when the user says "update stats", "refresh stats",
+  "update market stats", "update arbitrage", or asks to pull latest EASY/Alcor
+  volume, TVL, price, reflection pool, XMD/XUSDC/XPYUSD/XPAX/XUSDT cross-rates,
+  or thelake case-study charts into the docs.
 ---
 
 # Update Stats
@@ -16,16 +17,17 @@ User says **update stats** (or refresh/update market stats / arbitrage).
 
 ## Do this
 
-1. From the repo root, run both refresh scripts:
+1. From the repo root, run all three refresh scripts:
 
 ```bash
 python3 .cursor/skills/update-stats/scripts/refresh_market_stats.py
 python3 .cursor/skills/update-stats/scripts/refresh_arbitrage.py
+python3 .cursor/skills/update-stats/scripts/refresh_success_stories.py
 ```
 
 Requires network. Needs `matplotlib` for chart PNGs (`pip install -r .cursor/skills/update-stats/requirements.txt` if missing).
 
-GitHub Actions runs the same two scripts daily around **9 AM Eastern** (`.github/workflows/update-stats.yml`; cron `0 13 * * *` UTC) and commits updated files to `main`. Manual run: Actions → Update stats → Run workflow.
+GitHub Actions runs the same three scripts daily around **9 AM Eastern** (`.github/workflows/update-stats.yml`; cron `0 13 * * *` UTC) and commits updated files to `main`. Manual run: Actions → Update stats → Run workflow.
 
 2. Confirm these files changed:
 
@@ -42,9 +44,18 @@ GitHub Actions runs the same two scripts daily around **9 AM Eastern** (`.github
 - `arbitrage.json`
 - `assets/arbitrage-heatmap.png`
 
-3. Optionally refresh Success-in-Community Alcor charts if the user also asks for story/price charts (that is a separate path) (see below). Do **not** rewrite founder/legal content.
+**Success stories (thelake)**
+- `our-story/success-stories.md`
+- `our-story/success-stories.json`
+- `our-story/assets/reflections-lake.png`
+- `our-story/assets/thelake-reflections-summary.png`
+- `our-story/assets/thelake-reflections-cumulative.png`
+- `our-story/assets/thelake-reflections-monthly.png`
+- `our-story/assets/thelake-vs-bluechips.png`
 
-4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb +/- % (best sell→buy leg), updated timestamp.
+3. Do **not** rewrite founder/legal content. Do not put `montauk` back on Success Stories.
+
+4. Brief the user with: EASY price, 24h EASY volume, Alcor Proton swap 1D volume, reflection pool, top arb +/- % (best sell→buy leg), thelake USD bag vs day-one dollars, updated timestamp.
 
 ## Alcor links in generated markdown
 
@@ -112,14 +123,18 @@ Keep `market-stats.md` structure:
 
 Do not invent APY unless computed from a documented formula. Prefer raw on-chain + Alcor figures.
 
-## Optional: thelake / Success charts
+## Success stories (thelake): always refresh
 
-Only if user asks to update reflection case-study charts:
+`refresh_success_stories.py` is part of the daily job.
 
 - History: `https://proton.eosusa.io/v2/history/get_actions?account=thelake&filter=mon3y:transfer&sort=asc`
 - Reflections = inbound transfers `from=mon3y`
-- Day-one stack ≈ inbound from `nyra` + `reflections` welcome memos
-- Regenerate PNGs under `our-story/assets/thelake-*.png` and update numbers in `our-story/success-stories.md`
+- Day-one stack = inbound from `nyra` + `reflections` welcome
+- Day-one USD = day-one EASY × Alcor EASY/XUSDC USD mark on **2025-12-22** (not today’s price)
+- Comparable bag = day-one + reflections (exclude later `invite.mon3y` from the vs-coins table)
+- Blue chips: Binance USDT daily close on 2025-12-22 vs last price (BTC, ETH, XRP, SOL, BNB, ADA, DOT, USDC)
+- Staked USDC: compound DefiLlama daily `apy` from day one (Aave V3 ETH USDC, Compound III ETH USDC, Morpho Steakhouse USDC Base, Spark Savings ETH USDC)
+- Do not include `montauk`
 
 ## Not published
 

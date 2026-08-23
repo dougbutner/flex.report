@@ -3,7 +3,11 @@ reference contracts/
 flextokens.md
 Flex Docs base.pdf
 
-# Cursor project skills are committed, but never linked in SUMMARY.md (not a GitBook page)
+# Cursor project skills are committed, but never linked in SUMMARY.md (not a GitBook page).
+# Also listed in .bookignore so GitBook importers skip .cursor/ entirely.
+
+# Local SVG rasterize helper (optional; PNGs are committed under image-elements)
+.cursor/skills/make-hero-image/scripts/.resvg-tools/
 
 # macOS
 .DS_Store
