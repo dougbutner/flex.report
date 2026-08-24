@@ -8,7 +8,7 @@ We need go-getters so the world knows how to take it EASY.
 
 We **collect EASY in the [`reflections`](https://explorer.xprnetwork.org/account/reflections) account** (pool fees, volunteer budget, and other inflows). Before each meeting, that accrued EASY from **all sources** is split into **8 shares** and paid out for contributions.
 
-Flextoken’s **Contributors Club** is a structured **60-80 minute** meeting to unite community and value each other’s efforts. Show how you spread love over the past two weeks for **EASY, GRAMS, MEME, and WON**, and earn EASY if you’re picked for **top 3**.
+Flextoken’s **Contributors Club** is a **public** structured **60-80 minute** meeting to unite community and value each other’s efforts. Show how you spread love over the past two weeks for **EASY, GRAMS, MEME, and WON**, and earn EASY if you’re picked for **top 3**. Treat the call like an open room: others can watch, note, clip, and later see any EASY payout on chain.
 
 [Add to Google Calendar](https://calendar.google.com/calendar/u/0/r/eventedit?text=Contributors+Club&dates=20260127T170000Z/20260127T180000Z&details=Share+your+contributions+to+EASY+and+WON+in+3-5+minutes+and+rank+others+to+distribute+shares.+www.flex.town.%0A%0AAlways+5PM+UTC%0AReal+Link:+https://meet.google.com/dqq-yian-hch&location=https://meet.google.com/dqq-yian-hch&recur=RRULE:FREQ%3DWEEKLY;INTERVAL%3D2;BYDAY%3DTU) 📆 every **2 weeks**, **5PM UTC** ([Meet](https://meet.google.com/dqq-yian-hch)).
 
