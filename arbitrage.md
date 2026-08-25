@@ -2,7 +2,7 @@
 
 Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT** into the others on Alcor (XPR Network).
 
-*Snapshot: **2026-08-22 13:25 UTC** · Primary path: deepest **EASY**↔stable pools*
+*Snapshot: **2026-08-25 05:05 UTC** · Primary path: deepest **EASY**↔stable pools*
 
 ## Cross-rate heatmap (+/- percent)
 
@@ -22,34 +22,34 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 
 | Sell ↓ \ Buy → | XMD | XUSDC | XPYUSD | XPAX | XUSDT |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| **XMD** | 1.000000 | 0.999366 | 0.957166 | 0.888096 | 0.982481 |
-| **XUSDC** | 1.000634 | 1.000000 | 0.957772 | 0.888659 | 0.983103 |
-| **XPYUSD** | 1.044751 | 1.044089 | 1.000000 | 0.927839 | 1.026448 |
-| **XPAX** | 1.126005 | 1.125291 | 1.077773 | 1.000000 | 1.106278 |
-| **XUSDT** | 1.017832 | 1.017187 | 0.974234 | 0.903932 | 1.000000 |
+| **XMD** | 1.000000 | 0.999670 | 0.978729 | 0.969858 | 0.998867 |
+| **XUSDC** | 1.000330 | 1.000000 | 0.979052 | 0.970178 | 0.999196 |
+| **XPYUSD** | 1.021733 | 1.021396 | 1.000000 | 0.990936 | 1.020575 |
+| **XPAX** | 1.031079 | 1.030739 | 1.009147 | 1.000000 | 1.029911 |
+| **XUSDT** | 1.001134 | 1.000804 | 0.979839 | 0.970958 | 1.000000 |
 
 ### Same matrix as +/- percent vs 1.000
 
 | Sell ↓ \ Buy → | XMD | XUSDC | XPYUSD | XPAX | XUSDT |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| **XMD** | +0.00 | -0.06 | -4.28 | -11.19 | -1.75 |
-| **XUSDC** | +0.06 | +0.00 | -4.22 | -11.13 | -1.69 |
-| **XPYUSD** | +4.48 | +4.41 | +0.00 | -7.22 | +2.64 |
-| **XPAX** | +12.60 | +12.53 | +7.78 | +0.00 | +10.63 |
-| **XUSDT** | +1.78 | +1.72 | -2.58 | -9.61 | +0.00 |
+| **XMD** | +0.00 | -0.03 | -2.13 | -3.01 | -0.11 |
+| **XUSDC** | +0.03 | +0.00 | -2.09 | -2.98 | -0.08 |
+| **XPYUSD** | +2.17 | +2.14 | +0.00 | -0.91 | +2.06 |
+| **XPAX** | +3.11 | +3.07 | +0.91 | +0.00 | +2.99 |
+| **XUSDT** | +0.11 | +0.08 | -2.02 | -2.90 | +0.00 |
 
 ## Standout legs (this snapshot)
 
-- Sell **XPAX** → buy **XMD**: **1.126005** (+12.60% vs parity) via EASY
-- Sell **XPAX** → buy **XUSDC**: **1.125291** (+12.53% vs parity) via EASY
-- Sell **XPAX** → buy **XUSDT**: **1.106278** (+10.63% vs parity) via EASY
-- Sell **XPAX** → buy **XPYUSD**: **1.077773** (+7.78% vs parity) via EASY
-- Sell **XPYUSD** → buy **XMD**: **1.044751** (+4.48% vs parity) via EASY
-- Sell **XMD** → buy **XPAX**: **0.888096** (-11.19% vs parity) via EASY
-- Sell **XUSDC** → buy **XPAX**: **0.888659** (-11.13% vs parity) via EASY
-- Sell **XUSDT** → buy **XPAX**: **0.903932** (-9.61% vs parity) via EASY
-- Sell **XPYUSD** → buy **XPAX**: **0.927839** (-7.22% vs parity) via EASY
-- Sell **XMD** → buy **XPYUSD**: **0.957166** (-4.28% vs parity) via EASY
+- Sell **XPAX** → buy **XMD**: **1.031079** (+3.11% vs parity) via EASY
+- Sell **XPAX** → buy **XUSDC**: **1.030739** (+3.07% vs parity) via EASY
+- Sell **XPAX** → buy **XUSDT**: **1.029911** (+2.99% vs parity) via EASY
+- Sell **XPYUSD** → buy **XMD**: **1.021733** (+2.17% vs parity) via EASY
+- Sell **XPYUSD** → buy **XUSDC**: **1.021396** (+2.14% vs parity) via EASY
+- Sell **XMD** → buy **XPAX**: **0.969858** (-3.01% vs parity) via EASY
+- Sell **XUSDC** → buy **XPAX**: **0.970178** (-2.98% vs parity) via EASY
+- Sell **XUSDT** → buy **XPAX**: **0.970958** (-2.90% vs parity) via EASY
+- Sell **XMD** → buy **XPYUSD**: **0.978729** (-2.13% vs parity) via EASY
+- Sell **XUSDC** → buy **XPYUSD**: **0.979052** (-2.09% vs parity) via EASY
 
 ## EASY pool anchors
 
@@ -57,18 +57,18 @@ Fees, hop slippage, and pool depth can erase small edges. EASY transfer tax (2%)
 
 | Stable | Pool | EASY per 1 stable | Stable TVL | 24h vol |
 | --- | --- | ---: | ---: | ---: |
-| XMD | [4067](https://alcor.exchange/v/xpr/analytics/pools/4067) | 52.3671 | $16,313 | $11,449 |
-| XUSDC | [4065](https://alcor.exchange/v/xpr/analytics/pools/4065) | 52.4003 | $17,685 | $14,443 |
-| XPYUSD | [4068](https://alcor.exchange/v/xpr/analytics/pools/4068) | 54.7106 | $15,601 | $965 |
-| XPAX | [4070](https://alcor.exchange/v/xpr/analytics/pools/4070) | 58.9656 | $15,041 | $275 |
-| XUSDT | [4066](https://alcor.exchange/v/xpr/analytics/pools/4066) | 53.3009 | $15,782 | $5,472 |
+| XMD | [4067](https://alcor.exchange/v/xpr/analytics/pools/4067) | 53.0714 | $16,042 | $2,916 |
+| XUSDC | [4065](https://alcor.exchange/v/xpr/analytics/pools/4065) | 53.0889 | $17,082 | $2,963 |
+| XPYUSD | [4068](https://alcor.exchange/v/xpr/analytics/pools/4068) | 54.2248 | $15,195 | $143 |
+| XPAX | [4070](https://alcor.exchange/v/xpr/analytics/pools/4070) | 54.7208 | $15,998 | $0 |
+| XUSDT | [4066](https://alcor.exchange/v/xpr/analytics/pools/4066) | 53.1316 | $15,617 | $290 |
 
 ### Alcor mark prices
 
 | Stable | usd_price |
 | --- | ---: |
-| XMD | $0.9869 |
+| XMD | $0.9940 |
 | XUSDC | $1.0000 |
-| XPYUSD | $1.0554 |
-| XPAX | $1.1309 |
-| XUSDT | $1.0163 |
+| XPYUSD | $1.0106 |
+| XPAX | $1.0384 |
+| XUSDT | $0.9999 |
