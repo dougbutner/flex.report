@@ -27,6 +27,11 @@ RPC = [
     "https://api.protonnz.com",
     "https://proton.greymass.com",
 ]
+# api.binance.com returns 451 from many US/cloud IPs (incl. GitHub Actions).
+BINANCE = [
+    "https://data-api.binance.vision",
+    "https://api.binance.com",
+]
 
 # Spot blue chips: Binance USDT pairs (day-one close vs now).
 SPOT = [
@@ -243,18 +248,28 @@ def summarize_account(account: str, welcome_from: tuple[str, ...] = ("nyra", "re
     }
 
 
+def binance_get(path: str):
+    last_err = None
+    for host in BINANCE:
+        try:
+            return get(f"{host}{path}")
+        except Exception as e:
+            last_err = e
+            continue
+    raise SystemExit(f"Binance fetch failed for {path}: {last_err}")
+
+
 def binance_start_and_now() -> dict[str, dict]:
     start_ms = int(datetime(START.year, START.month, START.day, tzinfo=timezone.utc).timestamp() * 1000)
     symbols = [s["binance"] for s in SPOT]
-    now_rows = get(
-        "https://api.binance.com/api/v3/ticker/price?symbols=" + json.dumps(symbols).replace(" ", "")
+    now_rows = binance_get(
+        "/api/v3/ticker/price?symbols=" + json.dumps(symbols).replace(" ", "")
     )
     now = {r["symbol"]: float(r["price"]) for r in now_rows}
     out = {}
     for s in SPOT:
-        klines = get(
-            f"https://api.binance.com/api/v3/klines?symbol={s['binance']}"
-            f"&interval=1d&startTime={start_ms}&limit=1"
+        klines = binance_get(
+            f"/api/v3/klines?symbol={s['binance']}&interval=1d&startTime={start_ms}&limit=1"
         )
         if not klines:
             raise SystemExit(f"no Binance kline for {s['binance']} on {START}")
