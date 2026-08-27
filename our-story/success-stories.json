@@ -1,27 +1,27 @@
 {
-  "updated": "2026-08-26 13:46 UTC",
+  "updated": "2026-08-27 22:42 UTC",
   "start": "2025-12-22",
   "thelake": {
     "account": "thelake",
     "first_ts": "2025-12-22T21:06:35.500",
-    "last_refl_ts": "2026-08-26T11:30:34.500",
+    "last_refl_ts": "2026-08-27T17:24:02.500",
     "in_from": {
       "reflections": 655.0,
-      "mon3y": 1813.5847390000015,
+      "mon3y": 1825.9317070000013,
       "nyra": 7880.709643,
-      "invite.mon3y": 100.00002699999993
+      "invite.mon3y": 100.00002799999993
     },
     "n_from": {
       "reflections": 2,
-      "mon3y": 645,
+      "mon3y": 649,
       "nyra": 1,
-      "invite.mon3y": 28
+      "invite.mon3y": 29
     },
     "day_one_easy": 8535.709643,
-    "reflections_easy": 1813.584739,
-    "reflection_payments": 645,
-    "invite_easy": 100.000027,
-    "balance_easy": 10462.271472,
+    "reflections_easy": 1825.931707,
+    "reflection_payments": 649,
+    "invite_easy": 100.000028,
+    "balance_easy": 10474.618441,
     "monthly": {
       "2025-12": 57.481573000000004,
       "2026-01": 266.11831300000006,
@@ -31,37 +31,37 @@
       "2026-05": 136.35909800000005,
       "2026-06": 159.76393399999995,
       "2026-07": 133.35364099999998,
-      "2026-08": 109.079433
+      "2026-08": 121.426401
     },
     "price_start": 0.011961,
-    "price_now": 0.018182,
+    "price_now": 0.01927,
     "start_usd": 102.1,
-    "now_usd": 188.17,
-    "reflections_usd": 32.97,
-    "qty_gain": 0.21247,
-    "usd_gain": 0.842998,
-    "qty_apy": 0.329622,
-    "usd_apy": 1.469695,
-    "days": 247,
-    "held_easy": 10349.294382
+    "now_usd": 199.67,
+    "reflections_usd": 35.19,
+    "qty_gain": 0.213917,
+    "usd_gain": 0.955597,
+    "qty_apy": 0.33043,
+    "usd_apy": 1.685288,
+    "days": 248,
+    "held_easy": 10361.64135
   },
   "kinship1": {
     "account": "kinship1",
     "first_ts": "2025-11-27T01:12:44.500",
-    "last_refl_ts": "2026-08-26T09:50:18.000",
+    "last_refl_ts": "2026-08-27T21:06:19.000",
     "in_from": {
       "reflections": 1000.0,
-      "mon3y": 316.9454950000003
+      "mon3y": 319.48059900000027
     },
     "n_from": {
       "reflections": 1,
-      "mon3y": 786
+      "mon3y": 791
     },
     "day_one_easy": 1000.0,
-    "reflections_easy": 316.945495,
-    "reflection_payments": 786,
+    "reflections_easy": 319.480599,
+    "reflection_payments": 791,
     "invite_easy": 0.0,
-    "balance_easy": 1319.138902,
+    "balance_easy": 1321.674006,
     "monthly": {
       "2025-11": 7.5827149999999985,
       "2025-12": 47.93594400000001,
@@ -72,14 +72,14 @@
       "2026-05": 27.46025699999999,
       "2026-06": 16.592102999999998,
       "2026-07": 17.657527,
-      "2026-08": 13.968232000000002
+      "2026-08": 16.503336000000004
     },
-    "price_now": 0.018182,
-    "reflections_usd": 5.76,
-    "balance_usd": 23.98,
-    "qty_gain": 0.316945,
-    "qty_apy": 0.447303,
-    "days": 272
+    "price_now": 0.01927,
+    "reflections_usd": 6.16,
+    "balance_usd": 25.47,
+    "qty_gain": 0.319481,
+    "qty_apy": 0.449068,
+    "days": 273
   },
   "benchmarks": [
     {
@@ -89,9 +89,9 @@
       "kind": "Flex token",
       "note": "Hold + reflections",
       "start_usd": 102.1,
-      "now_usd": 188.17,
-      "usd_gain": 0.842998,
-      "usd_apy": 1.469695
+      "now_usd": 199.67,
+      "usd_gain": 0.955597,
+      "usd_apy": 1.685288
     },
     {
       "id": "morpho-usdc",
@@ -100,11 +100,11 @@
       "kind": "staked USDC",
       "note": "Morpho Steakhouse USDC on Base",
       "pool": "ba68527f-8ec2-4c55-827a-8f4673ae047c",
-      "last_apy": 0.044357,
+      "last_apy": 0.044463,
       "start_usd": 102.1,
-      "now_usd": 105.13,
-      "usd_gain": 0.02973,
-      "usd_apy": 0.044274
+      "now_usd": 105.15,
+      "usd_gain": 0.029855,
+      "usd_apy": 0.044279
     },
     {
       "id": "spark-usdc",
@@ -115,9 +115,9 @@
       "pool": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
       "last_apy": 0.0352,
       "start_usd": 102.1,
-      "now_usd": 104.6,
-      "usd_gain": 0.02452,
-      "usd_apy": 0.03647
+      "now_usd": 104.61,
+      "usd_gain": 0.024619,
+      "usd_apy": 0.036468
     },
     {
       "id": "aave-usdc",
@@ -126,11 +126,11 @@
       "kind": "staked USDC",
       "note": "Aave V3 Ethereum supply",
       "pool": "aa70268e-4b52-42bf-a116-608b370f9501",
-      "last_apy": 0.038871,
+      "last_apy": 0.032731,
       "start_usd": 102.1,
-      "now_usd": 104.41,
-      "usd_gain": 0.022652,
-      "usd_apy": 0.033677
+      "now_usd": 104.42,
+      "usd_gain": 0.022727,
+      "usd_apy": 0.033651
     },
     {
       "id": "comp-usdc",
@@ -139,11 +139,11 @@
       "kind": "staked USDC",
       "note": "Compound III Ethereum",
       "pool": "7da72d09-56ca-4ec5-a45f-59114353e487",
-      "last_apy": 0.042435,
+      "last_apy": 0.043984,
       "start_usd": 102.1,
-      "now_usd": 104.37,
-      "usd_gain": 0.022202,
-      "usd_apy": 0.033005
+      "now_usd": 104.38,
+      "usd_gain": 0.022332,
+      "usd_apy": 0.033063
     },
     {
       "id": "usdc",
@@ -152,11 +152,11 @@
       "kind": "stable",
       "note": "Buy and hold from 2025-12-22",
       "start": 1.0004,
-      "now": 1.00008,
+      "now": 0.99984,
       "start_usd": 102.1,
-      "now_usd": 102.07,
-      "usd_gain": -0.00032,
-      "usd_apy": -0.000473
+      "now_usd": 102.04,
+      "usd_gain": -0.00056,
+      "usd_apy": -0.000824
     },
     {
       "id": "btc",
@@ -165,37 +165,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-12-22",
       "start": 88620.79,
-      "now": 78400.69,
+      "now": 80216.34,
       "start_usd": 102.1,
-      "now_usd": 90.33,
-      "usd_gain": -0.115324,
-      "usd_apy": -0.165728
-    },
-    {
-      "id": "bnb",
-      "name": "BNB",
-      "symbol": "BNB",
-      "kind": "blue chip",
-      "note": "Buy and hold from 2025-12-22",
-      "start": 858.66,
-      "now": 701.01,
-      "start_usd": 102.1,
-      "now_usd": 83.35,
-      "usd_gain": -0.1836,
-      "usd_apy": -0.259156
-    },
-    {
-      "id": "eth",
-      "name": "Ethereum",
-      "symbol": "ETH",
-      "kind": "blue chip",
-      "note": "Buy and hold from 2025-12-22",
-      "start": 3009.49,
-      "now": 2456.18,
-      "start_usd": 102.1,
-      "now_usd": 83.33,
-      "usd_gain": -0.183855,
-      "usd_apy": -0.259498
+      "now_usd": 92.42,
+      "usd_gain": -0.094836,
+      "usd_apy": -0.136488
     },
     {
       "id": "sol",
@@ -204,11 +178,37 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-12-22",
       "start": 125.93,
-      "now": 96.57,
+      "now": 109.32,
       "start_usd": 102.1,
-      "now_usd": 78.3,
-      "usd_gain": -0.233145,
-      "usd_apy": -0.324664
+      "now_usd": 88.63,
+      "usd_gain": -0.131899,
+      "usd_apy": -0.188053
+    },
+    {
+      "id": "eth",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "kind": "blue chip",
+      "note": "Buy and hold from 2025-12-22",
+      "start": 3009.49,
+      "now": 2511.79,
+      "start_usd": 102.1,
+      "now_usd": 85.21,
+      "usd_gain": -0.165377,
+      "usd_apy": -0.233746
+    },
+    {
+      "id": "bnb",
+      "name": "BNB",
+      "symbol": "BNB",
+      "kind": "blue chip",
+      "note": "Buy and hold from 2025-12-22",
+      "start": 858.66,
+      "now": 711.73,
+      "start_usd": 102.1,
+      "now_usd": 84.63,
+      "usd_gain": -0.171115,
+      "usd_apy": -0.241493
     },
     {
       "id": "xrp",
@@ -217,11 +217,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-12-22",
       "start": 1.9043,
-      "now": 1.3944,
+      "now": 1.4526,
       "start_usd": 102.1,
-      "now_usd": 74.76,
-      "usd_gain": -0.267762,
-      "usd_apy": -0.369254
+      "now_usd": 77.88,
+      "usd_gain": -0.2372,
+      "usd_apy": -0.328855
     },
     {
       "id": "ada",
@@ -230,11 +230,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-12-22",
       "start": 0.3711,
-      "now": 0.2089,
+      "now": 0.2144,
       "start_usd": 102.1,
-      "now_usd": 57.47,
-      "usd_gain": -0.437079,
-      "usd_apy": -0.572461
+      "now_usd": 58.99,
+      "usd_gain": -0.422258,
+      "usd_apy": -0.554256
     },
     {
       "id": "dot",
@@ -243,11 +243,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-12-22",
       "start": 1.784,
-      "now": 0.844,
+      "now": 0.882,
       "start_usd": 102.1,
-      "now_usd": 48.3,
-      "usd_gain": -0.526906,
-      "usd_apy": -0.669379
+      "now_usd": 50.48,
+      "usd_gain": -0.505605,
+      "usd_apy": -0.645646
     }
   ]
 }
