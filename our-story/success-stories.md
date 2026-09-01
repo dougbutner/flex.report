@@ -4,7 +4,7 @@ Pics or it didn’t happen.
 
 ![thelake reflections case study](assets/reflections-lake.png)
 
-*Last updated: 2026-08-31 19:19 UTC · thelake is a live on-chain bag, not a backtest.*
+*Last updated: 2026-09-01 17:04 UTC · thelake is a live on-chain bag, not a backtest.*
 
 ## Case study: `thelake`
 
@@ -15,22 +15,22 @@ On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.or
 
 At the **then** EASY mark (**$0.0120** on the Alcor EASY/XUSDC pool), that stack was **$102.10**: the ~$100 entry the playbook talks about.
 
-**Reflections earned since then:** **1,845.27 EASY** across **657** on-chain payments from `mon3y` (through 2026-08-31).
+**Reflections earned since then:** **1,850.35 EASY** across **659** on-chain payments from `mon3y` (through 2026-09-01).
 
-That is **+21.6% more EASY** from reflections alone (about **+32.8% APY** on quantity over 252 days), without selling. A later invite bonus of **100.00 EASY** sits in the wallet too. The comparison below ignores that bonus so the story stays “the original ~$100 bag.”
+That is **+21.7% more EASY** from reflections alone (about **+32.7% APY** on quantity over 253 days), without selling. A later invite bonus of **100.00 EASY** sits in the wallet too. The comparison below ignores that bonus so the story stays “the original ~$100 bag.”
 
-USD is a different lens. EASY itself moved from **$0.0120** to **$0.0189**. The comparable bag (day one + reflections) is **10,380.98 EASY**, about **$196.08** now: **+92.0%** vs those day-one dollars (**+157.5% APY** in USD).
+USD is a different lens. EASY itself moved from **$0.0120** to **$0.0187**. The comparable bag (day one + reflections) is **10,386.06 EASY**, about **$194.19** now: **+90.2%** vs those day-one dollars (**+153.0% APY** in USD).
 
 | | |
 | --- | --- |
 | Account created | 2025-12-22 |
 | Day-one stack | 8,535.71 EASY (**$102.10** at $0.0120) |
-| Reflections (mon3y → thelake) | **1,845.27 EASY** (≈**$34.85** at today’s mark) |
-| Reflection gain (EASY qty) | **+21.6% EASY** · **+32.8% APY** |
-| USD bag vs day-one dollars | **+92.0%** · **+157.5% APY** |
-| Reflection payments | 657 |
-| Comparable bag | **10,380.98 EASY** (≈**$196.08**) |
-| Wallet now | **10,493.96 EASY** (includes 100.00 invite EASY) |
+| Reflections (mon3y → thelake) | **1,850.35 EASY** (≈**$34.60** at today’s mark) |
+| Reflection gain (EASY qty) | **+21.7% EASY** · **+32.7% APY** |
+| USD bag vs day-one dollars | **+90.2%** · **+153.0% APY** |
+| Reflection payments | 659 |
+| Comparable bag | **10,386.06 EASY** (≈**$194.19**) |
+| Wallet now | **10,499.04 EASY** (includes 100.00 invite EASY) |
 | Explorer | [thelake](https://explorer.xprnetwork.org/account/thelake) |
 
 ![thelake reflections summary](assets/thelake-reflections-summary.png)
@@ -51,25 +51,25 @@ Buy-and-hold, no leverage, no trading. Coin marks are Binance USDT daily close v
 
 | Rank | Bag | Kind | Value now | USD change | USD APY |
 | ---: | --- | --- | ---: | ---: | ---: |
-| 1 | **EASY (thelake)** | Flex token | $196.08 | **+92.0%** | +157.5% |
-| 2 | Morpho USDC | staked USDC | $105.20 | +3.0% | +4.4% |
-| 3 | Spark USDC | staked USDC | $104.65 | +2.5% | +3.6% |
-| 4 | Aave USDC | staked USDC | $104.46 | +2.3% | +3.4% |
-| 5 | Compound USDC | staked USDC | $104.45 | +2.3% | +3.4% |
-| 6 | USDC (idle) | stable | $102.07 | 0.0% | 0.0% |
-| 7 | Bitcoin | blue chip | $91.10 | -10.8% | -15.2% |
-| 8 | Solana | blue chip | $84.42 | -17.3% | -24.1% |
-| 9 | Ethereum | blue chip | $84.26 | -17.5% | -24.3% |
-| 10 | BNB | blue chip | $82.43 | -19.3% | -26.7% |
-| 11 | XRP | blue chip | $74.42 | -27.1% | -36.8% |
-| 12 | Cardano | blue chip | $54.81 | -46.3% | -59.4% |
-| 13 | Polkadot | blue chip | $48.02 | -53.0% | -66.5% |
+| 1 | **EASY (thelake)** | Flex token | $194.19 | **+90.2%** | +153.0% |
+| 2 | Morpho USDC | staked USDC | $105.21 | +3.0% | +4.4% |
+| 3 | Spark USDC | staked USDC | $104.66 | +2.5% | +3.6% |
+| 4 | Aave USDC | staked USDC | $104.47 | +2.3% | +3.4% |
+| 5 | Compound USDC | staked USDC | $104.46 | +2.3% | +3.4% |
+| 6 | USDC (idle) | stable | $102.09 | 0.0% | 0.0% |
+| 7 | Bitcoin | blue chip | $89.40 | -12.4% | -17.4% |
+| 8 | Ethereum | blue chip | $82.53 | -19.2% | -26.5% |
+| 9 | Solana | blue chip | $81.85 | -19.8% | -27.3% |
+| 10 | BNB | blue chip | $81.33 | -20.3% | -28.0% |
+| 11 | XRP | blue chip | $73.27 | -28.2% | -38.1% |
+| 12 | Cardano | blue chip | $54.39 | -46.7% | -59.7% |
+| 13 | Polkadot | blue chip | $49.39 | -51.6% | -65.0% |
 
 The twelve comparison bags: Bitcoin, Ethereum, XRP, Solana, BNB, Cardano, Polkadot, idle USDC, plus four large USDC supply/savings venues. This is not advice, and a different window can reverse the ranking.
 
 ## `kinship1`
 
-[`kinship1`](https://explorer.xprnetwork.org/account/kinship1) got **1,000.00 EASY** from `reflections` on **2025-11-27** (“When things seem hard, Take it EASY”). Since then it has taken **321.79 EASY** in reflections across **799** payments (≈**$6.08** at $0.0189), a **+32.2%** gain in EASY (≈**+44.5% APY** over 277 days). Balance now: **1,323.99 EASY** (≈**$25.01**).
+[`kinship1`](https://explorer.xprnetwork.org/account/kinship1) got **1,000.00 EASY** from `reflections` on **2025-11-27** (“When things seem hard, Take it EASY”). Since then it has taken **321.98 EASY** in reflections across **800** payments (≈**$6.02** at $0.0187), a **+32.2%** gain in EASY (≈**+44.3% APY** over 278 days). Balance now: **1,324.17 EASY** (≈**$24.76**).
 
 ## EASY price (recent)
 
