@@ -20,8 +20,8 @@ LAKE = "thelake"
 KIN = "kinship1"
 START = date(2025, 12, 22)
 HYPERION = [
+    "https://proton.eu.eosamsterdam.net",
     "https://proton.eosusa.io",
-    "https://eos.greymass.com",
 ]
 RPC = [
     "https://api.protonnz.com",
