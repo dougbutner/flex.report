@@ -1,8 +1,14 @@
 # Stablecoin Arbitrage (XPR)
 
-Dated cross-rates for selling each of **XMD · XUSDC · XPYUSD · XPAX · XUSDT** into the others on Alcor (XPR Network).
+Dated cross-rates for selling **XMD · XUSDC · XPYUSD · XPAX · XUSDT** into each other on Alcor, routed **sell → EASY → buy**.
 
+<<<<<<< Updated upstream
 *Snapshot: **2026-09-26 16:50 UTC** · Primary path: deepest **EASY**↔stable pools*
+=======
+*Snapshot: 2026-09-25 17:39 UTC. Simulate on [Alcor Swap](https://alcor.exchange/v/xpr/swap) before you size. Fees, hop slippage, and the 2% EASY tax can erase a small edge. Prefer routes that stay inside `swap.alcor` memos.*
+
+Rows = sell. Columns = buy. Cell = how many buy tokens per 1.0 sell token.
+>>>>>>> Stashed changes
 
 ## Cross-rate heatmap (+/- percent)
 

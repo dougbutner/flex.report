@@ -2,9 +2,13 @@
 
 ![Market Stats](assets/heroes/market-stats.png)
 
-Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
+Live pulse of EASY on XPR Alcor: liquidity, volume, pending holder rewards.
 
+<<<<<<< Updated upstream
 *Last updated: 2026-09-26 16:49 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
+=======
+*Last updated: 2026-09-25 17:39 UTC · Alcor API + `mon3y` chain tables*
+>>>>>>> Stashed changes
 
 ## At a glance
 

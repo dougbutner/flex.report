@@ -2,20 +2,20 @@
 
 ![Celestial Buybacks](assets/heroes/celestial-buybacks.png)
 
-Scheduled buybacks on celestial time. Day-one project liquidity stays **date-locked** until a Venus window; then **one** pool is cleared and re-seeded higher.
+Day-one project liquidity stays **date-locked** until a Venus window. Then **one** pool is cleared and re-seeded higher.
 
-## Venus Buybacks
+## Venus buybacks (passed)
 
-**Passed.** The five project EASY/stable pools are locked until Venus alignments (**≈1.6 years / 584 days** apart, inferior conjunction). At each alignment, **exactly one** pool unlocks for a buyback: that pool is cleared, and the stables + EASY go back into pools at a **new range** (end still **$100,000 / EASY**; new start = current market price). All other pools stay locked.
-
-Background: [YouTube explanation](https://www.youtube.com/watch?v=HoZTD60D1lw).
+Five EASY/stable project pools lock until Venus alignments (**≈584 days** / ≈1.6 years, inferior conjunction). At each alignment, **exactly one** pool unlocks: clear it, redeploy stables + EASY at a new range (start = current market price; end still **$100,000 / EASY**). The other four stay locked.
 
 | | |
 | --- | --- |
-| **Cadence** | Every **≈1.6 years** (Venus synodic · ≈584 days) |
+| **Cadence** | Every **≈584 days** |
 | **What unlocks** | **One** of the five project EASY/stable pools |
-| **What happens** | Clear that pool → redeploy stables + EASY at a higher band |
-| **Range** | New start = market price · end still **$100,000 / EASY** |
+| **What happens** | Clear that pool → redeploy at a higher band |
+| **Range** | New start = market · end = **$100,000 / EASY** |
+
+[YouTube explanation](https://www.youtube.com/watch?v=HoZTD60D1lw)
 
 ### Locked project pools
 
@@ -29,17 +29,11 @@ Background: [YouTube explanation](https://www.youtube.com/watch?v=HoZTD60D1lw).
 
 ![Venus buyback loop](assets/diagrams/venus-loop.png)
 
-Between Venus beats, day-to-day support still comes from the living loop: **stablecoin-side** swap fees buy EASY and re-pool; **EASY-side** fees fund Welcome / Club / MEME. See [Tokenomics](tokenomics.md) and [Liquidity & Farms](core-tech/liquidity-and-farms.md).
+Between beats: stable-side swap fees buy EASY and re-pool; EASY-side fees fund Welcome / Club / MEME.
 
-## WON buybacks (superior conjunction)
+## WON buybacks
 
-**WON** uses the **same ≈584-day** Venus cadence, keyed to **superior conjunction** (opposite EASY’s inferior conjunction). Beats sit about **≈292 days** apart inside the cycle.
-
-| | |
-| --- | --- |
-| **Cadence** | Every **≈584 days**, superior conjunction |
-| **What** | Buybacks supporting the WON / EASY stack |
-| **Relation to EASY** | Same period; opposite conjunction (≈292 days apart) |
+Same **≈584-day** cadence, keyed to **superior conjunction** (≈292 days from EASY’s beat). Buybacks support the WON / EASY stack.
 
 ![WON and EASY Venus series](assets/diagrams/won-half-step.png)
 

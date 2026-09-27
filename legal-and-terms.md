@@ -2,11 +2,9 @@
 
 ![Legal & Terms](assets/heroes/legal.png)
 
-Applies for all Flex tokens. Privacy is in the last section of this page.
+Applies to all Flex tokens. Privacy is at the bottom of this page.
 
-**This project is not for profit.** It is a volunteer experiment in New Earth finance, not a company selling securities.
-
-Not an investment token. No promise of return. No guarantee service will operate the same in the future. Changes will be reflected in this document, but we are not responsible for informing stakeholders of changes or seeking approval (though we often do polls in Telegram).
+Volunteer experiment. Not a company selling securities. No promise of return. Mechanics can change; this page is the record. Polls often happen in Telegram. We do not guarantee a personal notice.
 
 **Howey (fails fast, point by point)**
 

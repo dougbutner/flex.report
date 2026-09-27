@@ -2,7 +2,7 @@
 
 ![WON contract](../assets/heroes/contract-won.png)
 
-Tree-aware reflections + flex pools, minted as WON on XPR.
+Account, actions, tables. Verify on [XPR explorer](https://explorer.xprnetwork.org/). Day-to-day use is [flex.town](https://www.flex.town/), not raw actions.
 
 ## Contract Surface (actions)
 

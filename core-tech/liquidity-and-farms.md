@@ -2,9 +2,7 @@
 
 ![Liquidity & Farms](../assets/heroes/liquidity-farms.png)
 
-100% of supply stashed in stablecoin pools day 1.  
-**Stablecoin-side** pool fees are bought back into EASY via smart contract and re-pooled (raising the redeemable price of EASY).  
-**EASY-side** fees from those day-one project pools are split for Welcome / Club / MEME. Farm MEME by providing liquidity.
+Day-one EASY sat in five locked stable pools. Extra books (XPR, XXRP, METAL, XBTC, and others) sit on Alcor. Prefer **1% fee** pools when you LP. Opt out of tax on the LP account first so deposits and exits are not hit with 2%.
 
 ![Liquidity fee flow](../assets/diagrams/liquidity-fee-flow.png)
 

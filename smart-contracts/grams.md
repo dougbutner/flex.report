@@ -2,7 +2,7 @@
 
 ![GRAMS contract](../assets/heroes/contract-grams.png)
 
-Tree-aware reflections + flex pools (same pattern as WON, with gold-themed action names). Minted as GRAMS on XPR.
+Account, actions, tables. Verify on [XPR explorer](https://explorer.xprnetwork.org/). Day-to-day use is [flex.town](https://www.flex.town/), not raw actions.
 
 **Backed by XPAXG** (Paxos Gold on XPR via `xtokens`). Pure liquid for gold: 100% of supply vaulted into GRAMS/XPAXG liquidity.
 

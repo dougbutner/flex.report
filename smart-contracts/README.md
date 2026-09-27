@@ -2,7 +2,7 @@
 
 ![Smart Contracts](../assets/heroes/smart-contracts.png)
 
-Reflexive EOSIO tokens with flexible swap targets. Each Flex token lives on its own contract account.
+Explorer first. Actions second.
 
 | Token | Contract |
 | --- | --- |
@@ -13,6 +13,10 @@ Reflexive EOSIO tokens with flexible swap targets. Each Flex token lives on its 
 
 ![Flex contracts flow](../assets/diagrams/smart-contracts-flow.png)
 
-Open any account above, then click **contract** on the explorer to see the actions you’ll use to submit transactions.
+- [EASY (`mon3y`)](easy.md)
+- [WON (`w3won`)](won.md)
+- [MEME (`m3m3`)](meme.md)
+- [GRAMS (`gold.mon3y`)](grams.md)
+- [API Reference](../api-reference.md)
 
-Browse the pages below for actions, tables, and on-chain tokenomics.
+Code is proprietary. Balances and actions are public on the explorer.

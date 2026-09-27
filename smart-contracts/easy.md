@@ -2,7 +2,7 @@
 
 ![EASY contract](../assets/heroes/contract-easy.png)
 
-Reflexive EOSIO token with flexible swap targets and configurable burn.
+Account, actions, tables. Verify on [XPR explorer](https://explorer.xprnetwork.org/). Day-to-day use is [flex.town](https://www.flex.town/), not raw actions.
 
 ![EASY contract flow](../assets/diagrams/easy-contract-flow.png)
 

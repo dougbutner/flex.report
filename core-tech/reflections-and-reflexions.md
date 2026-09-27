@@ -2,11 +2,12 @@
 
 ![Reflections and Reflexions](../assets/heroes/reflections.png)
 
-All transfer fees go in the reflection pool. The reflection rate goes to direct payments to accounts holding that token.
+**Reflect** = you get paid in the same token you hold.  
+**Flex / reflex** = you get paid in a different token you chose on flex.town.
+
+Transfer tax fills the pool. Send It pays the pool. 61.8% of your share this round; the rest waits.
 
 ![Reflections flow](../assets/diagrams/reflections-flow.png)
-
-**Reflect** = rewards stay in the same token. **Reflexive** = you flex rewards into something else (XBTC, GRAMS, …).
 
 ## Fee glance
 

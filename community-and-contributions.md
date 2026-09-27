@@ -2,30 +2,24 @@
 
 ![Contributors Club](assets/heroes/community.png)
 
-We need go-getters so the world knows how to take it EASY.
+Show two weeks of work. Rank three people. Get paid in EASY.
 
-## Break Bread: Biweekly Online [Contributors Club](https://www.notion.so/aquariusacademy/2e7ac693574b80eda6a1eda98e6732e0?v=2e7ac693574b80aa8435000c8a44e1ae)
+## Contributors Club
 
-We **collect EASY in the [`reflections`](https://explorer.xprnetwork.org/account/reflections) account** (pool fees, volunteer budget, and other inflows). Before each meeting, that accrued EASY from **all sources** is split into **8 shares** and paid out for contributions.
+Every **2 weeks**, **5PM UTC**. [Google Meet](https://meet.google.com/dqq-yian-hch). [Add to calendar](https://calendar.google.com/calendar/u/0/r/eventedit?text=Contributors+Club&dates=20260127T170000Z/20260127T180000Z&details=Share+your+contributions+to+EASY+and+WON+in+3-5+minutes+and+rank+others+to+distribute+shares.+www.flex.town.%0A%0AAlways+5PM+UTC%0AReal+Link:+https://meet.google.com/dqq-yian-hch&location=https://meet.google.com/dqq-yian-hch&recur=RRULE:FREQ%3DWEEKLY;INTERVAL%3D2;BYDAY%3DTU).
 
-Flextoken’s **Contributors Club** is a **public** structured **60-80 minute** meeting to unite community and value each other’s efforts. Show how you spread love over the past two weeks for **EASY, GRAMS, MEME, and WON**, and earn EASY if you’re picked for **top 3**. Treat the call like an open room: others can watch, note, clip, and later see any EASY payout on chain.
+Public call. 60-80 minutes. Present 3-5 minutes on work for EASY, GRAMS, MEME, or WON. Top 3 are paid from [`reflections`](https://explorer.xprnetwork.org/account/reflections).
 
-[Add to Google Calendar](https://calendar.google.com/calendar/u/0/r/eventedit?text=Contributors+Club&dates=20260127T170000Z/20260127T180000Z&details=Share+your+contributions+to+EASY+and+WON+in+3-5+minutes+and+rank+others+to+distribute+shares.+www.flex.town.%0A%0AAlways+5PM+UTC%0AReal+Link:+https://meet.google.com/dqq-yian-hch&location=https://meet.google.com/dqq-yian-hch&recur=RRULE:FREQ%3DWEEKLY;INTERVAL%3D2;BYDAY%3DTU) 📆 every **2 weeks**, **5PM UTC** ([Meet](https://meet.google.com/dqq-yian-hch)).
-
-We’re **actively improving this process**; details and the living [Contributions](https://www.notion.so/aquariusacademy/2e7ac693574b80eda6a1eda98e6732e0?v=2e7ac693574b80aa8435000c8a44e1ae) doc live on Notion.
-
-### Meeting format
+Living board: [Notion Contributions](https://www.notion.so/aquariusacademy/2e7ac693574b80eda6a1eda98e6732e0?v=2e7ac693574b80aa8435000c8a44e1ae).
 
 | Time | Block |
 | --- | --- |
 | 10 min | Landing |
-| 30 min | Each present for ≈3 mins |
+| 30 min | Each present ≈3 min |
 | 20 min | 1 · 2 · 3 consensus |
-| 20 min | Roundtable / party |
+| 20 min | Roundtable |
 
-### EASY rewards
-
-The `reflections` budget for that meeting is split into **8 shares** (example week: **8,800 EASY** / 8 shares ≈ **1,100 EASY** per share):
+Budget that meeting is split into **8 shares** (example: 8,800 EASY → 1,100 per share):
 
 | Place | Shares |
 | --- | ---: |
@@ -33,25 +27,10 @@ The `reflections` budget for that meeting is split into **8 shares** (example we
 | 2nd | 2 |
 | 3rd | 1 |
 | Host | 1 |
-| Host giveaway | 1 (at the host’s discretion) |
+| Host giveaway | 1 |
 
-We **reserve one share for the host**, and **one share the host may give away** at their discretion.
+Every 2 weeks: Club payouts. Every 2 weeks: EASY Quests. Active devs get **500 EASY** to spend on the ecosystem.
 
-| Cadence | What |
-| --- | --- |
-| Every 2 weeks | Contributors Club: present, consensus, rewards |
-| Every 2 weeks | EASY Quests: active devs get **500 EASY** to spend on ecosystem |
+Telegram: [t.me/flextokens](https://t.me/flextokens).
 
-EASY Quests in Telegram allows active devs 500 EASY to spend each 2 weeks to promote ecosystem, designed to incentive their own initiatives with collective funds.
-
-## Contributions Categories 2026
-
-- **Enlivening**: Bringing life into EASY, WON, and MEME in any way.
-- **Community**: Be active + include people.
-- **Connection**: To people and orgs.
-
-## Feeling called?
-
-Some people are into crypto just for the money, others want to evolve the New Earth. If you’re the latter, we invite you to walk beside us; if you’re the former, just [buy EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y).
-
-Show up + plan your next moves at the bi-weekly contributors meeting. Join the conversation in [t.me/flextokens](https://t.me/flextokens).
+If you only want the token: [buy EASY](https://alcor.exchange/v/xpr/swap?input=XUSDC-xtokens&output=EASY-mon3y).

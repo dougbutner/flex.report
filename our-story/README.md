@@ -2,4 +2,8 @@
 
 ![Our Story](../assets/heroes/our-story.png)
 
-Who built Flex Tokens, what [success stories](success-stories.md) look like on-chain, and the unintended market consequences of making money EASY.
+Who built Flex Tokens. What one on-chain bag did. What happened when volume found the pools.
+
+- [Founder Story](founder-story.md)
+- [Success Stories](success-stories.md)
+- [Unintended Consequences](unintended-consequences.md)

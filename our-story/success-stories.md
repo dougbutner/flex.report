@@ -1,11 +1,14 @@
 # Success Stories
 
-Pics or it didn’t happen.
+Pics or it didn’t happen. `thelake` is a live XPR account, not a backtest. *Updated 2026-09-25 17:39 UTC.*
 
 ![thelake reflections case study](assets/reflections-lake.png)
 
+<<<<<<< Updated upstream
 *Last updated: 2026-09-26 16:50 UTC · thelake is a live on-chain bag, not a backtest.*
 
+=======
+>>>>>>> Stashed changes
 ## Case study: `thelake`
 
 On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.org/account/thelake) bought into EASY. That is the original playbook example: put in about **$100** of EASY and leave it.
