@@ -41,7 +41,7 @@ Contract [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y).
 
 Request a welcome (`ask4invite`). Someone later pays **200 EASY**: **100 to you**, **100 to the vault**. Vault yield splits among the tree.
 
-Once welcomed, welcome others the same way.
+Once welcomed, welcome the next person. Grow the tree. Claim forever.
 
 | Flow | On flex.town |
 | --- | --- |

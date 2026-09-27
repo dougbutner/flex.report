@@ -123,18 +123,17 @@ Keep `market-stats.md` structure:
 
 Do not invent APY unless computed from a documented formula. Prefer raw on-chain + Alcor figures.
 
-## Success stories (thelake): always refresh
+## Success stories (kinship1): always refresh
 
 `refresh_success_stories.py` is part of the daily job.
 
-- History: `https://proton.eosusa.io/v2/history/get_actions?account=thelake&filter=mon3y:transfer&sort=asc`
-- Reflections = inbound transfers `from=mon3y`
-- Day-one stack = inbound from `nyra` + `reflections` welcome
-- Day-one USD = day-one EASY × Alcor EASY/XUSDC USD mark on **2025-12-22** (not today’s price)
-- Comparable bag = day-one + reflections (exclude later `invite.mon3y` from the vs-coins table)
-- Blue chips: Binance USDT daily close on 2025-12-22 vs last price (BTC, ETH, XRP, SOL, BNB, ADA, DOT, USDC)
-- Staked USDC: compound DefiLlama daily `apy` from day one (Aave V3 ETH USDC, Compound III ETH USDC, Morpho Steakhouse USDC Base, Spark Savings ETH USDC)
-- Do not include `montauk`
+- Featured account: `kinship1`. Add more names to `EXAMPLES` when ready.
+- History: `https://proton.eosusa.io/v2/history/get_actions?account=kinship1&filter=mon3y:transfer&sort=asc`
+- Yield = inbound transfers `from=mon3y` only
+- Seed = inbound from the `reflections` account. That transfer is principal, not yield
+- $100 comparison extrapolates kinship1’s reflection rate onto a $100 EASY buy on kinship1’s first day
+- Blue chips and staked USDC use that same start date and the same $100
+- Do not include `montauk`. Do not use `thelake` as the example (a `reflections` transfer was mixed into that bag)
 
 ## Not published
 

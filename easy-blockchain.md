@@ -2,7 +2,7 @@
 
 ![The EASY Blockchain](assets/heroes/easy-blockchain.png)
 
-Not live. Holding **EASY on XPR** is the current path. Intent: EASY you hold can be redeemed on the new chain. Dates below are a plan, not a guarantee.
+Blockchain was supposed to make money better. **EASY is better money.** This chain is not live. Holding **EASY on XPR** is the current path. Intent: EASY you hold can be redeemed on the new chain. Dates below are a plan, not a guarantee.
 
 ## What is sketched
 

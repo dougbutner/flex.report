@@ -4,7 +4,7 @@
 
 ![Founder story timeline](assets/founder-banner.png)
 
-Hi, I'm **Douglas James Butner**.
+Hi, I'm **Douglas James Butner**, and I'm pleased you're here.
 
 First program: a PokerStars bot in AutoIt at 15. Since 2008: social apps, maps, music, money that pays holders.
 
@@ -30,6 +30,8 @@ Reflection tokens I tried on BSC and Solana were rugs. Flex Tokens are the rewri
 3. Hold **100+ EASY** (~$1+) so reflections pay
 
 What that looks like on a real account: [Success Stories](success-stories.md).
+
+The longer reason: [Why I Built EASY](why-i-built-easy.md).
 
 ## Volunteers
 

@@ -13,3 +13,5 @@ XPR Wallet → Alcor Exchange → EASY → Flex Yields.
 4. Keep the bag. Tell one person.
 
 Bookmark [flex.town](https://flex.town).
+
+Take it EASY. Welcome, Gudasol 🜛

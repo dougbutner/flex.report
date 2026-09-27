@@ -1,78 +1,82 @@
 # Success Stories
 
-Pics or it didn’t happen. `thelake` is a live XPR account, not a backtest. *Updated 2026-09-25 17:39 UTC.*
+Pics or it didn’t happen. `kinship1` is a live XPR account, not a backtest. *Updated 2026-09-27 03:02 UTC.*
 
-![thelake reflections case study](assets/reflections-lake.png)
+![kinship1 reflections case study](assets/reflections-kinship.png)
 
-<<<<<<< Updated upstream
-*Last updated: 2026-09-26 16:50 UTC · thelake is a live on-chain bag, not a backtest.*
+## Case study: `kinship1`
 
-=======
->>>>>>> Stashed changes
-## Case study: `thelake`
+[`kinship1`](https://explorer.xprnetwork.org/account/kinship1) received **1,000.00 EASY** from the `reflections` account on **2025-11-27** (“When things seem hard, Take it EASY”). That seed is the principal. It is not counted as yield. Yield is only inbound transfers from `mon3y`.
 
-On **December 22, 2025**, XPR account [`thelake`](https://explorer.xprnetwork.org/account/thelake) bought into EASY. That is the original playbook example: put in about **$100** of EASY and leave it.
+**Reflections earned since then:** **333.67 EASY** across **842** payments from `mon3y` (through 2026-09-26).
 
-**Day-one stack:** 9,635.71 EASY  
-(7,880.71 from the funding transfer + 1,755.00 welcome)
+That is **+33.4% more EASY** on the seed (about **+41.3% APY** on quantity over 304 days). Wallet now: **1,333.67 EASY** (≈**$24.67**).
 
-At the **then** EASY mark (**$0.0120** on the Alcor EASY/XUSDC pool), that stack was **$115.26**: the ~$100 entry the playbook talks about.
-
-**Reflections earned since then:** **1,931.78 EASY** across **700** on-chain payments from `mon3y` (through 2026-09-25).
-
-That is **+20.0% more EASY** from reflections alone (about **+27.1% APY** on quantity over 278 days), without selling. A later invite bonus of **100.00 EASY** sits in the wallet too. The comparison below ignores that bonus so the story stays “the original ~$100 bag.”
-
-USD is a different lens. EASY itself moved from **$0.0120** to **$0.0187**. The comparable bag (day one + reflections) is **11,567.49 EASY**, about **$216.39** now: **+87.7%** vs those day-one dollars (**+128.8% APY** in USD).
+The comparison below takes that same reflection rate and applies it to a **$100** buy of EASY on **2025-11-27**, when EASY was **$0.0114**. That buy is **8,786.74 EASY**. After the same reflection rate it is **11,718.62 EASY**, about **$216.74** at **$0.0185**: **+116.7%** vs the $100 (**+153.3% APY** in USD).
 
 | | |
 | --- | --- |
-| Account created | 2025-12-22 |
-| Day-one stack | 9,635.71 EASY (**$115.26** at $0.0120) |
-| Reflections (mon3y → thelake) | **1,931.78 EASY** (≈**$36.14** at today’s mark) |
-| Reflection gain (EASY qty) | **+20.0% EASY** · **+27.1% APY** |
-| USD bag vs day-one dollars | **+87.7%** · **+128.8% APY** |
-| Reflection payments | 700 |
-| Comparable bag | **11,567.49 EASY** (≈**$216.39**) |
-| Wallet now | **11,667.49 EASY** (includes 100.00 invite EASY) |
-| Explorer | [thelake](https://explorer.xprnetwork.org/account/thelake) |
+| Account | [kinship1](https://explorer.xprnetwork.org/account/kinship1) |
+| Seed (from `reflections`, not yield) | 1,000.00 EASY on 2025-11-27 |
+| Reflections (mon3y → kinship1) | **333.67 EASY** (≈**$6.17** at today’s mark) |
+| Reflection gain (EASY qty) | **+33.4% EASY** · **+41.3% APY** |
+| $100 buy on that day | **8,786.74 EASY** at $0.0114 |
+| Same rate, extrapolated bag | **11,718.62 EASY** (≈**$216.74**) |
+| USD bag vs the $100 | **+116.7%** · **+153.3% APY** |
+| Reflection payments | 842 |
+| Wallet now | **1,333.67 EASY** |
 
-![thelake reflections summary](assets/thelake-reflections-summary.png)
+![kinship1 reflections summary](assets/kinship1-reflections-summary.png)
 
-![thelake cumulative reflections](assets/thelake-reflections-cumulative.png)
+![kinship1 cumulative reflections](assets/kinship1-reflections-cumulative.png)
 
-![thelake monthly reflections](assets/thelake-reflections-monthly.png)
+![kinship1 monthly reflections](assets/kinship1-reflections-monthly.png)
 
 You can verify any payment on the explorer: transfers from `mon3y` with memos like “Take it EASY 🍹 Reflect & Collect ❇️” / “Be EASY 🍹 flex.town 🏘”.
 
+## The Perfect Gift
+
+Your relatives probably do not know crypto, and they do not want it. Open the wallet for them. Put in **100 EASY** and **1 WON**. That is a few dollars. They can ignore it. It still pays.
+
+[`jolly.1won`](https://explorer.xprnetwork.org/account/jolly.1won) is one of those wallets.
+
+On **2025-12-24**, `printy` sent **200 EASY** once, and **1 WON** twice (**2 WON**). Memos said Merry Christmas. At that day's prices the package was **$4.85** (200 EASY at $0.0120, 2 WON at $1.22).
+
+| | Gift day | Now |
+| --- | --- | --- |
+| EASY | 200.00 ($2.40) | **393.58** ($7.29) |
+| WON | 2.00 ($2.45) | **2.00** ($3.72) |
+| Together | **$4.85** | **$11.01** |
+
+The EASY count is **+96.8%** higher. The dollars are **+127.1%** higher (**+195.0% APY** over 277 days). The WON count is still 2. WON's pay arrived as **125.61 EASY** through the WON/EASY pool. Holding the EASY added **67.64 EASY** from `mon3y`. No second deposit.
+
+Copy the size, or copy this wallet's size. **100 EASY and 1 WON** is the same kind of gift. This account was given **200 EASY** and **2** transfers of **1 WON**. Set up the wallet. Put a few dollars in their name. Hand them the account.
+
 ## Same dollars, other bags
 
-What if that **$115.26** had bought a major coin on **2025-12-22** instead, or sat in USDC / supplied USDC?
+What if that **$100** had bought a major coin on **2025-11-27** instead, or sat in USDC / supplied USDC?
 
-Buy-and-hold, no leverage, no trading. Coin marks are Binance USDT daily close vs now. Idle USDC is the USDC/USDT pair. “Staked USDC” rows compound DefiLlama daily supply APY on the named venue (Aave V3 Ethereum, Compound III Ethereum, Morpho Steakhouse USDC on Base, Spark Savings Ethereum). EASY is thelake’s day-one stack plus reflections, marked in USD.
+Buy-and-hold, no leverage, no trading. Coin marks are Binance USDT daily close vs now. Idle USDC is the USDC/USDT pair. “Staked USDC” rows compound DefiLlama daily supply APY on the named venue (Aave V3 Ethereum, Compound III Ethereum, Morpho Steakhouse USDC on Base, Spark Savings Ethereum). The EASY row is a **$100** buy on 2025-11-27, grown by kinship1’s reflection rate, marked in USD.
 
-![thelake vs blue chips](assets/thelake-vs-bluechips.png)
+![kinship1 vs blue chips](assets/kinship1-vs-bluechips.png)
 
 | Rank | Bag | Kind | Value now | USD change | USD APY |
 | ---: | --- | --- | ---: | ---: | ---: |
-| 1 | **EASY (thelake)** | Flex token | $216.39 | **+87.7%** | +128.8% |
-| 2 | Morpho USDC | staked USDC | $119.12 | +3.4% | +4.4% |
-| 3 | Spark USDC | staked USDC | $118.44 | +2.8% | +3.6% |
-| 4 | Compound USDC | staked USDC | $118.30 | +2.6% | +3.5% |
-| 5 | Aave USDC | staked USDC | $118.22 | +2.6% | +3.4% |
-| 6 | USDC (idle) | stable | $115.23 | 0.0% | 0.0% |
-| 7 | Solana | blue chip | $111.28 | -3.5% | -4.5% |
-| 8 | Bitcoin | blue chip | $109.46 | -5.0% | -6.6% |
-| 9 | BNB | blue chip | $103.90 | -9.9% | -12.7% |
-| 10 | Ethereum | blue chip | $103.11 | -10.5% | -13.6% |
-| 11 | XRP | blue chip | $93.67 | -18.7% | -23.9% |
-| 12 | Polkadot | blue chip | $83.34 | -27.7% | -34.7% |
-| 13 | Cardano | blue chip | $80.35 | -30.3% | -37.8% |
+| 1 | **EASY (kinship1)** | Flex token | $216.74 | **+116.7%** | +153.3% |
+| 2 | Morpho USDC | staked USDC | $103.69 | +3.7% | +4.4% |
+| 3 | Compound USDC | staked USDC | $102.89 | +2.9% | +3.5% |
+| 4 | Aave USDC | staked USDC | $102.84 | +2.8% | +3.4% |
+| 5 | Spark USDC | staked USDC | $102.77 | +2.8% | +3.3% |
+| 6 | USDC (idle) | stable | $100.03 | 0.0% | 0.0% |
+| 7 | Bitcoin | blue chip | $92.51 | -7.5% | -8.9% |
+| 8 | Ethereum | blue chip | $89.51 | -10.5% | -12.5% |
+| 9 | BNB | blue chip | $86.25 | -13.7% | -16.3% |
+| 10 | Solana | blue chip | $86.01 | -14.0% | -16.6% |
+| 11 | XRP | blue chip | $69.07 | -30.9% | -35.9% |
+| 12 | Cardano | blue chip | $58.25 | -41.7% | -47.8% |
+| 13 | Polkadot | blue chip | $52.72 | -47.3% | -53.7% |
 
 The twelve comparison bags: Bitcoin, Ethereum, XRP, Solana, BNB, Cardano, Polkadot, idle USDC, plus four large USDC supply/savings venues. This is not advice, and a different window can reverse the ranking.
-
-## `kinship1`
-
-[`kinship1`](https://explorer.xprnetwork.org/account/kinship1) got **1,000.00 EASY** from `reflections` on **2025-11-27** (“When things seem hard, Take it EASY”). Since then it has taken **333.67 EASY** in reflections across **842** payments (≈**$6.24** at $0.0187), a **+33.4%** gain in EASY (≈**+41.5% APY** over 303 days). Balance now: **1,333.67 EASY** (≈**$24.95**).
 
 ## EASY price (recent)
 

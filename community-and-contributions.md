@@ -2,7 +2,7 @@
 
 ![Contributors Club](assets/heroes/community.png)
 
-Show two weeks of work. Rank three people. Get paid in EASY.
+Break bread. Show two weeks of work. Rank three people. Get paid in EASY.
 
 ## Contributors Club
 
