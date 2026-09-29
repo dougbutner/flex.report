@@ -1,50 +1,45 @@
 # Smarts for success
 
-Read this before you press liftoff. The contract will do exactly what you sign. It will not save a range you set too cheap, or a lock you set too short.
+Sign the range and the lock you can explain. The contract will not repair either one later.
 
 ## Get people excited
 
-People who are already waiting make a launch work. A presale is the practical version of that. The same posts, the same chats, and the same day of attention now have two finishes: the insider window, then the public launch. If the presale fills, that fill is the advertisement for the real open. You do not need a second campaign. The first result does the talking. If you skip the presale, you get one open and one chance to be heard. Use the presale when you already have names who said they would buy.
+A launch works when people are already waiting. A presale gives that attention two finishes: the insider window, then the public open. If the first window fills, that fill is the ad for the second. Skip the presale when you do not already have names who said they would buy. You get one open.
 
 ## Pump or pomp?
 
-Initial price and range width decide how much money it takes to own a real percent of the supply.
+Start price and range width set how much money buys a real percent of supply.
 
-A **pump** token has a low starting price and a wide range. A small buy walks a long way up the curve. The chart moves. So does the risk that one wallet quietly takes a large percent while it is still cheap.
+A pump token opens cheap, on a wide range. A small buy moves the price a long way. One wallet can also take a large percent while it is still cheap.
 
-A **pomp** token opens at a high market cap. The same buy barely moves the price. It looks established on minute one. It also takes much more money to "pump," which is the point: percent of supply is expensive on purpose.
+A pomp token opens at a high market cap. The same buy barely moves the price. It takes more money to run the chart.
 
-On the price step, read the **$100 buys** line before you trust the shape. At a near-zero start, $100 can be most of the pool on a tight range and still a large slice on a wide one. Put the starting market cap where you actually want it, then read that percent again. Plan the launch around that second number, not around the shape of the buttons.
+Set the starting market cap you actually want, then read **$100 buys** on the price step. Plan around that percent. A near-zero draft will show a huge percent even on a wide range. That number is the draft, not the launch.
 
 ## How to make money forever
 
-Flex is built as a stream, not a single sale you harvest and leave. Transfer tax keeps filling `reflection_pool` as long as people move the token. `makeitrain` sends a slice of that pool to holders every time someone calls it. The Alcor fee on your locked position keeps accruing to that position for as long as the lock holds.
+Transfer tax keeps filling the reflection pool as long as the token moves. Each `makeitrain` sends a slice of it. The swap fee keeps accruing to your locked position until the lock ends.
 
-Pure liquid is the guarantee you can actually point at. The pool starts as your token only. Buyers bring the quote. You cannot pull that liquidity until the lock you signed is over. The longer the lock, the longer that sentence stays true.
+The pool starts as your token. Buyers bring the quote. You cannot remove the position until the lock ends. A longer lock is a longer version of that sentence, and holders can read the date.
 
 ## Invest in yourself first
 
-The first buys are the bottom of the range you drew. That is the best price the pool will ever print, because every later buy is higher up the same range.
+The first buys are the bottom of the range. Later buys are higher. That open is your best price.
 
-You can buy your own token the moment insiders are allowed, or at public launch if you skipped the presale. Do it from the same screen everyone else uses, and use the $100 preview to decide the size. Buy enough that the pool is not empty attention. Do not buy so much, so cheap, that everyone else is arriving after you already own the float. The next section is that mistake, seen from the other side.
+Buy on the same screen everyone else uses. Use the $100 line to pick a size that gets the pool moving. If that line says one wallet can take the float for pocket change, fix the price before you buy it yourself.
 
 ## Build trust
 
-You must lock liquidity at least 90 days (91 on the slider). After that date, nothing in the contract stops you from removing the position and selling. Holders know that. They have seen it on other launchers.
+Ninety days is the chain minimum. After that, nothing stops you from pulling the position and selling. Holders know it.
 
-Set the lock to a year, or to two. The chain accepts it. The community can read `unlock_time` after liftoff. A long lock is the only proof that works before they know you.
+Lock a year, or two. `unlock_time` is public after liftoff. A long lock is the proof that works before they know you.
 
-The other trust problem is the range. A long lock does not help if the start price is so low that an unknown wallet buys 10% or more of supply for pocket change. Insiders and outsiders both count. If that wallet is you, say so. If it is not you, holders will assume the quiet wallet dumps. Read the $100 percent. If it is a number you would not want a stranger to have, raise the start price or tighten who can buy in the insider window.
+A long lock does not fix a cheap open. If a wallet can buy 10% or more for very little, holders will assume that wallet dumps. If that wallet is you, say so before they find the transfer.
 
 ## Take full control
 
-There is a way to step outside the launch pool after the fact. Set a very cheap range, buy the supply out of that pool, and then add whatever other Alcor routes you want with `addpool`. The contract allows the issuer to add pools. It does not stop you from being the first buyer.
+You can set a very cheap range, buy the supply out of that pool, then add other Alcor routes with `addpool`. The contract allows the issuer to add pools. It does not stop you from being the first buyer.
 
-Do that and you are no longer launching a community range. You are taking the inventory and rebuilding liquidity yourself. Holders can see the price you set and the wallet that bought it. If that is the plan, it should be the plan you tell them. If it is not the plan, do not leave the start price in a place where anyone, including you, can do it by accident.
+That is you taking the inventory and building liquidity yourself. The price and the buyer are public. If that is the plan, say it. If it is not, do not leave the start price where anyone can do it by accident.
 
-## Also
-
-- Press **Make it rain** yourself the first day. The pay is the product. An unpaid pool looks like a promise.
-- On `for3x`, leave angel and jackpot at 0 until you can explain the draw in one sentence. Those pots come out of the reflection slice. They do not create new tax.
-- Reflection cannot be lowered later, and the total tax cannot be raised. Pick the split you can live with.
-- A verified WebAuth account is what waives the EASY hold on a first GEASY launch. The waiver is once per contract, for that first GEASY only.
+Leave angel and jackpot at 0 until you can explain the draw in one sentence. They come out of reflection. They do not add tax.

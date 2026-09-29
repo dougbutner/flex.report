@@ -33,6 +33,7 @@
   * [WON (w3won)](smart-contracts/won.md)
   * [MEME (m3m3)](smart-contracts/meme.md)
   * [GRAMS (gold.mon3y)](smart-contracts/grams.md)
+  * [flexforex (for3x)](smart-contracts/flexforex.md)
 * [API Reference](api-reference.md)
 * [FAQ](faq.md)
 * [Legal & Terms](legal-and-terms.md)

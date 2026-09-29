@@ -1,57 +1,61 @@
 # How your token works
 
-The Launch screen is the whole path. Nothing here is a separate product you bolt on later.
-
 - Decide your name.
 - Pick your token logo.
 - Set a starting price and token supply.
 - Decide your pre-sale, or go live together.
-- Hold EASY on `mon3y`: 5,000 on `3asy`, 10,000 on `fl3x`, or 50,000 on `for3x`, times one more than the tokens you already launched on that contract. From 9 Sep 2026, XPR, XMD, LOAN, and xtokens start at 90% off that hold and lose 10 points of discount every 30 days until the full hold is back. EASY, WON, GRAMS, and MEME stay at 10% of the full hold and do not rise. A verified first GEASY launch holds 0.
+- Hold the EASY the contract asks for. The amount steps up on a clock, below.
 - Launch.
 - Promote.
 - Send the rain and call the angels.
 
 ## Decide your name
 
-The symbol is 1 to 7 uppercase letters. It is fixed forever. The display name can be longer (the field allows 16 characters). You also pick the program: `3asy` (reflections and burn), `fl3x` (plus a project share and inheritance), or `for3x` (plus angel numbers and a jackpot).
+The symbol is 1 to 7 uppercase letters and never changes. The display name can be 16 characters. Pick the program on the same step: `3asy` (reflection and burn), `fl3x` (plus a project share and inheritance), or `for3x` (plus angel numbers and a jackpot).
 
 ![Name, symbol, and program](assets/launch-name.png)
 
 ## Pick your token logo
 
-Square PNG or SVG, roughly 256 to 1024 pixels. Pin it, or paste a public image URL. Wallets read the logo from `token.proton`. That registration is signed by the flex contract account (`3asy`, `fl3x`, or `for3x`), not by you. The wizard does not ask you to sign it. Admin pushes the listing later. Until then the launcher still shows the URL you saved.
+Square PNG or SVG, about 256 to 1024 pixels. Pin it or paste a public URL. Wallets read logos from `token.proton`. That listing is signed by `3asy`, `fl3x`, or `for3x`, not by you. The wizard keeps your URL until the listing exists.
 
 ## Set a starting price and token supply
 
-You set max supply. 100% is minted or issued to you, then deposited into one Alcor position. The pool is one-sided: it starts just outside the range, so the position is entirely your token. Buyers pay the quote as they walk from the start price toward the top.
+You set max supply. 100% is minted or issued to you, then deposited into one Alcor position. The position starts just outside the range, so it is entirely your token. Buyers pay the quote as they walk toward the top.
 
-The fee on that pool is 0.05%, 0.30%, or 1.00%. You pick it. It is not a tax on transfers. It is the swap fee, and it accrues to the locked position, which is yours.
+Three different percents, and they are not the same fee:
 
-Range width is the other half of the price. A tight range means a little money buys a lot of the supply. A wide range means the same money buys less, and the top of the range is far away. The screen shows what $100 buys at the width you picked. Raise the starting market cap and that percent falls. The shot below is a near-zero start on purpose, so the width is the only thing changing.
+- **Swap fee.** 0.05%, 0.30%, or 1.00% on trades through this pool. It accrues to in-range liquidity. At launch the only position is yours, and it is locked.
+- **Transfer tax.** `create` writes 0%. The first `setfees` can be any split up to 100%. Later calls cannot raise the total or lower reflection. Burn and project can be cut. `3asy` splits reflection and burn. `fl3x` and `for3x` add a project rate. A blank project account stays the issuer. On `for3x`, angel and jackpot take a share of the reflection slice only.
+- **Protocol skim.** Taken from the reflection pool when someone calls `makeitrain`, not from the swap. Flex quotes (EASY, WON, GRAMS, MEME, GEASY) pay 0. Other quotes start at 0.25% to the protocol and 0.25% to Contributor's Club. After the LP unlocks, each of those can rise once by another 0.25%.
+
+Width is the other half of price. Tight means a little money buys a lot of supply. Wide means the same money buys less. The screen shows what $100 buys. Set the starting market cap first, then read that percent. The shot uses a near-zero start so only the width is changing.
 
 ![Fee tier and range width](assets/launch-range-width.png)
 
-Transfer tax is separate, and you set it on the previous step. Create writes 0%. `setfees` is the first real split. The sum cannot go above 100%, and a later call cannot raise the total or lower reflection.
-
 ![Transfer tax](assets/launch-fees.png)
-
-On `3asy` the split is reflection and burn. On `fl3x` and `for3x` you also set a project rate and a project account (blank stays the issuer). On `for3x` you can give angel numbers and the jackpot a share of the reflection slice only. That does not add tax on top.
 
 ## Decide your pre-sale, or go live
 
-Insiders are optional. Leave the box off and everyone starts at liftoff.
+Leave Insiders off and everyone starts at liftoff.
 
-Turn it on and you set two clocks: when insiders may buy, and when the public launch is. Insider time has to come first. You can cap how much of supply an insider may hold, add a higher cap for someone who proves a locked LP position, and require a hold, an NFT, or LP. Invites are a list you sign. They are not a buy gate by themselves.
+Turn it on and you set two clocks. Insider time must come first.
+
+- From insider time until public launch, approved insiders may deposit into the pool. That deposit window closes at public launch.
+- From public launch, buys out of the pool open, only to approved insiders, and only up to the cap.
+- Wallet-to-wallet transfers stay closed until you `golive`. Liftoff with a presale row leaves `launched` false until that call.
+
+The cap is a percent of supply, with a higher cap if someone proves a locked LP position. Gates can be a hold, an NFT, LP, or all of them. An invite puts a name on the list. It is not a buy gate by itself.
 
 ![Presale is optional](assets/launch-insiders.png)
 
-If a presale row exists, liftoff fills the pool and leaves `launched` false until you call `golive`. Until then, transfers stay inside the club rules.
+Join, prove lock, and the buttons are in the [game guide](game-guide.md).
 
 ## The EASY hold
 
-This is not a fee. At liftoff the contract reads your EASY balance on `mon3y` and refuses if it is short.
+At liftoff the contract reads your EASY balance on `mon3y`. A short balance stops liftoff. The EASY stays in your account.
 
-Full hold, whole tokens, times (tokens you already launched on **this** contract + 1):
+Full hold, whole tokens, times (tokens you have already launched on this contract, plus one):
 
 | Program | Account | Full hold |
 | --- | --- | --- |
@@ -59,39 +63,37 @@ Full hold, whole tokens, times (tokens you already launched on **this** contract
 | complexflex | `fl3x` | 10,000 EASY |
 | flexforex | `for3x` | 50,000 EASY |
 
-The discount clock is in the contracts (`promo_start` = 9 Sep 2026 00:00 UTC, then one step every 30 days):
+The discount is in the contract from 9 Sep 2026 00:00 UTC, and it steps every 30 days:
 
-- EASY, WON, GRAMS, and MEME always use 10% of the full hold. That price does not rise.
-- A verified first launch against GEASY (`fl3x`) needs no EASY hold. Later GEASY launches use the monthly discount.
-- XPR, XMD, LOAN, and xtokens use the monthly discount: 90% off in the first 30 days, then 80% off, then 70%, and so on until the discount is 0 and the full hold is due.
+- EASY, WON, GRAMS, and MEME always take 10% of the full hold. That price does not rise.
+- A verified first launch against GEASY takes no EASY hold. Verified means `eosio.proton` `usersinfo`. Later GEASY launches use the monthly discount.
+- XPR, XMD, LOAN, and xtokens start at 90% off, then 80%, then 70%, until the discount is gone. The first step up is 9 Oct 2026.
 
-This month (still inside the first 30 days) a first `for3x` token is 5,000 EASY, which is 10% of 50,000. On 9 Oct 2026 the non-flex quotes step to 20% of the full hold. Flex quotes stay at 10%.
+A first `for3x` token in the opening month is 5,000 EASY (10% of 50,000). After 9 Oct 2026, flex quotes stay at 10%. Non-flex quotes move to 20% of the full hold.
 
 ## Launch
 
-You sign a sequence. The flex contract does not sign Alcor for you.
+You sign. The flex contract does not sign Alcor for you.
 
 1. `create`
 2. `setfees`
 3. `issue` on `3asy`, or `mint` on `fl3x` and `for3x`, 100% to you
-4. `startlaunch` (quote amount 0, swap-to-quote default on)
-5. Alcor `createpool`, activate the pool if it is inactive, deposit the supply, add the one-sided range, `lockpos`
-6. Optional `setpresale` (and invites) after the lock
+4. `startlaunch` (quote amount 0)
+5. Alcor: `createpool`, activate if needed, deposit the supply, one-sided `addliquid`, `lockpos`
+6. Optional `setpresale`, and invites, after the lock
 7. `liftoff`
 8. `addpool` of the launch quote pair
 
-Do not put liftoff in the same transaction as `createpool`. After a successful create, the token, tax, quote, and range stay frozen in the wizard so a later click cannot drift them. Insiders stay editable until `setpresale` is signed.
+Do not put `liftoff` in the same transaction as `createpool`. After create, the wizard freezes token, tax, quote, and range. Insiders stay editable until `setpresale` is signed.
 
-The chain checks the lock at liftoff: unlock time must still be at least 90 days out (`MIN_LOCK_SECS`). The UI minimum is 91 days so a slow signing session does not fail that check.
+The chain requires at least 90 days left on the Alcor lock at the moment of liftoff. The slider starts at 91 days, which leaves about one day of slack. Wait longer than that and a 91-day lock fails the check.
 
 ## Promote
 
-The calendar picks up insider dates and the public launch. People who already care will tell the next person if the presale actually fills. A quiet pool does not become loud because the contract exists. Say the start price, the lock length, and what $100 buys. Those three numbers are the ad.
+The calendar shows the insider date and the public launch. Say the start price, the lock, and what $100 buys. Those three numbers can be checked. Using the presale so the first result advertises the second is in [Smarts for success](smarts-for-success.md).
 
 ## Send the rain and call the angels
 
-After liftoff, transfer tax sits in `reflection_pool` until someone calls `makeitrain`. That call splashes **38.2%** of the pool to holders (vaults such as `swap.alcor` are left out of the share count). Anyone connected can press the square. You should press it yourself the first time, so holders see the pay.
+`makeitrain` pays 38.2% of `reflection_pool` to holders. Swap and contract balances are left out of the share count. On `for3x`, white squares call `pullangel` and gold squares call `pulljackpot` when those pots are above zero. The clicks are in the [game guide](game-guide.md).
 
 ![Make it rain](assets/make-it-rain.png)
-
-On `for3x`, the same page has angel squares and jackpot squares. `pullangel` draws against holders who set an angel number. `pulljackpot` draws winners who meet the minimum hold. Both need a pot above zero, and both are public calls. The game guide is the click-by-click version.
