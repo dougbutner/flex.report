@@ -25,7 +25,7 @@ EASY is not an asset that can be possessed by an individual or organization, and
 
 The **0.3% protocol fee applies to EASY only** (not WON, MEME, or GRAMS). It is taken of/from the EASY reflection pool on each rewards payout action.
 
-Proceeds are used to **pay developers**, fund **Contributors Club**, and support **development of The EASY Blockchain**.
+Proceeds are used to **pay developers**, fund **Contributors Club**, and support the tech as it evolves into a new chain: [The Channel](https://github.com/TetraGrids/The-Channel).
 
 **How the 0.3% protocol fee works**
 

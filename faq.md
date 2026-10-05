@@ -54,9 +54,9 @@ Metal Pay / full Metal X: yes. Alcor DEX: no. You can CEX-KYC, withdraw to an un
 
 No. Contracts are proprietary. Explorer tables are the public record. Tools for others to mint Flex tokens are planned.
 
-## How do I invest in The EASY Blockchain?
+## Is there a new chain?
 
-Hold EASY. Intent: redeemable onto the new chain. Details TBA. [Chain page](easy-blockchain.md).
+The tech is evolving into a new chain: [The Channel](https://github.com/TetraGrids/The-Channel).
 
 ## Do I have to stake to earn reflections?
 

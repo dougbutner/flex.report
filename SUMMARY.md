@@ -27,7 +27,6 @@
   * [WON](flex-tokens-family/won.md)
   * [MEME](flex-tokens-family/meme.md)
   * [GRAMS](flex-tokens-family/grams.md)
-* [Soon: The EASY Blockchain](easy-blockchain.md)
 * [Smart Contracts](smart-contracts/README.md)
   * [EASY (mon3y)](smart-contracts/easy.md)
   * [WON (w3won)](smart-contracts/won.md)
