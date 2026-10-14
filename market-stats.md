@@ -4,23 +4,23 @@
 
 Live pulse of EASY on XPR Alcor: liquidity, volume, and pending holder rewards.
 
-*Last updated: 2026-10-13 19:40 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
+*Last updated: 2026-10-14 17:41 UTC · Sources: [Alcor API](https://api.alcor.exchange/) (`proton.alcor.exchange/api/v2`) + `mon3y` chain tables*
 
 ## At a glance
 
 | | |
 | --- | --- |
-| **24h volume (all EASY pools)** | **$10,651** |
-| **EASY price** | **$0.0180** (≈8.02 XPR) |
-| **EASY price in XUSDC** | **0.018211 XUSDC** |
-| **Total EASY pools TVL** | **$393,293** |
-| **Total USD backing (stables)** | **$72,795** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
-| **Pending holder rewards** | **906.42 EASY** (≈$16.35) in the reflection pool |
-| **7d volume** | **$91,553** |
-| **30d volume** | **$401,717** |
-| **Flexers (holders on contract)** | **1,019** |
-| **Market cap (fully circulating)** | **$378,727** |
-| **Share of Alcor Proton swap volume (24h)** | **≈25.13%** |
+| **24h volume (all EASY pools)** | **$6,125** |
+| **EASY price** | **$0.0180** (≈8.06 XPR) |
+| **EASY price in XUSDC** | **0.018080 XUSDC** |
+| **Total EASY pools TVL** | **$391,877** |
+| **Total USD backing (stables)** | **$72,623** (XMD + XUSDC + XPYUSD + XPAX + XUSDT sides) |
+| **Pending holder rewards** | **1,677.31 EASY** (≈$30.15) in the reflection pool |
+| **7d volume** | **$58,002** |
+| **30d volume** | **$396,510** |
+| **Flexers (holders on contract)** | **1,020** |
+| **Market cap (fully circulating)** | **$377,494** |
+| **Share of Alcor Proton swap volume (24h)** | **≈16.06%** |
 
 ## Volume
 
@@ -30,9 +30,9 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 
 | Window | EASY pools | Rest of Alcor swap | EASY share |
 | --- | ---: | ---: | ---: |
-| 24h | $10,651 | $31,725 | **25.1%** |
-| 7d | $91,553 | $225,746 | **28.9%** |
-| 30d | $401,717 | $1,239,641 | **24.5%** |
+| 24h | $6,125 | $32,016 | **16.1%** |
+| 7d | $58,002 | $213,958 | **21.3%** |
+| 30d | $396,510 | $1,212,797 | **24.6%** |
 
 ![EASY share of Alcor Proton swap volume](assets/market-easy-share.png)
 
@@ -42,24 +42,24 @@ EASY pool volume is the sum of `volumeUSD24` / `volumeUSDWeek` / `volumeUSDMonth
 
 | Pool | 24h volume | TVL | EASY in pool | Other side | 24h Δ |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| EASY/XUSDC | $2,386 | $70,796 | 3,112,628 EASY | 14,677.07 XUSDC | +0.3% |
-| EASY/XXRP | $1,829 | $15,102 | 319,008 EASY | 6,793.73 XXRP | +0.5% |
-| EASY/XMD | $1,826 | $71,468 | 3,137,876 EASY | 15,170.59 XMD | +0.3% |
-| EASY/XPR | $1,753 | $23,769 | 518,763 EASY | 6,410,287.79 XPR | +0.2% |
-| EASY/XUSDT | $798.98 | $70,798 | 3,136,325 EASY | 14,248.50 XUSDT | -0.1% |
-| EASY/XDOGE | $382.88 | $1,481 | 47,897 EASY | 7,370.85 XDOGE | +0.3% |
-| EASY/XPYUSD | $364.77 | $56,394 | 3,127,730 EASY | 14,403.01 XPYUSD | -0.2% |
-| EASY/METAL | $327.39 | $2,971 | 76,322 EASY | 13,499.32 METAL | -0.6% |
+| EASY/XUSDC | $1,736 | $70,627 | 3,123,849 EASY | 14,473.29 XUSDC | -0.4% |
+| EASY/XMD | $1,176 | $71,372 | 3,150,837 EASY | 14,935.33 XMD | -0.5% |
+| EASY/XPR | $1,024 | $23,629 | 558,477 EASY | 6,087,399.99 XPR | +0.3% |
+| EASY/XUSDT | $686.05 | $70,627 | 3,132,883 EASY | 14,310.23 XUSDT | +0.1% |
+| EASY/XXRP | $613.32 | $14,778 | 285,405 EASY | 7,238.04 XXRP | +0.6% |
+| EASY/XXLM | $262.01 | $1,684 | 48,476 EASY | 4,437.42 XXLM | +2.1% |
+| EASY/XDOGE | $134.95 | $1,457 | 41,570 EASY | 8,717.49 XDOGE | +1.1% |
+| EASY/METAL | $119.88 | $2,918 | 74,430 EASY | 13,621.32 METAL | +0.1% |
 
 ### Stable backing (deepest pool each)
 
 | Pool | Stable side | EASY in pool | Pool TVL |
 | --- | ---: | ---: | ---: |
-| [EASY/XMD](https://alcor.exchange/v/xpr/analytics/pools/4067) | $14,899 XMD | 3,137,876 EASY | $71,468 |
-| [EASY/XUSDC](https://alcor.exchange/v/xpr/analytics/pools/4065) | $14,677 XUSDC | 3,112,628 EASY | $70,796 |
-| [EASY/XPYUSD](https://alcor.exchange/v/xpr/analytics/pools/4068) | $14,345 XPYUSD | 3,127,730 EASY | $56,394 |
-| [EASY/XPAX](https://alcor.exchange/v/xpr/analytics/pools/4070) | $14,448 XPAX | 3,137,107 EASY | $56,563 |
-| [EASY/XUSDT](https://alcor.exchange/v/xpr/analytics/pools/4066) | $14,248 XUSDT | 3,136,325 EASY | $70,798 |
+| [EASY/XMD](https://alcor.exchange/v/xpr/analytics/pools/4067) | $14,726 XMD | 3,150,837 EASY | $71,372 |
+| [EASY/XUSDC](https://alcor.exchange/v/xpr/analytics/pools/4065) | $14,473 XUSDC | 3,123,849 EASY | $70,627 |
+| [EASY/XPYUSD](https://alcor.exchange/v/xpr/analytics/pools/4068) | $14,462 XPYUSD | 3,131,061 EASY | $56,284 |
+| [EASY/XPAX](https://alcor.exchange/v/xpr/analytics/pools/4070) | $14,461 XPAX | 3,137,099 EASY | $56,392 |
+| [EASY/XUSDT](https://alcor.exchange/v/xpr/analytics/pools/4066) | $14,310 XUSDT | 3,132,883 EASY | $70,627 |
 
 Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analytics: [EASY token](https://alcor.exchange/v/xpr/analytics/tokens/EASY-mon3y)
 
@@ -67,21 +67,21 @@ Trade: [alcor.exchange/v/xpr/swap](https://alcor.exchange/v/xpr/swap) · Analyti
 
 | | 1D | 1W | 1M |
 | --- | ---: | ---: | ---: |
-| **TVL** | $1,105,061 | (snapshot) | (snapshot) |
-| **Swap TVL** | $964,641 | - | - |
-| **Swap volume** | $42,375 | $317,299 | $1,641,358 |
-| **Spot volume** | $654.44 | $2,198 | $11,770 |
-| **Swap fees** | $262.84 | $1,788 | $8,891 |
-| **DAU (avg)** | ≈404 | ≈406 | ≈416 |
-| **Liquidity pools** | 11,719 | - | - |
+| **TVL** | $1,102,517 | (snapshot) | (snapshot) |
+| **Swap TVL** | $963,681 | - | - |
+| **Swap volume** | $38,141 | $271,960 | $1,609,308 |
+| **Spot volume** | $202.51 | $1,862 | $11,840 |
+| **Swap fees** | $204.69 | $1,543 | $8,752 |
+| **DAU (avg)** | ≈400 | ≈403 | ≈414 |
+| **Liquidity pools** | 11,733 | - | - |
 | **Spot pairs** | 1,674 | - | - |
 
 ## Holder rewards (on-chain)
 
 | | |
 | --- | --- |
-| Reflection pool (`mon3y` / EASY `stat`) | **906.42 EASY** |
-| Approx. USD | **≈$16.35** |
+| Reflection pool (`mon3y` / EASY `stat`) | **1,677.31 EASY** |
+| Approx. USD | **≈$30.15** |
 | How it fills | 2% transfer tax into the pool |
 | How it pays | Anyone calls `distribute` → splash to flexers |
 
