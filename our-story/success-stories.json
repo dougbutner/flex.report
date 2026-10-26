@@ -1,25 +1,25 @@
 {
-  "updated": "2026-10-25 16:55 UTC",
+  "updated": "2026-10-26 18:57 UTC",
   "start": "2025-11-27",
   "compare_usd": 100.0,
   "examples": [
     {
       "account": "kinship1",
       "first_ts": "2025-11-27T01:12:44.500",
-      "last_refl_ts": "2026-10-22T13:04:29.500",
+      "last_refl_ts": "2026-10-26T13:09:40.000",
       "in_from": {
         "reflections": 1000.0,
-        "mon3y": 339.5075910000005
+        "mon3y": 339.6817830000005
       },
       "n_from": {
         "reflections": 1,
-        "mon3y": 860
+        "mon3y": 861
       },
       "day_one_easy": 1000.0,
-      "reflections_easy": 339.507591,
-      "reflection_payments": 860,
+      "reflections_easy": 339.681783,
+      "reflection_payments": 861,
       "invite_easy": 0.0,
-      "balance_easy": 1339.507591,
+      "balance_easy": 1339.681783,
       "monthly": {
         "2025-11": 7.5827149999999985,
         "2025-12": 47.93594400000001,
@@ -32,44 +32,44 @@
         "2026-07": 17.657527,
         "2026-08": 18.814398,
         "2026-09": 10.295554000000005,
-        "2026-10": 5.226969
+        "2026-10": 5.401161
       },
       "start": "2025-11-27",
       "price_start": 0.011381,
-      "price_now": 0.020156,
-      "days": 332,
-      "qty_gain": 0.339508,
-      "qty_apy": 0.3793,
-      "reflections_usd": 6.84,
-      "balance_usd": 27.0,
+      "price_now": 0.019792,
+      "days": 333,
+      "qty_gain": 0.339682,
+      "qty_apy": 0.378165,
+      "reflections_usd": 6.72,
+      "balance_usd": 26.52,
       "seed_usd_actual": 11.38,
       "compare_usd": 100.0,
       "easy_bought": 8786.740787,
-      "held_easy": 11769.905984,
+      "held_easy": 11771.436564,
       "start_usd": 100.0,
-      "now_usd": 237.23,
-      "usd_gain": 1.37233,
-      "usd_apy": 1.586719,
-      "extrapolated_reflections_easy": 2983.165197
+      "now_usd": 232.98,
+      "usd_gain": 1.329839,
+      "usd_apy": 1.528717,
+      "extrapolated_reflections_easy": 2984.695777
     }
   ],
   "kinship1": {
     "account": "kinship1",
     "first_ts": "2025-11-27T01:12:44.500",
-    "last_refl_ts": "2026-10-22T13:04:29.500",
+    "last_refl_ts": "2026-10-26T13:09:40.000",
     "in_from": {
       "reflections": 1000.0,
-      "mon3y": 339.5075910000005
+      "mon3y": 339.6817830000005
     },
     "n_from": {
       "reflections": 1,
-      "mon3y": 860
+      "mon3y": 861
     },
     "day_one_easy": 1000.0,
-    "reflections_easy": 339.507591,
-    "reflection_payments": 860,
+    "reflections_easy": 339.681783,
+    "reflection_payments": 861,
     "invite_easy": 0.0,
-    "balance_easy": 1339.507591,
+    "balance_easy": 1339.681783,
     "monthly": {
       "2025-11": 7.5827149999999985,
       "2025-12": 47.93594400000001,
@@ -82,46 +82,46 @@
       "2026-07": 17.657527,
       "2026-08": 18.814398,
       "2026-09": 10.295554000000005,
-      "2026-10": 5.226969
+      "2026-10": 5.401161
     },
     "start": "2025-11-27",
     "price_start": 0.011381,
-    "price_now": 0.020156,
-    "days": 332,
-    "qty_gain": 0.339508,
-    "qty_apy": 0.3793,
-    "reflections_usd": 6.84,
-    "balance_usd": 27.0,
+    "price_now": 0.019792,
+    "days": 333,
+    "qty_gain": 0.339682,
+    "qty_apy": 0.378165,
+    "reflections_usd": 6.72,
+    "balance_usd": 26.52,
     "seed_usd_actual": 11.38,
     "compare_usd": 100.0,
     "easy_bought": 8786.740787,
-    "held_easy": 11769.905984,
+    "held_easy": 11771.436564,
     "start_usd": 100.0,
-    "now_usd": 237.23,
-    "usd_gain": 1.37233,
-    "usd_apy": 1.586719,
-    "extrapolated_reflections_easy": 2983.165197
+    "now_usd": 232.98,
+    "usd_gain": 1.329839,
+    "usd_apy": 1.528717,
+    "extrapolated_reflections_easy": 2984.695777
   },
   "gift": {
     "account": "jolly.1won",
     "day": "2025-12-24",
-    "days": 305,
+    "days": 306,
     "easy_seed": 200.0,
-    "easy_refl": 69.702529,
+    "easy_refl": 69.755723,
     "easy_won_flex": 125.610826,
-    "easy_now": 395.313355,
+    "easy_now": 395.366549,
     "won_in": 2.0,
     "won_n": 2,
     "won_now": 2.0,
     "px_easy_then": 0.012,
-    "px_easy_now": 0.020156,
+    "px_easy_now": 0.019792,
     "px_won_then": 1.223315,
-    "px_won_now": 2.032043,
+    "px_won_now": 2.005217,
     "then_usd": 4.85,
-    "now_usd": 12.03,
-    "usd_gain": 1.482567,
-    "usd_apy": 1.971052,
-    "qty_gain": 0.976567
+    "now_usd": 11.84,
+    "usd_gain": 1.442058,
+    "usd_apy": 1.902927,
+    "qty_gain": 0.976833
   },
   "benchmarks": [
     {
@@ -131,9 +131,9 @@
       "kind": "Flex token",
       "note": "$100 buy, kinship1 reflection rate",
       "start_usd": 100.0,
-      "now_usd": 237.23,
-      "usd_gain": 1.37233,
-      "usd_apy": 1.586719
+      "now_usd": 232.98,
+      "usd_gain": 1.329839,
+      "usd_apy": 1.528717
     },
     {
       "id": "morpho-usdc",
@@ -142,11 +142,11 @@
       "kind": "staked USDC",
       "note": "Morpho Steakhouse USDC on Base",
       "pool": "ba68527f-8ec2-4c55-827a-8f4673ae047c",
-      "last_apy": 0.045974,
+      "last_apy": 0.047469,
       "start_usd": 100.0,
-      "now_usd": 104.05,
-      "usd_gain": 0.040517,
-      "usd_apy": 0.044664
+      "now_usd": 104.07,
+      "usd_gain": 0.040652,
+      "usd_apy": 0.044675
     },
     {
       "id": "comp-usdc",
@@ -155,11 +155,11 @@
       "kind": "staked USDC",
       "note": "Compound III Ethereum",
       "pool": "7da72d09-56ca-4ec5-a45f-59114353e487",
-      "last_apy": 0.032359,
+      "last_apy": 0.033559,
       "start_usd": 100.0,
       "now_usd": 103.27,
-      "usd_gain": 0.032651,
-      "usd_apy": 0.035979
+      "usd_gain": 0.032746,
+      "usd_apy": 0.035973
     },
     {
       "id": "aave-usdc",
@@ -168,11 +168,11 @@
       "kind": "staked USDC",
       "note": "Aave V3 Ethereum supply",
       "pool": "aa70268e-4b52-42bf-a116-608b370f9501",
-      "last_apy": 0.037801,
+      "last_apy": 0.037133,
       "start_usd": 100.0,
-      "now_usd": 103.13,
-      "usd_gain": 0.031263,
-      "usd_apy": 0.034448
+      "now_usd": 103.14,
+      "usd_gain": 0.031368,
+      "usd_apy": 0.034458
     },
     {
       "id": "spark-usdc",
@@ -183,9 +183,9 @@
       "pool": "c5c74dd1-995c-4445-9d84-3e710bad7d52",
       "last_apy": 0.038,
       "start_usd": 100.0,
-      "now_usd": 103.07,
-      "usd_gain": 0.030692,
-      "usd_apy": 0.033817
+      "now_usd": 103.08,
+      "usd_gain": 0.030799,
+      "usd_apy": 0.033832
     },
     {
       "id": "usdc",
@@ -194,11 +194,11 @@
       "kind": "stable",
       "note": "Buy and hold from 2025-11-27",
       "start": 0.9999,
-      "now": 1.00115,
+      "now": 1.00114,
       "start_usd": 100.0,
-      "now_usd": 100.13,
-      "usd_gain": 0.00125,
-      "usd_apy": 0.001375
+      "now_usd": 100.12,
+      "usd_gain": 0.00124,
+      "usd_apy": 0.00136
     },
     {
       "id": "btc",
@@ -207,11 +207,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 91333.95,
-      "now": 80817.08,
+      "now": 80030.0,
       "start_usd": 100.0,
-      "now_usd": 88.49,
-      "usd_gain": -0.115147,
-      "usd_apy": -0.125922
+      "now_usd": 87.62,
+      "usd_gain": -0.123765,
+      "usd_apy": -0.134905
     },
     {
       "id": "bnb",
@@ -220,11 +220,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 895.74,
-      "now": 743.4,
+      "now": 742.96,
       "start_usd": 100.0,
-      "now_usd": 82.99,
-      "usd_gain": -0.170072,
-      "usd_apy": -0.185422
+      "now_usd": 82.94,
+      "usd_gain": -0.170563,
+      "usd_apy": -0.18545
     },
     {
       "id": "eth",
@@ -233,11 +233,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 3015.23,
-      "now": 2356.92,
+      "now": 2315.09,
       "start_usd": 100.0,
-      "now_usd": 78.17,
-      "usd_gain": -0.218328,
-      "usd_apy": -0.237376
+      "now_usd": 76.78,
+      "usd_gain": -0.232201,
+      "usd_apy": -0.2516
     },
     {
       "id": "sol",
@@ -246,11 +246,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 140.85,
-      "now": 101.87,
+      "now": 100.48,
       "start_usd": 100.0,
-      "now_usd": 72.33,
-      "usd_gain": -0.276748,
-      "usd_apy": -0.29984
+      "now_usd": 71.34,
+      "usd_gain": -0.286617,
+      "usd_apy": -0.309573
     },
     {
       "id": "xrp",
@@ -259,11 +259,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 2.1999,
-      "now": 1.3062,
+      "now": 1.2939,
       "start_usd": 100.0,
-      "now_usd": 59.38,
-      "usd_gain": -0.406246,
-      "usd_apy": -0.436449
+      "now_usd": 58.82,
+      "usd_gain": -0.411837,
+      "usd_apy": -0.441306
     },
     {
       "id": "ada",
@@ -272,11 +272,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 0.4331,
-      "now": 0.2065,
+      "now": 0.2053,
       "start_usd": 100.0,
-      "now_usd": 47.68,
-      "usd_gain": -0.523205,
-      "usd_apy": -0.557293
+      "now_usd": 47.4,
+      "usd_gain": -0.525976,
+      "usd_apy": -0.559036
     },
     {
       "id": "dot",
@@ -285,11 +285,11 @@
       "kind": "blue chip",
       "note": "Buy and hold from 2025-11-27",
       "start": 2.337,
-      "now": 1.044,
+      "now": 1.005,
       "start_usd": 100.0,
-      "now_usd": 44.67,
-      "usd_gain": -0.553273,
-      "usd_apy": -0.587909
+      "now_usd": 43.0,
+      "usd_gain": -0.569961,
+      "usd_apy": -0.603709
     }
   ]
 }
