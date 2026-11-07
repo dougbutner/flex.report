@@ -37,11 +37,12 @@ Swap fees on those pools are typically 0.05%-1%.
 
 **How those fees are used**
 
-- **Stablecoin-side fees** → smart contract buys EASY → re-pooled (more redeemable depth)
-- **EASY-side fees only**
-  - **38.2%** → [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (Welcome)
-  - **38.2%** → Contributor Club (`reflections`)
-  - **23.6%** → MEME buyback into locked [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y)
+- **Stablecoin-side fees** → smart contract buys EASY → **98%** joins the reflection pool
+- **EASY-side fees**
+  - **10%** → [`invite.mon3y`](https://explorer.xprnetwork.org/account/invite.mon3y) (Welcome)
+  - **25%** → Contributor Club (`reflections`)
+  - **10%** → MEME buyback into locked [`glitch.mon3y`](https://explorer.xprnetwork.org/account/glitch.mon3y)
+  - **55%** → reflection pool on `mon3y`
 
 ![Pool fee flow](assets/diagrams/pool-fee-flow.png)
 

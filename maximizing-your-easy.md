@@ -4,7 +4,7 @@
 
 ## Provide liquidity
 
-Prefer **1% fee** EASY pools. Higher fee on busy books feeds Welcome, Club, and MEME buybacks.
+Prefer **1% fee** EASY pools. Higher fee on busy books feeds Welcome, Club, MEME buybacks, and the reflection pool.
 
 Example (moves with volume): [EASY/XPR](https://alcor.exchange/v/xpr/analytics/pools/4512) · 1% fee · recent ≈14% fee APY (≈$890/day on ≈$24k TVL).
 
@@ -50,4 +50,4 @@ Once welcomed, welcome the next person. Grow the tree. Claim forever.
 | Share links | Welcome → Telegram / WhatsApp / X / email / text |
 | View network | Welcome → View welcome network |
 
-**38.2%** of EASY-side pool fees fund `invite.mon3y`.
+**10%** of EASY-side pool fees fund `invite.mon3y`.
