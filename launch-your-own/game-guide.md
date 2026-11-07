@@ -34,6 +34,20 @@ Pick 0 to 999 with `setangelnum`. `pullangel` asks the randomness contract to dr
 
 Gold squares, no number to pick. `jackpot_pool` fills from the jackpot share of reflection. `pulljackpot` draws winners. Winner count, and the minimum hold checked after the draw, are what the issuer set. Anyone can call when the pot is above zero.
 
+## Fund a budget
+
+Send this token to the contract account (`3asy`, `fl3x`, or `for3x`), not to the issuer. The memo is the symbol, or the symbol, a `|`, and a pool name. Spaces and letter case are ignored. The symbol is 1 to 7 letters and must be the token you are sending. After `|`, only the first three letters are read.
+
+- `LUZ` fills reflection.
+- `LUZ | reflections` fills reflection. `ref` is enough.
+- `LUZ|jackpot` fills the jackpot on `for3x`. `jac` is enough.
+- `luz | angel` fills angel numbers on `for3x`. `ang` is enough.
+- `LUZ | other` fills reflection.
+
+`jac` and `ang` are separate pots on `for3x` only. On `3asy` and `fl3x` every matching memo fills `reflection_pool`.
+
+A match adds the full amount to that budget and charges no transfer tax. A memo that is not this symbol, or that continues without `|`, is an ordinary transfer: tax can apply, and the amount is not added to a budget. Before `golive`, presale rules still block the send.
+
 ## On the token page
 
 - Make it rain, pull angel, or pull jackpot when the button is there and the pot is above zero.

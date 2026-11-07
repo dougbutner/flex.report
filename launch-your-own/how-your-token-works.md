@@ -96,4 +96,6 @@ The calendar shows the insider date and the public launch. Say the start price, 
 
 `makeitrain` pays 38.2% of `reflection_pool` to holders. Swap and contract balances are left out of the share count. On `for3x`, white squares call `pullangel` and gold squares call `pulljackpot` when those pots are above zero. The clicks are in the [game guide](game-guide.md).
 
+Anyone can add to a budget. Transfer the token to the contract (`3asy`, `fl3x`, or `for3x`) with the symbol as the memo. `SYMBOL | reflections` is the same pot. On `for3x`, `SYMBOL | jackpot` and `SYMBOL | angel` fill those pots. Only the first three letters are checked (`ref`, `jac`, `ang`). Spaces and letter case are ignored. A match is not taxed. Any other tag, and every match on `3asy` and `fl3x`, fills reflection. The memo shapes are in the [game guide](game-guide.md).
+
 ![Make it rain](assets/make-it-rain.png)

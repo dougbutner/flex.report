@@ -21,7 +21,7 @@ Presale (issuer, or the contract):
 
 After launch:
 
-- `transfer`: tax on top of wallet-to-wallet sends. Alcor inbound tax is taken from the amount. Skipped for contract payouts, fee-opted-out accounts, and the pre-liftoff Alcor seed.
+- `transfer`: tax on top of wallet-to-wallet sends. Alcor inbound tax is taken from the amount. Skipped for contract payouts, fee-opted-out accounts, and the pre-liftoff Alcor seed. A send to `for3x` whose memo is the symbol, or the symbol plus `|` and a tag, also skips tax and credits a budget. Spaces and letter case are ignored. The symbol must match and be 1 to 7 letters, then end or `|`. The first three letters after `|` pick the pot: `jac` → `jackpot_pool`, `ang` → `angel_numbers_pool`, anything else including `ref` or a bare symbol → `reflection_pool`. A memo that does not match, or that continues without `|`, stays a normal transfer.
 - `makeitrain(token_symbol, keeper)`: anyone may sign as `keeper`. Splashes 38.2% of `reflection_pool`. Optional keeper tip only when `keeper_min` is at most 1% of that splash.
 - `checklock`: after `unlock_time`, may add 0.25% to `dev_bps` and 0.25% to `club_bps`, once.
 - `choosereward`: empty output contract means native. Pool id 0 uses the launch quote only if `swap_underlying_default` was true.
@@ -50,5 +50,7 @@ Scope is the symbol code except `launches` (scope is `for3x`) and `accounts` (sc
 ## What is different from `3asy` and `fl3x`
 
 `3asy` has no project tax, no inheritance, no angels, no jackpot. `fl3x` has project tax and inheritance, and no angels or jackpot. Both pay with `makeitrain(token_symbol, sender)`. This contract's field is `keeper`.
+
+The same memo deposit exists on `3asy` and `fl3x`. Those contracts have no angel or jackpot column, so every matching memo credits `reflection_pool`.
 
 Liftoff EASY hold on this contract is 50,000 whole EASY times (prior launches by that issuer on `for3x`, plus one), then the discount in [How your token works](../launch-your-own/how-your-token-works.md). `3asy` uses 5,000. `fl3x` uses 10,000. The discount clock is the same date on all three.
