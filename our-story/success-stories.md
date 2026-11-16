@@ -1,6 +1,6 @@
 # Success Stories
 
-Pics or it didn’t happen. `kinship1` is a live XPR account, not a backtest. *Updated 2026-11-15 19:12 UTC.*
+Pics or it didn’t happen. `kinship1` is a live XPR account, not a backtest. *Updated 2026-11-16 22:40 UTC.*
 
 ![kinship1 reflections case study](assets/reflections-kinship.png)
 
@@ -10,19 +10,19 @@ Pics or it didn’t happen. `kinship1` is a live XPR account, not a backtest. *U
 
 **Reflections earned since then:** **342.29 EASY** across **867** payments from `mon3y` (through 2026-11-15).
 
-That is **+34.2% more EASY** on the seed (about **+35.6% APY** on quantity over 353 days). Wallet now: **1,342.29 EASY** (≈**$23.56**).
+That is **+34.2% more EASY** on the seed (about **+35.5% APY** on quantity over 354 days). Wallet now: **1,342.29 EASY** (≈**$22.98**).
 
-The comparison below takes that same reflection rate and applies it to a **$100** buy of EASY on **2025-11-27**, when EASY was **$0.0114**. That buy is **8,786.74 EASY**. After the same reflection rate it is **11,794.33 EASY**, about **$207.06** at **$0.0176**: **+107.1%** vs the $100 (**+112.4% APY** in USD).
+The comparison below takes that same reflection rate and applies it to a **$100** buy of EASY on **2025-11-27**, when EASY was **$0.0114**. That buy is **8,786.74 EASY**. After the same reflection rate it is **11,794.33 EASY**, about **$201.91** at **$0.0171**: **+101.9%** vs the $100 (**+106.5% APY** in USD).
 
 | | |
 | --- | --- |
 | Account | [kinship1](https://explorer.xprnetwork.org/account/kinship1) |
 | Seed (from `reflections`, not yield) | 1,000.00 EASY on 2025-11-27 |
-| Reflections (mon3y → kinship1) | **342.29 EASY** (≈**$6.01** at today’s mark) |
-| Reflection gain (EASY qty) | **+34.2% EASY** · **+35.6% APY** |
+| Reflections (mon3y → kinship1) | **342.29 EASY** (≈**$5.86** at today’s mark) |
+| Reflection gain (EASY qty) | **+34.2% EASY** · **+35.5% APY** |
 | $100 buy on that day | **8,786.74 EASY** at $0.0114 |
-| Same rate, extrapolated bag | **11,794.33 EASY** (≈**$207.06**) |
-| USD bag vs the $100 | **+107.1%** · **+112.4% APY** |
+| Same rate, extrapolated bag | **11,794.33 EASY** (≈**$201.91**) |
+| USD bag vs the $100 | **+101.9%** · **+106.5% APY** |
 | Reflection payments | 867 |
 | Wallet now | **1,342.29 EASY** |
 
@@ -44,11 +44,11 @@ On **2025-12-24**, `printy` sent **200 EASY** once, and **1 WON** twice (**2 WON
 
 | | Gift day | Now |
 | --- | --- | --- |
-| EASY | 200.00 ($2.40) | **396.14** ($6.95) |
-| WON | 2.00 ($2.45) | **2.00** ($3.44) |
-| Together | **$4.85** | **$10.40** |
+| EASY | 200.00 ($2.40) | **396.14** ($6.78) |
+| WON | 2.00 ($2.45) | **2.00** ($3.33) |
+| Together | **$4.85** | **$10.12** |
 
-The EASY count is **+98.1%** higher. The dollars are **+114.5%** higher (**+135.1% APY** over 326 days). The WON count is still 2. WON's pay arrived as **125.61 EASY** through the WON/EASY pool. Holding the EASY added **70.53 EASY** from `mon3y`. No second deposit.
+The EASY count is **+98.1%** higher. The dollars are **+108.7%** higher (**+127.5% APY** over 327 days). The WON count is still 2. WON's pay arrived as **125.61 EASY** through the WON/EASY pool. Holding the EASY added **70.53 EASY** from `mon3y`. No second deposit.
 
 Copy the size, or copy this wallet's size. **100 EASY and 1 WON** is the same kind of gift. This account was given **200 EASY** and **2** transfers of **1 WON**. Set up the wallet. Put a few dollars in their name. Hand them the account.
 
@@ -62,19 +62,19 @@ Buy-and-hold, no leverage, no trading. Coin marks are Binance USDT daily close v
 
 | Rank | Bag | Kind | Value now | USD change | USD APY |
 | ---: | --- | --- | ---: | ---: | ---: |
-| 1 | **EASY (kinship1)** | Flex token | $207.06 | **+107.1%** | +112.4% |
-| 2 | Morpho USDC | staked USDC | $104.38 | +4.4% | +4.5% |
-| 3 | Compound USDC | staked USDC | $103.49 | +3.5% | +3.6% |
-| 4 | Aave USDC | staked USDC | $103.40 | +3.4% | +3.5% |
-| 5 | Spark USDC | staked USDC | $103.29 | +3.3% | +3.4% |
-| 6 | USDC (idle) | stable | $100.04 | 0.0% | 0.0% |
-| 7 | Bitcoin | blue chip | $71.22 | -28.8% | -29.6% |
-| 8 | BNB | blue chip | $66.21 | -33.8% | -34.7% |
-| 9 | Ethereum | blue chip | $60.54 | -39.5% | -40.5% |
-| 10 | Solana | blue chip | $50.83 | -49.2% | -50.4% |
-| 11 | XRP | blue chip | $43.52 | -56.5% | -57.7% |
-| 12 | Cardano | blue chip | $35.65 | -64.3% | -65.6% |
-| 13 | Polkadot | blue chip | $31.54 | -68.5% | -69.7% |
+| 1 | **EASY (kinship1)** | Flex token | $201.91 | **+101.9%** | +106.5% |
+| 2 | Morpho USDC | staked USDC | $104.39 | +4.4% | +4.5% |
+| 3 | Compound USDC | staked USDC | $103.50 | +3.5% | +3.6% |
+| 4 | Aave USDC | staked USDC | $103.41 | +3.4% | +3.5% |
+| 5 | Spark USDC | staked USDC | $103.31 | +3.3% | +3.4% |
+| 6 | USDC (idle) | stable | $100.09 | +0.1% | +0.1% |
+| 7 | Bitcoin | blue chip | $71.60 | -28.4% | -29.2% |
+| 8 | BNB | blue chip | $66.35 | -33.6% | -34.5% |
+| 9 | Ethereum | blue chip | $60.77 | -39.2% | -40.2% |
+| 10 | Solana | blue chip | $51.10 | -48.9% | -50.0% |
+| 11 | XRP | blue chip | $43.69 | -56.3% | -57.4% |
+| 12 | Cardano | blue chip | $35.51 | -64.5% | -65.6% |
+| 13 | Polkadot | blue chip | $31.41 | -68.6% | -69.7% |
 
 The twelve comparison bags: Bitcoin, Ethereum, XRP, Solana, BNB, Cardano, Polkadot, idle USDC, plus four large USDC supply/savings venues. This is not advice, and a different window can reverse the ranking.
 
